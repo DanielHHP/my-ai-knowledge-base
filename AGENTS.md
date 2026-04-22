@@ -1,307 +1,269 @@
-# AI 知识库 · Agent 设计文档
+# AI 知识库助手 · Agent 架构设计文档
 
 ## 概述
 
-本系统通过多个 Agent 协作，自动抓取 GitHub Trending 榜单中的 AI 相关项目并提取结构化信息。每日 UTC 00:00:00 执行一次，生成 JSON 格式的知识库文章。
+本系统通过多 Agent 协作，自动从 GitHub Trending 和 Hacker News 采集 AI/LLM/Agent 领域的技术动态，经 AI 分析后结构化存储为 JSON 知识条目，并支持多渠道（Telegram/飞书）分发，为用户提供实时、高质量的技术情报。
 
-## Agent 定义
+## 技术栈
 
-### 1. 数据抓取 Agent (Data Fetcher Agent)
+- **编程语言**: Python 3.12
+- **Agent 框架**: OpenCode + 国产大模型 (DeepSeek/Qwen)
+- **工作流编排**: LangGraph
+- **数据抓取**: OpenClaw (基于 Playwright/httpx)
+- **数据存储**: JSON 文件 + SQLite (可选)
+- **消息推送**: Telegram Bot API、飞书开放平台
 
-**职责**：从 GitHub Trending 获取每日 Top 50 项目列表。
+## 编码规范
 
-**输入**：无（定时触发）
-**输出**：原始项目列表，包含：
-- 仓库名 (name)
-- 仓库链接 (url)
-- 作者 (author)
-- 描述 (description)
-- 语言 (language)
-- 星标数 (stars)
-- 今日新增星标数 (stars_today)
-- 话题标签 (topics)
-- 其他元数据
+- **代码风格**: 遵循 PEP 8，使用 `black` 自动格式化
+- **命名约定**: 变量/函数使用 `snake_case`，类使用 `CamelCase`
+- **文档字符串**: Google 风格 docstring，包含参数、返回值和示例
+- **日志记录**: 统一使用 `logging` 模块，禁止裸 `print()` 输出
+- **类型注解**: 尽可能使用类型注解，提高代码可读性
+- **异常处理**: 明确捕获特定异常，避免裸露的 `except:`
 
-**实现要点**：
-- 使用 GitHub REST API 或网页抓取（若 API 无 trending 端点）
-- 处理网络超时、限流等异常
-- 输出临时数据供后续 Agent 使用
+## 项目结构
 
-**边界**：
-- 仅抓取 Top 50，不处理历史数据
-- 每日仅执行一次，失败时重试最多 3 次（仅限网络错误）
+```
+.
+├── .opencode/
+│   ├── agents/           # Agent 定义文件
+│   │   ├── collector.py
+│   │   ├── analyzer.py
+│   │   └── distributor.py
+│   └── skills/          # 可复用的技能模块
+│       ├── web_scraper.py
+│       ├── llm_client.py
+│       └── notifier.py
+├── knowledge/
+│   ├── raw/             # 原始采集数据 (JSON)
+│   │   ├── github/
+│   │   └── hackernews/
+│   └── articles/        # 结构化知识条目 (JSON)
+│       └── YYYY-MM-DD.json
+├── config.yaml          # 配置文件
+├── requirements.txt     # Python 依赖
+└── README.md
+```
 
-### 2. AI 项目筛选 Agent (AI Project Filter Agent)
+## 知识条目 JSON 格式
 
-**职责**：使用 NLP 模型判断项目是否与 AI 相关。
+每个知识条目代表一个 AI 相关技术动态，包含以下字段：
 
-**输入**：数据抓取 Agent 输出的原始项目列表
-**输出**：AI 相关项目子集
+```json
+{
+  "id": "github_openai_gpt-3_2025-04-17",
+  "title": "OpenAI 发布 GPT-3 模型",
+  "source": "github",  // 或 "hackernews"
+  "source_url": "https://github.com/openai/gpt-3",
+  "published_at": "2025-04-17T00:00:00Z",
+  "summary": "OpenAI 发布的大规模预训练语言模型 GPT-3，具有 1750 亿参数...",
+  "content": "详细分析内容，由 AI 生成...",
+  "tags": ["llm", "language-model", "openai"],
+  "category": "模型发布",  // 模型发布、工具库、论文、行业动态等
+  "status": "published",  // draft, published, archived
+  "metadata": {
+    "stars": 50000,
+    "language": "Python",
+    "author": "openai",
+    "hackernews_score": 256
+  },
+  "created_at": "2025-04-17T10:30:00Z",
+  "updated_at": "2025-04-17T10:30:00Z"
+}
+```
 
-**判断依据**：
-- 项目 topics 包含 AI 相关关键词（如 "ai", "machine-learning", "llm", "deep-learning" 等）
-- 项目 name 或 description 包含 AI 相关术语
-- 可扩展：检查 README 内容（需谨慎控制 token 成本）
+**字段说明**:
+- `id`: 唯一标识符，格式为 `{source}_{slug}_{date}`
+- `title`: 条目标题，从源信息提取或 AI 生成
+- `source`: 数据源，`github` 或 `hackernews`
+- `source_url`: 原始链接
+- `published_at`: 源发布时间 (UTC)
+- `summary`: AI 生成的摘要 (100-200字)
+- `content`: 详细分析内容 (可选)
+- `tags`: 标签列表，用于分类检索
+- `category`: 分类，便于聚合展示
+- `status`: 状态机，控制发布流程
+- `metadata`: 源平台特定元数据
+- `created_at`/`updated_at`: 系统内部时间戳
 
-**实现要点**：
-- 使用轻量级 NLP 模型（如关键词匹配 + 嵌入相似度）
-- 通过 DeepSeek API 进行文本分类（若关键词匹配不明确）
-- 输出为过滤后的项目列表，标记为 AI 相关
+## Agent 角色概览
 
-**边界**：
-- 成本控制：优先使用规则匹配，仅在不明确时调用模型
-- 不进行深度评估，仅做二元分类（是/否 AI 相关）
+| 角色 | 职责 | 输入 | 输出 | 关键技术 |
+|------|------|------|------|----------|
+| **采集 Agent** | 从 GitHub Trending 和 Hacker News 抓取原始数据 | 定时触发 | 原始数据列表 (JSON) | OpenClaw, GitHub API, RSS |
+| **分析 Agent** | AI 分析原始数据，生成结构化知识条目 | 原始数据列表 | 结构化知识条目 (JSON) | DeepSeek API, 提示工程 |
+| **整理 Agent** | 过滤、去重、分类、打标签，并推送到 Telegram/飞书 | 结构化知识条目 | 推送状态 + 整理后的知识条目 | 规则引擎, 相似度计算, Bot API |
 
-### 3. 项目分析 Agent (Project Analysis Agent)
+### 1. 采集 Agent (Collector)
 
-**职责**：对每个 AI 相关项目进行多维分析，提取结构化信息。
+**数据源**:
+- **GitHub Trending**: 每日 Top 50 项目，通过 GitHub REST API 或网页抓取
+- **Hacker News**: Top 30 故事，通过官方 API 或 RSS
 
-**输入**：AI 项目筛选 Agent 输出的项目列表
-**输出**：结构化 JSON 数组，每个项目包含以下字段：
+**采集频率**:
+- GitHub Trending: 每日 UTC 00:00
+- Hacker News: 每 4 小时
 
-| 字段名 | 类型 | 说明 | 是否必需 |
-|--------|------|------|----------|
-| id | string | 唯一标识（可采用 UUID 或 repo_name + trending_date 组合） | 是 |
-| repo_name | string | 仓库名（如 "openai/gpt-3"） | 是 |
-| repo_url | string | 仓库链接 | 是 |
-| trending_date | string | 上榜日期，YYYY-MM-DD 格式（UTC） | 是 |
-| summary | string | 项目简介，由模型生成 | 是 |
-| core_features | array | 核心功能列表，允许空数组 | 是 |
-| tech_stack | array | 技术栈列表，允许空数组 | 是 |
-| innovation | string/null | 创新点描述，可选 | 否 |
-| use_cases | array | 适用场景列表，允许空数组 | 是 |
+**输出格式**:
+```json
+[
+  {
+    "platform": "github",
+    "title": "openai/gpt-3",
+    "url": "https://github.com/openai/gpt-3",
+    "description": "GPT-3 language model",
+    "metadata": {
+      "stars": 50000,
+      "language": "Python",
+      "topics": ["ai", "llm"]
+    },
+    "collected_at": "2025-04-17T00:00:00Z"
+  }
+]
+```
 
-**实现要点**：
-- 调用 DeepSeek API 分析项目（使用 repo 的 description、topics、README 片段）
-- 设计 prompt 工程，确保输出结构化 JSON
-- 批量处理以提高效率，注意 token 成本
-- 错误处理：单个项目分析失败不应影响整体任务，记录异常继续处理下一个
+### 2. 分析 Agent (Analyzer)
 
-**边界**：
-- 仅进行基础维度分析，不进行代码深度评估
-- 每个项目分析 token 上限可设定（如 2000 tokens）
-- 字段灵活，允许空数组或 null 值
+**AI 分析维度**:
+1. **相关性判断**: 是否属于 AI/LLM/Agent 领域
+2. **摘要生成**: 用 100-200 字概括核心内容
+3. **标签提取**: 自动提取 3-5 个相关标签
+4. **分类判断**: 模型发布、工具库、论文、行业动态等
+5. **质量评估**: 技术价值、创新性、实用性评分
+
+**提示工程优化**:
+- 使用少量示例 (few-shot) 提高准确性
+- 结构化输出约束为 JSON 格式
+- 成本控制: 每个条目 token 上限 2000
+
+### 3. 整理 Agent (Curator)
+
+**主要功能**:
+1. **去重**: 基于标题、URL 相似度检测重复条目
+2. **过滤**: 根据质量评分和相关性阈值过滤低质量条目
+3. **分类**: 按预设分类体系自动归类
+4. **标签增强**: 合并相似标签，补充缺失标签
+5. **状态管理**: 管理条目的 `draft` → `published` → `archived` 生命周期
+
+**推送功能**:
+- **推送渠道**:
+  - **Telegram**: 每日摘要频道，实时推送重要动态
+  - **飞书**: 团队知识库同步，支持 @提及 特定成员
+- **推送策略**:
+  - **定时推送**: 每日 UTC 08:00 发送前 24 小时重要动态
+  - **实时推送**: 高价值条目 (评分 > 8.0) 立即推送
+  - **摘要格式**: Markdown，包含标题、摘要、标签和原始链接
+
+
+
+## 红线 (绝对禁止的操作)
+
+1. **数据安全**
+   - 禁止在代码中硬编码 API 密钥、令牌等敏感信息
+   - 禁止将原始用户数据上传至第三方服务
+   - 禁止存储未经脱敏的个人身份信息 (PII)
+
+2. **API 使用**
+   - 禁止违反平台 Rate Limit 规定 (GitHub/HackerNews/飞书/Telegram)
+   - 禁止绕过付费 API 限制
+   - 禁止将 API 密钥分享给未授权方
+
+3. **内容合规**
+   - 禁止采集、存储、传播违法、违规内容
+   - 禁止 AI 生成有害、歧视性、虚假信息
+   - 禁止未经授权转载受版权保护的内容
+
+4. **系统稳定性**
+   - 禁止无限循环或未设置超时的网络请求
+   - 禁止未处理异常导致 Agent 进程崩溃
+   - 禁止同时启动过多并发请求导致服务过载
+
+5. **成本控制**
+   - 禁止单日 LLM API 调用超出 $0.5 预算
+   - 禁止无限制存储原始数据，需定期清理
+   - 禁止推送频率超出渠道限制 (如 Telegram 频道的消息频率限制)
 
 ## 执行流程
 
 ```mermaid
 graph TD
-    A[定时触发 UTC 00:00] --> B[数据抓取 Agent]
-    B --> C{抓取成功?}
-    C -->|是| D[AI 项目筛选 Agent]
-    C -->|否| E[记录异常]
-    D --> F{有 AI 项目?}
-    F -->|是| G[项目分析 Agent]
-    F -->|否| H[生成空输出]
-    G --> I[存储 JSON 文件]
-    H --> I
-    E --> J[生成异常文件]
-    I --> K[任务完成]
+    A[定时触发] --> B{数据源选择}
+    B -->|GitHub| C[GitHub 采集]
+    B -->|HN| D[HackerNews 采集]
+    C --> E[原始数据存储]
+    D --> E
+    E --> F[AI 分析]
+    F --> G[结构化知识条目]
+    G --> H[整理过滤]
+    H --> I{推送策略}
+    I -->|定时推送| J[等待定时触发]
+    I -->|实时推送| K[立即推送]
+    J --> L[多渠道分发]
+    K --> L
+    L --> M[任务完成]
 ```
 
-1. **定时触发**：每日 UTC 00:00:00 启动流程
-2. **数据抓取**：获取 GitHub Trending Top 50
-3. **AI 筛选**：过滤出 AI 相关项目
-4. **项目分析**：对每个 AI 项目提取结构化信息
-5. **存储结果**：
-   - 成功：`knowledge/articles/YYYY-MM-DD.md`（纯 JSON 数组）
-   - 失败：`knowledge/incidents/YYYY-MM-DD.md`（错误详情）
-6. **清理旧数据**：自动保留最近 30 天数据，旧数据可归档或删除
+## 监控与维护
 
-## 数据存储
+### 健康检查
+- **采集成功率**: 目标 > 95%
+- **分析准确率**: 定期人工抽样评估
+- **推送到达率**: 监控渠道反馈
 
-### 输出文件结构
+### 日志记录
+- 所有 Agent 操作记录到结构化日志文件
+- 关键事件 (错误、限流、成本超支) 发送警报
+- 日志保留 30 天
 
-```
-knowledge/
-├── articles/
-│   ├── 2025-04-17.md   # JSON 数组
-│   ├── 2025-04-18.md
-│   └── ...
-└── incidents/
-    ├── 2025-04-17.md   # 异常信息
-    └── ...
-```
+### 成本监控
+- 每日 LLM API 消耗图表
+- 月度预算与实际支出对比
+- 成本超支自动暂停机制
 
-**文件格式示例** (`knowledge/articles/2025-04-17.md`):
-```json
-[
-  {
-    "id": "openai_gpt-3_2025-04-17",
-    "repo_name": "openai/gpt-3",
-    "repo_url": "https://github.com/openai/gpt-3",
-    "trending_date": "2025-04-17",
-    "summary": "OpenAI 的 GPT-3 语言模型...",
-    "core_features": ["文本生成", "代码补全", "对话系统"],
-    "tech_stack": ["Python", "PyTorch", "TensorFlow"],
-    "innovation": "大规模预训练 Transformer 模型",
-    "use_cases": ["聊天机器人", "内容创作", "编程辅助"]
-  },
-  // ... 更多项目
-]
-```
+## 扩展规划
 
-### 数据保留策略
-- 最近 30 天数据保留在 `knowledge/articles/`
-- 30 天前的数据可自动移动到归档目录或删除
-- 异常文件永久保留（或定期清理）
+### 短期 (1-3 个月)
+- 增加 arXiv、Twitter 作为数据源
+- 支持更多推送渠道 (微信、Discord)
+- 实现 Web 界面查看知识库
 
-## 异常处理
+### 中期 (3-6 个月)
+- 添加用户反馈机制 (有用/无用评分)
+- 实现个性化推荐
+- 支持知识图谱构建
 
-### 异常类型
-1. **网络错误**：GitHub API 不可达、超时
-2. **API 限流**：GitHub API 或 DeepSeek API 限流
-3. **解析错误**：HTML/JSON 解析失败
-4. **模型错误**：DeepSeek API 返回异常
-5. **存储错误**：文件写入失败
-
-### 处理策略
-- **网络错误**：自动重试最多 3 次，每次间隔指数退避
-- **API 限流**：等待后重试，若持续限流则记录异常并终止当日任务
-- **解析错误**：记录异常，跳过当前项目继续处理
-- **模型错误**：记录异常，跳过当前项目继续处理
-- **存储错误**：重试 2 次，若仍失败则记录异常
-
-### 异常文件格式
-`knowledge/incidents/YYYY-MM-DD.md` 包含：
-- 异常时间戳
-- 异常类型
-- 错误详情
-- 受影响的步骤（抓取、筛选、分析、存储）
-- 建议处理措施
-
-## 配置管理
-
-### 环境变量
-```bash
-# GitHub API 配置（可选 token 用于提高限流）
-GITHUB_TOKEN=
-
-# DeepSeek API 配置
-DEEPSEEK_API_KEY=
-DEEPSEEK_BASE_URL=https://api.deepseek.com
-
-# 执行配置
-MAX_RETRIES=3
-REQUEST_TIMEOUT=30
-DAILY_TOKEN_BUDGET=0.5  # 美元
-```
-
-### 配置文件
-`config.yaml`（可选）：
-```yaml
-github:
-  trending_url: "https://github.com/trending"
-  api_base: "https://api.github.com"
-  timeout: 30
-  
-deepseek:
-  model: "deepseek-chat"
-  max_tokens_per_project: 2000
-  temperature: 0.2
-  
-storage:
-  articles_dir: "knowledge/articles"
-  incidents_dir: "knowledge/incidents"
-  retention_days: 30
-  
-logging:
-  level: "INFO"
-  file: "logs/execution.log"
-```
-
-## 成本控制
-
-### 预算分配
-- 每日总预算：$0.5
-- 分配建议：
-  - AI 筛选：≤ $0.1（优先使用规则匹配）
-  - 项目分析：≤ $0.4（约 20-30 个项目，每个项目 ≤ $0.02）
-
-### 优化措施
-1. **缓存机制**：相同 repo 在不同日期 trending 时可复用部分分析结果
-2. **批量请求**：将多个项目分析合并到单个 API 调用（若 API 支持）
-3. **截断文本**：限制输入 token 数量（如只取 README 前 1000 字符）
-4. **降级策略**：成本接近预算时，跳过非核心字段（如 innovation）
-
-## 监控与验证
-
-### 执行状态监控
-- **成功标准**：`knowledge/articles/YYYY-MM-DD.md` 文件存在且包含有效 JSON
-- **失败标准**：`knowledge/incidents/YYYY-MM-DD.md` 文件存在
-- **监控方式**：检查每日生成的文件，可集成外部监控（如 Cronitor、Healthchecks）
-
-### 质量抽查
-- 定期手动检查分析结果的合理性
-- 验证 AI 筛选的准确性（抽查 false positive/negative）
-- 检查 JSON 格式有效性
-
-### 性能指标
-- 任务执行成功率（目标：月成功率 ≥ 95%）
-- 平均执行时间（目标：< 10 分钟）
-- 异常发生频率
-- 每日 token 消耗（目标：< $0.5）
-
-## 部署考虑
-
-### 运行环境要求
-- Python 3.9+
-- 网络访问（GitHub API、DeepSeek API）
-- 文件系统写入权限
-- 定时任务调度器（如 cron、systemd timer）
-
-### 部署选项
-1. **本地脚本**：最简单，适合个人使用
-2. **云函数**（AWS Lambda、Google Cloud Functions）：无服务器，自动伸缩
-3. **容器化**（Docker + Kubernetes）：适合团队部署
-4. **CI/CD 集成**：通过 GitHub Actions 每日执行
-
-### 扩展性
-当前设计为最小可行产品，未来可扩展：
-- 增加数据源（Hacker News、arXiv、博客）
-- 增加分析维度（代码质量、社区活跃度、许可证）
-- 提供 API 服务或 UI 界面
-- 支持多语言（中文、英文分析）
+### 长期 (6-12 个月)
+- 开源 Agent 框架
+- 提供 SaaS 服务
+- 建立 AI 技术动态标准数据集
 
 ## 附录
 
-### Prompt 设计示例
+### 环境变量配置
+```bash
+# API 密钥
+GITHUB_TOKEN=
+DEEPSEEK_API_KEY=
+TELEGRAM_BOT_TOKEN=
+FEISHU_WEBHOOK_URL=
 
-**AI 项目筛选 Prompt**：
-```
-判断以下 GitHub 项目是否与人工智能（AI、机器学习、深度学习、自然语言处理、计算机视觉等）相关。
-
-项目信息：
-名称：{name}
-描述：{description}
-话题标签：{topics}
-
-请仅回答 "是" 或 "否"。
-```
-
-**项目分析 Prompt**：
-```
-请分析以下 GitHub 项目，提取结构化信息：
-
-项目名称：{repo_name}
-描述：{description}
-话题标签：{topics}
-README 片段：{readme_snippet}
-
-请以 JSON 格式返回以下字段：
-- summary: 项目简介（100-200字）
-- core_features: 核心功能列表（数组）
-- tech_stack: 技术栈列表（数组）
-- innovation: 创新点描述（可选，如无显著创新可留空）
-- use_cases: 适用场景列表（数组）
-
-JSON 格式要求严格，仅返回 JSON 对象，不要有其他文本。
+# 配置参数
+MAX_DAILY_BUDGET=0.5
+REQUEST_TIMEOUT=30
+LOG_LEVEL=INFO
 ```
 
-### 参考链接
-- GitHub Trending: https://github.com/trending
-- DeepSeek API 文档: https://platform.deepseek.com/api-docs
-- 项目愿景文档: spec/project-vision.md
+### 快速开始
+1. 克隆仓库并安装依赖: `pip install -r requirements.txt`
+2. 配置环境变量: 复制 `.env.example` 到 `.env` 并填写
+3. 启动 Agent 系统: `python main.py`
+4. 查看生成的知识条目: `ls knowledge/articles/`
+
+### 故障排除
+- **采集失败**: 检查网络连接和 API 令牌
+- **分析超时**: 降低每个条目的 token 上限
+- **推送失败**: 验证渠道令牌和网络可达性
 ```
 
 （文档结束）
