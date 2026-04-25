@@ -1,0 +1,24 @@
+{
+  "id": "github_claude-mem_2026-04-24",
+  "title": "thedotmack/claude-mem",
+  "source": "github",
+  "source_url": "https://github.com/thedotmack/claude-mem",
+  "published_at": "2026-04-24T00:00:00Z",
+  "summary": "Claude Code 的持久记忆插件，能自动捕获编程会话中的所有工具使用记录，通过 AI 压缩生成语义摘要，并在未来会话启动时注入相关上下文，实现跨会话记忆连续性。项目采用 5 种生命周期钩子、SQLite + Chroma 向量数据库混合检索架构，以及渐进式上下文披露策略以控制 Token 成本。已发布到 v12.3.9，拥有 6.7 万星标，支持 Claude Code、Gemini CLI、OpenCode 等多种 AI 编程工具，并已集成 Claude Desktop Skill，是 AI 编程辅助生态中最成熟的内存管理方案之一。",
+  "highlights": [
+    "AI 编程工具跨会话记忆的完整解决方案，解决上下文丢失的核心痛点",
+    "成熟的技术架构：5 钩子系统 + SQLite + Chroma 向量数据库 + 渐进式 Token 优化",
+    "已迭代至 v12.3.9，6.7 万星标，支持 Claude Code / Gemini CLI / OpenCode 多平台"
+  ],
+  "tags": ["claude-code", "long-term-memory", "ai-coding", "plugin", "context-management"],
+  "category": "工具库",
+  "score": 8,
+  "score_reason": "直接有帮助（8分）：成熟度高、架构设计优秀，解决了 AI 编程中最令人困扰的上下文丢失问题，被广泛集成的实用工具。",
+  "status": "published",
+  "metadata": {
+    "stars": 66458,
+    "author": "thedotmack"
+  },
+  "created_at": "2026-04-24T10:30:00Z",
+  "updated_at": "2026-04-24T10:30:00Z"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "github_TrendRadar_2026-04-24",
+  "title": "sansan0/TrendRadar",
+  "source": "github",
+  "source_url": "https://github.com/sansan0/TrendRadar",
+  "published_at": "2026-04-24T00:00:00Z",
+  "summary": "AI 驱动的舆情与趋势监控平台，支持多平台热点聚合、RSS 订阅和关键词精准筛选，AI 智能分析简报可直接推送至微信、飞书、钉钉、Telegram、Slack、邮件等 9+ 渠道。项目架构完整，包含 MCP 服务（支持 AI 自然语言对话查询和分析）、可视化配置编辑器、timeline 调度系统、多存储后端（本地 SQLite / 云 S3）、AI 翻译、情感分析等。支持 Docker 部署，30 秒即可上线。总星标 5.5 万，社区活跃。",
+  "highlights": [
+    "一站式舆情监控：多平台聚合 + RSS 订阅 + AI 筛选 + 9+ 渠道推送",
+    "集成 MCP 服务，支持通过 AI 对话进行自然语言舆情查询和分析",
+    "50 天快速部署，Docker 支持，5.5 万星标验证了成熟度和实用性"
+  ],
+  "tags": ["trend-monitoring", "mcp", "information-aggregation", "multi-channel-push", "ai-analysis"],
+  "category": "工具库",
+  "score": 7,
+  "score_reason": "直接有帮助（7分）：功能完备的舆情监控工具，AI 分析 + 多渠道推送的组合切中信息过载痛点，部署简便，实用价值高。",
+  "status": "published",
+  "metadata": {
+    "stars": 54917,
+    "author": "sansan0"
+  },
+  "created_at": "2026-04-24T10:30:00Z",
+  "updated_at": "2026-04-24T10:30:00Z"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "github_dive-into-llms_2026-04-24",
+  "title": "Lordog/dive-into-llms",
+  "source": "github",
+  "source_url": "https://github.com/Lordog/dive-into-llms",
+  "published_at": "2026-04-24T00:00:00Z",
+  "summary": "《深入 LLM》编程实践教程系列，旨在帮助学习者从零开始理解大语言模型的核心原理与实现。不同于理论书籍或论文，该项目侧重动手编码实践，通过逐步实现关键组件来加深对 Transformer 架构、注意力机制、预训练等核心概念的掌握。总星标高达 3.4 万，说明其在 LLM 学习社区中具有极高的口碑和实用性。适合希望深入理解 LLM 内部机制而非仅停留在 API 调用层面的开发者。",
+  "highlights": [
+    "从零到一动手实现 LLM 核心组件，理论与实践深度结合",
+    "总星标 3.4 万，LLM 学习领域高口碑教程资源",
+    "填补了 LLM 领域从 '会用 API' 到 '理解原理' 之间的教育空白"
+  ],
+  "tags": ["llm", "tutorial", "deep-learning", "transformer", "hands-on"],
+  "category": "教程/最佳实践",
+  "score": 7,
+  "score_reason": "直接有帮助（7分）：高质量 LLM 实践教程，3.4 万星标验证了其教育价值，是 AI 开发者的优质学习资源。",
+  "status": "published",
+  "metadata": {
+    "stars": 33999,
+    "author": "Lordog"
+  },
+  "created_at": "2026-04-24T10:30:00Z",
+  "updated_at": "2026-04-24T10:30:00Z"
+}

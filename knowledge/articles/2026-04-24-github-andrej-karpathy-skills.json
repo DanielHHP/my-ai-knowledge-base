@@ -1,0 +1,24 @@
+{
+  "id": "github_andrej-karpathy-skills_2026-04-24",
+  "title": "forrestchang/andrej-karpathy-skills",
+  "source": "github",
+  "source_url": "https://github.com/forrestchang/andrej-karpathy-skills",
+  "published_at": "2026-04-24T00:00:00Z",
+  "summary": "基于 Andrej Karpathy 对 LLM 编程陷阱的深刻观察，提炼出的单文件 CLAUDE.md 配置方案，用于系统性地改善 Claude Code 等 AI 编程助手的行为表现。该项目将 Karpathy 关于大模型编码的经验总结转化为可直接应用的提示词规则，帮助开发者避免常见陷阱，如过度工程化、过早优化、忽略代码可读性等。短短一周内收获超过 3.2 万星标，反映出开发者对高质量 AI 编程辅助的强烈需求，以及 Karpathy 在 LLM 编程实践领域的权威影响力。",
+  "highlights": [
+    "将 Andrej Karpathy 的 LLM 编程最佳实践转化为可复用的 CLAUDE.md 配置文件",
+    "针对性地解决 AI 编程助手的常见陷阱，如过度抽象和过早优化",
+    "一周内增长 3.2 万星标，社区反响极其热烈"
+  ],
+  "tags": ["claude-code", "prompt-engineering", "llm-coding", "best-practices", "claude.md"],
+  "category": "教程/最佳实践",
+  "score": 7,
+  "score_reason": "直接有帮助（7分）：虽非开创性技术突破，但将 Karpathy 的实践经验转化为可直接使用的配置文件，对大量 Claude Code 用户有即时价值，且人气极高。",
+  "status": "published",
+  "metadata": {
+    "stars": 80481,
+    "author": "forrestchang"
+  },
+  "created_at": "2026-04-24T10:30:00Z",
+  "updated_at": "2026-04-24T10:30:00Z"
+}

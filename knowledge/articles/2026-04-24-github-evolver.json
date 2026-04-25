@@ -1,0 +1,24 @@
+{
+  "id": "github_evolver_2026-04-24",
+  "title": "EvoMap/evolver",
+  "source": "github",
+  "source_url": "https://github.com/EvoMap/evolver",
+  "published_at": "2026-04-24T00:00:00Z",
+  "summary": "基于基因表达式编程（Gene Expression Programming, GEP）的自进化 AI Agent 引擎，引入了 Genes（基因）、Capsules（胶囊）、Events（事件）三层抽象来构建可审计的进化式 Agent 系统。与传统基于固定提示词的 Agent 不同，Evolver 允许 Agent 通过类似生物进化的方式自主改进自身行为逻辑，所有进化过程均可追溯和审计。这是一个相对创新的研究方向，将进化计算与 AI Agent 相结合，当前总星标 6676，仍处于非常早期的探索阶段。",
+  "highlights": [
+    "将基因表达式编程（GEP）引入 AI Agent 领域，实现 Agent 行为的自主进化",
+    "Genes/Capsules/Events 三层抽象架构，提供完整的可审计进化链路",
+    "创新性强：融合进化计算与 LLM Agent，开辟了 Agent 自我改进的新路径"
+  ],
+  "tags": ["evolutionary-computing", "agent-framework", "gep", "self-evolving", "auditable-ai"],
+  "category": "工具库",
+  "score": 6,
+  "score_reason": "值得了解（6分）：将进化计算与 AI Agent 结合的研究方向具有创新性，但目前星标和社区规模较小，项目成熟度和实用性有待验证。",
+  "status": "published",
+  "metadata": {
+    "stars": 6676,
+    "author": "EvoMap"
+  },
+  "created_at": "2026-04-24T10:30:00Z",
+  "updated_at": "2026-04-24T10:30:00Z"
+}

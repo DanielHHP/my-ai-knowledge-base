@@ -1,0 +1,24 @@
+{
+  "id": "github_openai-agents-python_2026-04-24",
+  "title": "openai/openai-agents-python",
+  "source": "github",
+  "source_url": "https://github.com/openai/openai-agents-python",
+  "published_at": "2026-04-24T00:00:00Z",
+  "summary": "OpenAI 官方出品的轻量级多 Agent 工作流 Python SDK，核心概念包括 Agents（配置了指令/工具/护栏的 LLM）、Sandbox Agents（容器化长时间任务执行）、Handoffs（Agent 间任务委派）、Guardrails（输入输出安全校验）、Human-in-the-loop（人工介入机制）以及内置的 Tracing 追踪调试系统。框架支持 OpenAI Responses API 和 Chat Completions API，同时通过 LiteLLM 兼容 100+ 其他模型提供商，提供厂商无关的灵活性。当前版本 v0.14.5，总星标 2.5 万，拥有完善的文档和示例。",
+  "highlights": [
+    "OpenAI 官方出品，背靠最前沿的 LLM 能力，提供厂商中立的多模型支持",
+    "核心概念完备：Agents / Sandbox / Handoffs / Guardrails / Human-in-the-loop / Tracing",
+    "内置 Sandbox Agent 机制，支持容器化长时间任务执行，区别于其他 Agent 框架"
+  ],
+  "tags": ["openai", "agent-framework", "multi-agent", "python-sdk", "workflow-orchestration"],
+  "category": "工具库",
+  "score": 8,
+  "score_reason": "直接有帮助（8分）：OpenAI 官方的 Agent 框架，设计精良、文档完善、生态成熟，是构建多 Agent 系统的首选框架之一。",
+  "status": "published",
+  "metadata": {
+    "stars": 24854,
+    "author": "openai"
+  },
+  "created_at": "2026-04-24T10:30:00Z",
+  "updated_at": "2026-04-24T10:30:00Z"
+}

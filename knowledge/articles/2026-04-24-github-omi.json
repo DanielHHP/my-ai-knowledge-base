@@ -1,0 +1,24 @@
+{
+  "id": "github_omi_2026-04-24",
+  "title": "BasedHardware/omi",
+  "source": "github",
+  "source_url": "https://github.com/BasedHardware/omi",
+  "published_at": "2026-04-24T00:00:00Z",
+  "summary": "Omi 是一款开源 AI 可穿戴设备及配套软件系统，核心能力是实时捕捉屏幕内容和语音对话，进行转录、摘要和生成行动项，并提供\"记住一切\"的 AI 聊天能力。项目覆盖桌面应用（Swift/Rust）、移动应用（Flutter）、可穿戴硬件固件（nRF Zephyr / ESP32-S3）、后端（Python FastAPI）等完整技术栈，已服务超过 30 万专业人士。支持 macOS、iOS、Android 和浏览器，提供多款开源硬件设计（智能吊坠、智能眼镜）。总星标 1.2 万，累计 1.78 万次提交，开发非常活跃。",
+  "highlights": [
+    "完整的 AI 可穿戴软硬件生态：智能吊坠 + 智能眼镜 + 桌面/移动 App + 后端",
+    "实时视频/音频捕捉 + AI 转录/摘要/行动项生成，已服务 30 万+ 用户",
+    "全栈开源：硬件设计、固件、移动端、桌面端、后端代码全部公开"
+  ],
+  "tags": ["wearable", "ai-hardware", "voice-assistant", "open-source-hardware", "real-time-ai"],
+  "category": "行业动态",
+  "score": 5,
+  "score_reason": "值得了解（5分）：硬件+软件结合的 AI 可穿戴项目，概念吸引人但属于小众市场，实际使用场景有限，技术门槛较高。",
+  "status": "published",
+  "metadata": {
+    "stars": 12101,
+    "author": "BasedHardware"
+  },
+  "created_at": "2026-04-24T10:30:00Z",
+  "updated_at": "2026-04-24T10:30:00Z"
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "title": "forrestchang/andrej-karpathy-skills",
+    "url": "https://github.com/forrestchang/andrej-karpathy-skills",
+    "source": "github",
+    "popularity": 32115,
+    "total_stars": 80481,
+    "summary": "基于 Andrej Karpathy 对 LLM 编程陷阱的观察，提炼出的单文件 CLAUDE.md，用于改善 Claude Code 的行为表现，本周增长 32,115 stars"
+  },
+  {
+    "title": "NousResearch/hermes-agent",
+    "url": "https://github.com/NousResearch/hermes-agent",
+    "source": "github",
+    "popularity": 20316,
+    "total_stars": 113148,
+    "summary": "与用户一同成长的 AI Agent 框架，由 Nous Research 开发，支持持续学习和能力进化"
+  },
+  {
+    "title": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem",
+    "source": "github",
+    "popularity": 7562,
+    "total_stars": 66458,
+    "summary": "Claude Code 插件，自动捕获编程会话中的所有操作记录，通过 AI 压缩后注入未来会话上下文，实现持久记忆"
+  },
+  {
+    "title": "multica-ai/multica",
+    "url": "https://github.com/multica-ai/multica",
+    "source": "github",
+    "popularity": 5741,
+    "total_stars": 20191,
+    "summary": "开源托管 Agent 平台，将编码 Agent 转变为真正的协作者——分配任务、跟踪进度、积累技能"
+  },
+  {
+    "title": "jamiepine/voicebox",
+    "url": "https://github.com/jamiepine/voicebox",
+    "source": "github",
+    "popularity": 3969,
+    "total_stars": 22842,
+    "summary": "开源 AI 语音工作室，支持语音克隆、听写和音频创作，打造个性化语音体验"
+  },
+  {
+    "title": "openai/openai-agents-python",
+    "url": "https://github.com/openai/openai-agents-python",
+    "source": "github",
+    "popularity": 3842,
+    "total_stars": 24854,
+    "summary": "OpenAI 官方推出的轻量级多 Agent 工作流框架，支持复杂任务编排与协作"
+  },
+  {
+    "title": "EvoMap/evolver",
+    "url": "https://github.com/EvoMap/evolver",
+    "source": "github",
+    "popularity": 3759,
+    "total_stars": 6676,
+    "summary": "基于基因表达式编程（GEP）的自进化 AI Agent 引擎，通过 Genes、Capsules、Events 实现可审计的进化"
+  },
+  {
+    "title": "Lordog/dive-into-llms",
+    "url": "https://github.com/Lordog/dive-into-llms",
+    "source": "github",
+    "popularity": 3561,
+    "total_stars": 33999,
+    "summary": "《深入 LLM》编程实践教程系列，从零开始理解大语言模型的核心原理与实现"
+  },
+  {
+    "title": "BasedHardware/omi",
+    "url": "https://github.com/BasedHardware/omi",
+    "source": "github",
+    "popularity": 3373,
+    "total_stars": 12101,
+    "summary": "AI 可穿戴设备，能识别屏幕内容、监听对话并给出实时建议，将 AI 融入日常生活"
+  },
+  {
+    "title": "sansan0/TrendRadar",
+    "url": "https://github.com/sansan0/TrendRadar",
+    "source": "github",
+    "popularity": 3253,
+    "total_stars": 54917,
+    "summary": "AI 驱动的舆情与趋势监控平台，支持多平台数据聚合、RSS 订阅和智能告警，可推送至微信/飞书/钉钉/Telegram 等渠道"
+  }
+]

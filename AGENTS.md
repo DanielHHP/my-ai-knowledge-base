@@ -111,7 +111,7 @@
 
 **采集频率**:
 - GitHub Trending: 每日 UTC 00:00
-- Hacker News: 每 4 小时
+- Hacker News: 每日 UTC 00:00
 
 **输出格式**:
 ```json

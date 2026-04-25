@@ -1,0 +1,24 @@
+{
+  "id": "github_multica_2026-04-24",
+  "title": "multica-ai/multica",
+  "source": "github",
+  "source_url": "https://github.com/multica-ai/multica",
+  "published_at": "2026-04-24T00:00:00Z",
+  "summary": "开源托管 Agent 平台，致力于将编码 Agent 转变为真正的协作者。核心功能包括任务分配、进度跟踪和技能积累，使得多个 Agent 可以在统一平台上协同工作，形成持续积累能力的智能协作系统。总星标已超 2 万，本周增长 5700+，反映了市场对多 Agent 协作平台的需求正在增长。与传统的单体 Agent 框架不同，Multica 更侧重于 Agent 间的组织管理和长期能力沉淀。",
+  "highlights": [
+    "聚焦多 Agent 协作管理，覆盖任务分配、进度跟踪和技能积累全流程",
+    "强调 Agent 能力随时间的积累与沉淀，超越单一会话的限制",
+    "总星标超 2 万，社区认可度快速增长"
+  ],
+  "tags": ["multi-agent", "agent-orchestration", "collaboration", "task-management", "open-source"],
+  "category": "工具库",
+  "score": 6,
+  "score_reason": "值得了解（6分）：多 Agent 协作管理方向有潜力，但项目尚处早期阶段，与已有平台相比差异化优势尚不明确。",
+  "status": "published",
+  "metadata": {
+    "stars": 20191,
+    "author": "multica-ai"
+  },
+  "created_at": "2026-04-24T10:30:00Z",
+  "updated_at": "2026-04-24T10:30:00Z"
+}

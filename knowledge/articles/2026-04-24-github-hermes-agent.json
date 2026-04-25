@@ -1,0 +1,24 @@
+{
+  "id": "github_hermes-agent_2026-04-24",
+  "title": "NousResearch/hermes-agent",
+  "source": "github",
+  "source_url": "https://github.com/NousResearch/hermes-agent",
+  "published_at": "2026-04-24T00:00:00Z",
+  "summary": "由知名 AI 研究机构 Nous Research 开发的 Agent 框架，核心理念是与用户共同成长的 AI 智能体。与传统的静态 Agent 框架不同，Hermes Agent 支持持续学习机制，能在与用户的交互过程中不断进化能力边界，积累经验和知识。平台累计已获得超过 11 万星标，本周增长 2 万以上，反映出社区对新一代自适应 Agent 框架的高度期待。Nous Research 此前在开源大模型领域有深厚积累，此次转向 Agent 框架赛道，值得关注。",
+  "highlights": [
+    "由顶尖 AI 研究机构 Nous Research 出品，品牌信誉和技术实力兼备",
+    "提出 '与用户共同成长' 的持续学习 Agent 理念，区别于静态 Agent 框架",
+    "总星标超 11 万，社区关注度和信任度极高"
+  ],
+  "tags": ["agent-framework", "continuous-learning", "nous-research", "adaptive-ai", "open-source"],
+  "category": "工具库",
+  "score": 7,
+  "score_reason": "直接有帮助（7分）：来自顶尖 AI 研究机构的 Agent 框架，持续学习理念有创新性，但项目仍处于发展早期，实际效果有待验证。",
+  "status": "published",
+  "metadata": {
+    "stars": 113148,
+    "author": "NousResearch"
+  },
+  "created_at": "2026-04-24T10:30:00Z",
+  "updated_at": "2026-04-24T10:30:00Z"
+}

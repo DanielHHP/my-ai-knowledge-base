@@ -1,0 +1,24 @@
+{
+  "id": "github_voicebox_2026-04-24",
+  "title": "jamiepine/voicebox",
+  "source": "github",
+  "source_url": "https://github.com/jamiepine/voicebox",
+  "published_at": "2026-04-24T00:00:00Z",
+  "summary": "开源本地优先的 AI 语音合成工作室，是 ElevenLabs 的免费开源替代方案。支持从数秒音频中进行零样本语音克隆，集成了 7 种 TTS 引擎（包括 Qwen3-TTS、Chatterbox、Kokoro 等），覆盖 23 种语言，内置语音效果处理（变调、混响、延迟等）、多轨故事编辑器、REST API 和异步生成队列。完全本地运行保障隐私安全，底层使用 Tauri (Rust) 而非 Electron 以提升性能，同时支持 macOS (MLX)、Windows (CUDA)、Linux (ROCm) 等多种硬件加速后端。总星标 2.3 万。",
+  "highlights": [
+    "ElevenLabs 的本地开源替代方案，7 种 TTS 引擎 + 23 种语言覆盖",
+    "本地优先架构保障数据隐私，Tauri (Rust) 构建实现原生性能",
+    "功能完整：语音克隆、效果处理、多轨编辑、REST API 一应俱全"
+  ],
+  "tags": ["tts", "voice-cloning", "open-source", "local-first", "elevenlabs-alternative"],
+  "category": "工具库",
+  "score": 7,
+  "score_reason": "直接有帮助（7分）：功能完整的本地 TTS 解决方案，隐私友好，可作为 ElevenLabs 的廉价/免费替代，但语音质量仍不及商业方案。",
+  "status": "published",
+  "metadata": {
+    "stars": 22842,
+    "author": "jamiepine"
+  },
+  "created_at": "2026-04-24T10:30:00Z",
+  "updated_at": "2026-04-24T10:30:00Z"
+}
