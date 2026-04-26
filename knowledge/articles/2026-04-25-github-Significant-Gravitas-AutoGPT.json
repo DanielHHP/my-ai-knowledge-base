@@ -1,0 +1,23 @@
+{
+  "id": "github_Significant-Gravitas-AutoGPT_2026-04-25",
+  "title": "Significant-Gravitas/AutoGPT",
+  "source": "github",
+  "source_url": "https://github.com/Significant-Gravitas/AutoGPT",
+  "published_at": "2026-04-25T00:00:00Z",
+  "summary": "开创性的自主 AI Agent 平台，让用户能够构建和运行具备自主决策能力的 AI Agent。支持 GPT、Claude、Llama 等多种大模型后端，具备自主任务规划、分解与执行能力，是 Agent 领域的标志性开源项目。AutoGPT 开创了让 LLM 自主设定并完成任务目标的 Agent 范式，核心理念已深刻影响了整个 AI Agent 领域的发展方向。虽然工程成熟度仍在持续提升中，但其对于推动自主 Agent 从概念走向实践具有里程碑意义。",
+  "highlights": [
+    "支持 GPT、Claude、Llama 等多种大模型后端",
+    "具备自主任务规划与分解执行能力，开创 Agent 范式"
+  ],
+  "tags": ["agent", "autonomous-agents", "llm", "ai-agents"],
+  "category": "工具库",
+  "score": 7,
+  "score_reason": "Agent 领域开创性项目，多模型支持覆盖广，但工程成熟度仍可提升",
+  "status": "published",
+  "metadata": {
+    "stars": 183737,
+    "author": "Significant-Gravitas"
+  },
+  "created_at": "2026-04-25T10:00:00Z",
+  "updated_at": "2026-04-25T10:00:00Z"
+}

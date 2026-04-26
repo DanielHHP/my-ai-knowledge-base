@@ -1,0 +1,23 @@
+{
+  "id": "github_huggingface-transformers_2026-04-25",
+  "title": "huggingface/transformers",
+  "source": "github",
+  "source_url": "https://github.com/huggingface/transformers",
+  "published_at": "2026-04-25T00:00:00Z",
+  "summary": "Hugging Face 推出的业界最流行的 Transformer 模型库，提供统一的 API 用于加载、推理和微调文本、视觉、音频、多模态等全场景预训练模型。作为 NLP/AI 研究和工程的事实标准工具，拥有 15.9 万+ Star 和极其活跃的社区生态。无论是学术研究者还是工业界工程师，都可以通过 transformers 库快速获取和使用最前沿的 AI 模型能力，是连接 AI 研究与工程实践的核心桥梁。",
+  "highlights": [
+    "支持文本、视觉、音频、多模态全场景预训练模型",
+    "业界加载和微调 Transformer 模型的标准工具"
+  ],
+  "tags": ["transformers", "huggingface", "nlp", "deep-learning"],
+  "category": "工具库",
+  "score": 5,
+  "score_reason": "经典项目，社区活跃但热度来自长期积累，非当日新增热点",
+  "status": "published",
+  "metadata": {
+    "stars": 159889,
+    "author": "huggingface"
+  },
+  "created_at": "2026-04-25T10:00:00Z",
+  "updated_at": "2026-04-25T10:00:00Z"
+}

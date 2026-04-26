@@ -1,0 +1,24 @@
+{
+  "id": "github_openclaw-openclaw_2026-04-25",
+  "title": "openclaw/openclaw",
+  "source": "github",
+  "source_url": "https://github.com/openclaw/openclaw",
+  "published_at": "2026-04-25T00:00:00Z",
+  "summary": "跨平台个人 AI 助手，采用 MIT 协议全面开源。支持任意操作系统和平台，凭借 lobster 风格的自然交互体验和「自有数据」隐私理念，以用户数据主权为核心设计理念，强调 AI 助手的本地化与个性化能力。上线后迅速获得超过 36 万 Star，成为 2026 年增长最快的 AI 开源项目之一。该项目正在重塑个人 AI 助手赛道的格局，为追求隐私保护和个性化体验的用户提供了全新的选择。",
+  "highlights": [
+    "上线后迅速获得超 36 万 Star，为 2026 年增长最快的 AI 开源项目",
+    "跨平台架构，支持任意操作系统",
+    "MIT 协议开源，强调'自有数据'隐私理念"
+  ],
+  "tags": ["ai-assistant", "cross-platform", "open-source", "个人助手"],
+  "category": "工具库",
+  "score": 9,
+  "score_reason": "36万+ Star 的现象级增长速度与跨平台定位，重塑个人 AI 助手赛道格局",
+  "status": "published",
+  "metadata": {
+    "stars": 363484,
+    "author": "openclaw"
+  },
+  "created_at": "2026-04-25T10:00:00Z",
+  "updated_at": "2026-04-25T10:00:00Z"
+}

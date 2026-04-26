@@ -1,0 +1,23 @@
+{
+  "id": "github_anomalyco-opencode_2026-04-25",
+  "title": "anomalyco/opencode",
+  "source": "github",
+  "source_url": "https://github.com/anomalyco/opencode",
+  "published_at": "2026-04-25T00:00:00Z",
+  "summary": "开源终端原生编码 Agent，帮助开发者在命令行环境中通过自然语言与代码库进行交互。具备代码理解、自动补全、智能重构等核心功能，提供与编辑器无关的终端原生 AI 编程体验。14.9 万+ Star 彰显了其在开源编码 Agent 赛道中的头部地位，终端原生交互的差异化定位为追求极致效率和最小化上下文切换的开发者提供了独特价值，是开源社区中备受瞩目的 AI 编程助手新星。",
+  "highlights": [
+    "终端原生编码 Agent，通过自然语言与代码库交互",
+    "14.9 万+ Star，开源编码 Agent 赛道头部项目"
+  ],
+  "tags": ["coding-agent", "open-source", "terminal", "ai"],
+  "category": "工具库",
+  "score": 7,
+  "score_reason": "开源编码 Agent 代表，终端原生交互体验差异化为核心竞争力",
+  "status": "published",
+  "metadata": {
+    "stars": 149042,
+    "author": "anomalyco"
+  },
+  "created_at": "2026-04-25T10:00:00Z",
+  "updated_at": "2026-04-25T10:00:00Z"
+}

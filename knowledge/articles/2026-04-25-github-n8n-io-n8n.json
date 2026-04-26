@@ -1,0 +1,24 @@
+{
+  "id": "github_n8n-io-n8n_2026-04-25",
+  "title": "n8n-io/n8n",
+  "source": "github",
+  "source_url": "https://github.com/n8n-io/n8n",
+  "published_at": "2026-04-25T00:00:00Z",
+  "summary": "内置 AI 能力的公平代码工作流自动化平台，支持可视化编排与自定义代码，已集成 400+ 应用和服务。原生支持 MCP (Model Context Protocol) 协议，可打通 LLM 与外部工具的数据链路，支持自托管或云部署两种方式。作为构建 AI Agent 工作流的首选工具之一，n8n 让企业能够以低代码方式将 AI 能力无缝嵌入到现有业务流程中，兼顾数据安全、灵活性和可扩展性，是 MCP 生态落地的重要推动者。",
+  "highlights": [
+    "原生支持 MCP (Model Context Protocol) 协议，打通 LLM 与外部工具",
+    "集成 400+ 应用，生态覆盖面广",
+    "可自托管部署，兼顾数据安全与灵活性"
+  ],
+  "tags": ["workflow", "automation", "mcp", "low-code", "ai"],
+  "category": "工具库",
+  "score": 7,
+  "score_reason": "AI+工作流自动化真实解决企业痛点，MCP 支持具有前瞻性",
+  "status": "published",
+  "metadata": {
+    "stars": 185472,
+    "author": "n8n-io"
+  },
+  "created_at": "2026-04-25T10:00:00Z",
+  "updated_at": "2026-04-25T10:00:00Z"
+}

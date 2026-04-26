@@ -1,0 +1,23 @@
+{
+  "id": "github_langgenius-dify_2026-04-25",
+  "title": "langgenius/dify",
+  "source": "github",
+  "source_url": "https://github.com/langgenius/dify",
+  "published_at": "2026-04-25T00:00:00Z",
+  "summary": "生产级 Agent 工作流开发平台，提供可视化编排、RAG 管道、MCP 协议集成和统一模型管理等企业级功能。支持 OpenAI、Gemini、GPT-4 等主流大模型，是搭建企业级 AI 应用的首选开源方案。Dify 的工程成熟度在开源 Agent 平台中名列前茅，RAG 与 MCP 的全面集成使其能够应对真实世界的复杂业务场景，实现了从原型开发到生产部署的全流程覆盖，是工程化 AI 落地的标杆项目。",
+  "highlights": [
+    "内置 RAG 管道、MCP 协议集成和模型管理功能",
+    "生产级可用，面向企业规模化部署场景"
+  ],
+  "tags": ["agent", "rag", "mcp", "llm-platform", "production"],
+  "category": "工具库",
+  "score": 8,
+  "score_reason": "工程成熟度最高的开源 Agent 平台之一，RAG+MCP 全面集成，企业级可用",
+  "status": "published",
+  "metadata": {
+    "stars": 139072,
+    "author": "langgenius"
+  },
+  "created_at": "2026-04-25T10:00:00Z",
+  "updated_at": "2026-04-25T10:00:00Z"
+}

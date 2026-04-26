@@ -1,0 +1,23 @@
+{
+  "id": "github_affaan-m-everything-claude-code_2026-04-25",
+  "title": "affaan-m/everything-claude-code",
+  "source": "github",
+  "source_url": "https://github.com/affaan-m/everything-claude-code",
+  "published_at": "2026-04-25T00:00:00Z",
+  "summary": "面向编码 Agent 的综合性能优化系统，覆盖 Claude Code、Codex、OpenCode、Cursor 等主流 AI 编程工具。首创性地提出技能（Skills）、本能（Instincts）、记忆（Memory）、安全（Safety）四大模块化优化方案，帮助开发者最大化编码 Agent 的生产力和智能化水平。该项目直击编码 Agent 实用化的核心痛点，模块化设计思路使其具备直接落地价值，是目前最全面的编码 Agent 性能调优参考资源之一。",
+  "highlights": [
+    "覆盖 Claude Code、Codex、OpenCode、Cursor 等主流编码 Agent",
+    "提供技能、本能、记忆、安全四大模块化优化方案"
+  ],
+  "tags": ["ai-agents", "coding-agent", "optimization", "llm"],
+  "category": "工具库",
+  "score": 8,
+  "score_reason": "直击编码 Agent 实用化痛点，模块化设计可直接落地",
+  "status": "published",
+  "metadata": {
+    "stars": 166312,
+    "author": "affaan-m"
+  },
+  "created_at": "2026-04-25T10:00:00Z",
+  "updated_at": "2026-04-25T10:00:00Z"
+}

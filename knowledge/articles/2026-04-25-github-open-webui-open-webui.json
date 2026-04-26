@@ -1,0 +1,23 @@
+{
+  "id": "github_open-webui-open-webui_2026-04-25",
+  "title": "open-webui/open-webui",
+  "source": "github",
+  "source_url": "https://github.com/open-webui/open-webui",
+  "published_at": "2026-04-25T00:00:00Z",
+  "summary": "功能全面的用户友好型 AI 聊天界面，同时支持 Ollama 本地模型和 OpenAI API 云端模型，可在两者间灵活切换。内置 RAG 知识库（支持文档上传与语义检索）、MCP 工具集成和多用户协作管理功能，是自托管 LLM 服务的首选 Web 前端。项目部署极其简单（支持 Docker 一键启动），功能丰富程度堪比商业产品，将本地隐私部署与云端能力有机融合，满足了从个人开发者到团队协作的多样化 LLM 使用需求。",
+  "highlights": [
+    "同时支持 Ollama 本地模型和 OpenAI API 云端模型，灵活切换",
+    "内置 RAG 知识库、MCP 工具集成和多用户管理"
+  ],
+  "tags": ["llm", "ollama", "rag", "mcp", "chat-ui"],
+  "category": "工具库",
+  "score": 7,
+  "score_reason": "功能全面的 AI 聊天前端，结合本地与云端，实用价值高",
+  "status": "published",
+  "metadata": {
+    "stars": 133939,
+    "author": "open-webui"
+  },
+  "created_at": "2026-04-25T10:00:00Z",
+  "updated_at": "2026-04-25T10:00:00Z"
+}

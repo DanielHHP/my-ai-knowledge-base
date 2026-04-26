@@ -1,0 +1,23 @@
+{
+  "id": "github_tensorflow-tensorflow_2026-04-25",
+  "title": "tensorflow/tensorflow",
+  "source": "github",
+  "source_url": "https://github.com/tensorflow/tensorflow",
+  "published_at": "2026-04-25T00:00:00Z",
+  "summary": "Google 开源的端到端机器学习框架，完整覆盖从模型训练到生产部署的全链路需求。支持深度学习、神经网络构建与推理优化，拥有 19.4 万+ Star 和业界最庞大的 ML 生态体系，包括 TFX 生产管道、TensorBoard 可视化、TFLite 移动端部署等子项目。作为全球使用最广泛的深度学习框架之一，持续为研究人员和工程师提供稳定、高效的 AI 基础设施，在工业级部署场景中具有不可替代的地位。",
+  "highlights": [
+    "端到端机器学习框架，覆盖训练、部署、推理全链路",
+    "19.4 万+ Star，业界最成熟的深度学习框架之一"
+  ],
+  "tags": ["deep-learning", "tensorflow", "machine-learning", "framework"],
+  "category": "工具库",
+  "score": 5,
+  "score_reason": "经典项目，热度为长期积累，非当日新增技术价值",
+  "status": "published",
+  "metadata": {
+    "stars": 194861,
+    "author": "tensorflow"
+  },
+  "created_at": "2026-04-25T10:00:00Z",
+  "updated_at": "2026-04-25T10:00:00Z"
+}

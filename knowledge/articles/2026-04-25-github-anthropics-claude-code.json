@@ -1,0 +1,23 @@
+{
+  "id": "github_anthropics-claude-code_2026-04-25",
+  "title": "anthropics/claude-code",
+  "source": "github",
+  "source_url": "https://github.com/anthropics/claude-code",
+  "published_at": "2026-04-25T00:00:00Z",
+  "summary": "Anthropic 推出的旗舰级终端编码 Agent，具备深度理解代码库结构的能力，可通过自然语言执行日常开发任务、解释复杂代码和处理 Git 工作流。代表了 AI 辅助编程的前沿方向，其工程实现质量和代码理解能力在同类产品中处于领先水平，是编码 Agent 类别的标杆产品。Claude Code 正显著改变开发者的日常编程工作流，在代码生成、重构、调试和文档等场景下大幅提升开发效率。",
+  "highlights": [
+    "深度理解代码库结构，自然语言驱动开发操作",
+    "可执行日常开发任务、解释复杂代码和处理 Git 工作流"
+  ],
+  "tags": ["coding-agent", "anthropic", "claude", "terminal"],
+  "category": "工具库",
+  "score": 8,
+  "score_reason": "编码 Agent 旗舰产品，工程体验和代码理解能力出色，代表编码 Agent 最高水平",
+  "status": "published",
+  "metadata": {
+    "stars": 117680,
+    "author": "anthropics"
+  },
+  "created_at": "2026-04-25T10:00:00Z",
+  "updated_at": "2026-04-25T10:00:00Z"
+}

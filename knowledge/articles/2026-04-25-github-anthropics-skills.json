@@ -1,0 +1,23 @@
+{
+  "id": "github_anthropics-skills_2026-04-25",
+  "title": "anthropics/skills",
+  "source": "github",
+  "source_url": "https://github.com/anthropics/skills",
+  "published_at": "2026-04-25T00:00:00Z",
+  "summary": "Anthropic 官方发布的 Agent 技能公共仓库，定义和分享 Claude Code 可执行的标准化技能模块。开发者可自由贡献和复用技能，推动 Agent 生态的技能标准化和可组合性。12.3 万+ Star 反映了社区对 Agent 技能标准化方向的高度认可，该项目有望形成 Agent 生态的技能开发和复用行业规范。作为官方主导的标准化尝试，anthropics/skills 在 Agent 生态建设中具有重要的基础设施意义，可能成为未来 Agent 技能互操作的基石。",
+  "highlights": [
+    "Anthropic 官方出品，定义 Claude Code 可执行的标准化技能",
+    "12.3 万+ Star，有望形成 Agent 技能生态规范"
+  ],
+  "tags": ["agent-skills", "anthropic", "claude", "standardization"],
+  "category": "工具库",
+  "score": 8,
+  "score_reason": "官方主导的 Agent 技能标准化，可能形成行业通用规范，生态影响力大",
+  "status": "published",
+  "metadata": {
+    "stars": 123470,
+    "author": "anthropics"
+  },
+  "created_at": "2026-04-25T10:00:00Z",
+  "updated_at": "2026-04-25T10:00:00Z"
+}

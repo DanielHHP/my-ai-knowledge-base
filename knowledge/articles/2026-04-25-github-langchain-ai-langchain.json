@@ -1,0 +1,23 @@
+{
+  "id": "github_langchain-ai-langchain_2026-04-25",
+  "title": "langchain-ai/langchain",
+  "source": "github",
+  "source_url": "https://github.com/langchain-ai/langchain",
+  "published_at": "2026-04-25T00:00:00Z",
+  "summary": "业界领先的 LLM 应用工程框架，提供 Agent 构建、RAG 管道、工具调用和链式编排等一站式解决方案。通过 LangGraph 状态机工作流支持复杂业务逻辑编排，生态体系极为丰富，衍生出 LangSmith（可观测性）、LangServe（部署）等子项目。作为 LLM 应用开发的事实标准框架，LangChain 虽然面临日益激烈的竞争，但其深厚的生态积累和广泛的社区基础仍是不可替代的核心优势，适合各类 LLM 驱动的应用开发场景。",
+  "highlights": [
+    "Agent 构建、RAG 管道、工具调用、链式编排一站式方案",
+    "业界最成熟的 LLM 应用框架，生态衍生丰富"
+  ],
+  "tags": ["langchain", "llm", "agent", "rag", "framework"],
+  "category": "工具库",
+  "score": 7,
+  "score_reason": "LLM 应用框架标杆，但竞争加剧，创新速度相对放缓",
+  "status": "published",
+  "metadata": {
+    "stars": 134801,
+    "author": "langchain-ai"
+  },
+  "created_at": "2026-04-25T10:00:00Z",
+  "updated_at": "2026-04-25T10:00:00Z"
+}

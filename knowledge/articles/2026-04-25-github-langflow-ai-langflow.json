@@ -1,0 +1,23 @@
+{
+  "id": "github_langflow-ai-langflow_2026-04-25",
+  "title": "langflow-ai/langflow",
+  "source": "github",
+  "source_url": "https://github.com/langflow-ai/langflow",
+  "published_at": "2026-04-25T00:00:00Z",
+  "summary": "低代码 AI Agent 和工作流可视化构建工具，通过拖拽式界面编排多 Agent 协作流程。支持 ChatGPT 等主流大模型集成、多智能体系统和生成式 AI 应用，大幅降低非技术用户构建复杂 AI 工作流的门槛。Langflow 的差异化优势在于其直观的可视化编排能力，使 AI 应用的构建过程变得清晰可见，特别适合快速原型设计、团队协作和业务人员自助构建 AI 流程的场景。",
+  "highlights": [
+    "拖拽式可视化编排多 Agent 协作流程",
+    "降低非技术用户构建复杂 AI 工作流的门槛"
+  ],
+  "tags": ["agent", "low-code", "workflow", "multi-agent"],
+  "category": "工具库",
+  "score": 7,
+  "score_reason": "可视化 Agent 编排差异化明显，低门槛优势突出",
+  "status": "published",
+  "metadata": {
+    "stars": 147335,
+    "author": "langflow-ai"
+  },
+  "created_at": "2026-04-25T10:00:00Z",
+  "updated_at": "2026-04-25T10:00:00Z"
+}
