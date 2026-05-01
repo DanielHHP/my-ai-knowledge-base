@@ -23,7 +23,7 @@ from typing import Any
 import httpx
 import yaml
 
-from model_client import LLMProvider, create_provider, chat_with_retry
+from model_client import LLMProvider, create_provider, chat_with_retry, tracker
 
 logger = logging.getLogger(__name__)
 
@@ -462,6 +462,8 @@ def run(sources: list[str], limit: int, dry_run: bool) -> int:
     total = len(github_items) + len(rss_items)
     saved = max(1, (1 if github_items else 0) + (1 if rss_items else 0))
     logger.info("")
+    tracker.report()
+
     logger.info("=" * 56)
     logger.info("  PIPELINE COMPLETE  collected=%d  articles=%d  saved=%d files",
                  total, len(articles), saved if dry_run else saved + len(articles))

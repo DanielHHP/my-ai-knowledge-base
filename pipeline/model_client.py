@@ -34,6 +34,13 @@ DEFAULT_TIMEOUT = 60.0
 MAX_RETRIES = 3
 RETRY_BASE_DELAY = 2.0
 
+# Domestic (CNY) price table: yuan per million tokens
+CNY_PRICES: dict[str, dict[str, float]] = {
+    "deepseek": {"input": 1, "output": 2},
+    "qwen": {"input": 4, "output": 12},
+    "openai": {"input": 150, "output": 600},
+}
+
 PROVIDER_CONFIG: dict[str, dict[str, Any]] = {
     "deepseek": {
         "base_url": "https://api.deepseek.com/v1",
@@ -265,12 +272,14 @@ class OpenAICompatibleProvider(LLMProvider):
         content = choice["message"]["content"] or ""
         usage = self._calculate_usage(data, messages, content)
 
-        return LLMResponse(
+        response = LLMResponse(
             content=content,
             usage=usage,
             model=data.get("model", ""),
             provider=self._provider_name,
         )
+        tracker.record(usage, self._provider_name)
+        return response
 
     def close(self) -> None:
         """Close the underlying httpx client."""
@@ -421,9 +430,127 @@ def quick_chat(
     messages.append({"role": "user", "content": prompt})
 
     try:
-        return chat_with_retry(provider, messages=messages, model=model, **kwargs)
+        resp = chat_with_retry(provider, messages=messages, model=model, **kwargs)
     finally:
         provider.close()
+
+    prices = CNY_PRICES.get(provider.provider_name, {"input": 0, "output": 0})
+    cost = (
+        resp.usage.prompt_tokens / 1_000_000 * prices["input"]
+        + resp.usage.completion_tokens / 1_000_000 * prices["output"]
+    )
+    print(
+        f"[Cost] {provider.provider_name}: {resp.usage.total_tokens} tokens, "
+        f"¥{cost:.4f}",
+    )
+    return resp
+
+
+# ---------------------------------------------------------------------------
+# CostTracker
+# ---------------------------------------------------------------------------
+
+
+class CostTracker:
+    """Tracks LLM API call token usage and estimates costs in CNY.
+
+    Records token consumption per provider and provides cost estimation
+    based on the domestically-oriented :data:`CNY_PRICES` table.
+
+    Attributes:
+        records: Mapping of provider name to list of :class:`Usage` records.
+    """
+
+    def __init__(self) -> None:
+        self.records: dict[str, list[Usage]] = {}
+
+    def record(self, usage: Usage, provider: str) -> None:
+        """Record a single API call's token usage.
+
+        Args:
+            usage: Token usage statistics from the API response.
+            provider: Provider name (e.g. ``"deepseek"``, ``"qwen"``).
+        """
+        self.records.setdefault(provider, []).append(usage)
+
+    def _total_usage(self, provider: str | None = None) -> dict[str, Usage]:
+        """Aggregate usage per provider.
+
+        Args:
+            provider: If specified, only return for this provider.
+
+        Returns:
+            Dict of provider -> summed :class:`Usage`.
+        """
+        if provider:
+            usage_list = self.records.get(provider, [])
+            total = sum(usage_list, Usage())
+            return {provider: total}
+
+        result = {}
+        for prov, usages in self.records.items():
+            result[prov] = sum(usages, Usage())
+        return result
+
+    def estimated_cost(self, provider: str | None = None) -> dict[str, float]:
+        """Calculate estimated cost in CNY for recorded calls.
+
+        Args:
+            provider: If specified, only calculate for this provider.
+                If ``None``, calculate for all providers.
+
+        Returns:
+            Dict mapping provider name to estimated cost in CNY.
+        """
+        totals = self._total_usage(provider)
+        costs: dict[str, float] = {}
+        for prov, usage in totals.items():
+            prices = CNY_PRICES.get(prov, {"input": 0, "output": 0})
+            cost = (
+                usage.prompt_tokens / 1_000_000 * prices["input"]
+                + usage.completion_tokens / 1_000_000 * prices["output"]
+            )
+            costs[prov] = cost
+        return costs
+
+    def report(self, provider: str | None = None) -> None:
+        """Print a formatted cost report via the module logger.
+
+        Args:
+            provider: If specified, only show this provider's report.
+                If ``None``, show all providers.
+        """
+        totals = self._total_usage(provider)
+        costs = self.estimated_cost(provider)
+
+        if not totals:
+            logger.info("[CostTracker] No usage records.")
+            return
+
+        grand_total = 0.0
+        for prov in sorted(totals):
+            usage = totals[prov]
+            cost = costs.get(prov, 0.0)
+            grand_total += cost
+            logger.info(
+                "[CostTracker] %s: %d prompt + %d completion = %d tokens, cost ¥%.4f",
+                prov,
+                usage.prompt_tokens,
+                usage.completion_tokens,
+                usage.total_tokens,
+                cost,
+            )
+
+        if len(totals) > 1:
+            logger.info(
+                "[CostTracker] Total: ¥%.4f across %d providers",
+                grand_total,
+                len(totals),
+            )
+
+
+# Global tracker instance
+tracker = CostTracker()
 
 
 # ---------------------------------------------------------------------------
