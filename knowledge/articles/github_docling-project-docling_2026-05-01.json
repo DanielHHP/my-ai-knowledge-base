@@ -1,0 +1,41 @@
+{
+  "id": "github_docling-project-docling_2026-05-01",
+  "title": "docling-project/docling",
+  "source": "github",
+  "source_url": "https://github.com/docling-project/docling",
+  "published_at": "2026-05-01T00:00:00Z",
+  "summary": "Docling是一个专注于文档预处理的开源工具库，旨在将各种文档格式（如PDF、Word等）转换为适合生成式AI模型处理的标准化格式。它简化了文档的解析、清洗和结构化流程，提高了AI应用的文档处理效率。",
+  "content": "",
+  "tags": [
+    "document-processing",
+    "open-source",
+    "preprocessing",
+    "generative-ai"
+  ],
+  "category": "工具库",
+  "status": "published",
+  "metadata": {
+    "stars": 58877,
+    "language": "Python",
+    "topics": [
+      "ai",
+      "convert",
+      "document-parser",
+      "document-parsing",
+      "documents",
+      "docx",
+      "html",
+      "markdown",
+      "pdf",
+      "pdf-converter",
+      "pdf-to-json",
+      "pdf-to-text",
+      "pptx",
+      "tables",
+      "xlsx"
+    ]
+  },
+  "created_at": "2026-05-01T03:56:19Z",
+  "updated_at": "2026-05-01T03:56:19Z",
+  "quality_score": 0.85
+}

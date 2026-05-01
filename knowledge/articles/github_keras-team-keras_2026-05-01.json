@@ -1,0 +1,35 @@
+{
+  "id": "github_keras-team-keras_2026-05-01",
+  "title": "keras-team/keras",
+  "source": "github",
+  "source_url": "https://github.com/keras-team/keras",
+  "published_at": "2026-05-01T00:00:00Z",
+  "summary": "Keras是一个高级神经网络API，用Python编写，能够运行在TensorFlow、JAX和PyTorch之上，专注于用户友好、模块化和可扩展性，旨在简化深度学习模型的构建、训练和部署过程。",
+  "content": "",
+  "tags": [
+    "deep-learning",
+    "neural-networks",
+    "api",
+    "open-source",
+    "tensorflow"
+  ],
+  "category": "工具库",
+  "status": "published",
+  "metadata": {
+    "stars": 64051,
+    "language": "Python",
+    "topics": [
+      "data-science",
+      "deep-learning",
+      "jax",
+      "machine-learning",
+      "neural-networks",
+      "python",
+      "pytorch",
+      "tensorflow"
+    ]
+  },
+  "created_at": "2026-05-01T03:56:10Z",
+  "updated_at": "2026-05-01T03:56:10Z",
+  "quality_score": 0.95
+}

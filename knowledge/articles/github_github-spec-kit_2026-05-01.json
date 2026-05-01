@@ -1,0 +1,33 @@
+{
+  "id": "github_github-spec-kit_2026-05-01",
+  "title": "github/spec-kit",
+  "source": "github",
+  "source_url": "https://github.com/github/spec-kit",
+  "published_at": "2026-05-01T00:00:00Z",
+  "summary": "一个面向Spec-Driven Development（规范驱动开发）的工具包，旨在帮助开发者更高效地启动和遵循规格优先的开发流程。可能涉及API定义、契约测试或文档生成等能力，适合注重接口治理和开发规范的团队。",
+  "content": "",
+  "tags": [
+    "spec-driven-development",
+    "toolkit",
+    "api",
+    "developer-tools"
+  ],
+  "category": "工具库",
+  "status": "published",
+  "metadata": {
+    "stars": 92002,
+    "language": "Python",
+    "topics": [
+      "ai",
+      "copilot",
+      "development",
+      "engineering",
+      "prd",
+      "spec",
+      "spec-driven"
+    ]
+  },
+  "created_at": "2026-05-01T03:55:23Z",
+  "updated_at": "2026-05-01T03:55:23Z",
+  "quality_score": 0.65
+}

@@ -1,0 +1,33 @@
+{
+  "id": "github_tesseract-ocr-tesseract_2026-05-01",
+  "title": "tesseract-ocr/tesseract",
+  "source": "github",
+  "source_url": "https://github.com/tesseract-ocr/tesseract",
+  "published_at": "2026-05-01T00:00:00Z",
+  "summary": "Tesseract是一个开源OCR（光学字符识别）引擎，支持多种语言和文本格式，广泛应用于文档数字化和图像文字提取。该项目历史悠久，社区活跃，提供了高度准确的文字识别能力。",
+  "content": "",
+  "tags": [
+    "ocr",
+    "open-source",
+    "text-recognition",
+    "computer-vision"
+  ],
+  "category": "工具库",
+  "status": "published",
+  "metadata": {
+    "stars": 73829,
+    "language": "C++",
+    "topics": [
+      "hacktoberfest",
+      "lstm",
+      "machine-learning",
+      "ocr",
+      "ocr-engine",
+      "tesseract",
+      "tesseract-ocr"
+    ]
+  },
+  "created_at": "2026-05-01T03:55:48Z",
+  "updated_at": "2026-05-01T03:55:48Z",
+  "quality_score": 0.95
+}

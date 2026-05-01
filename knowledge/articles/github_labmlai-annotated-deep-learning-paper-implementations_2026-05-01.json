@@ -1,0 +1,38 @@
+{
+  "id": "github_labmlai-annotated-deep-learning-paper-implementations_2026-05-01",
+  "title": "labmlai/annotated_deep_learning_paper_implementations",
+  "source": "github",
+  "source_url": "https://github.com/labmlai/annotated_deep_learning_paper_implementations",
+  "published_at": "2026-05-01T00:00:00Z",
+  "summary": "该仓库提供了60多种深度学习论文的代码实现与教程，涵盖Transformer、优化器、GAN、强化学习等多个领域，并附带详细的注释笔记，是学习和复现经典论文的宝贵资源。",
+  "content": "",
+  "tags": [
+    "deep-learning",
+    "tutorial",
+    "open-source"
+  ],
+  "category": "工具库",
+  "status": "published",
+  "metadata": {
+    "stars": 66476,
+    "language": "Python",
+    "topics": [
+      "attention",
+      "deep-learning",
+      "deep-learning-tutorial",
+      "gan",
+      "literate-programming",
+      "lora",
+      "machine-learning",
+      "neural-networks",
+      "optimizers",
+      "pytorch",
+      "reinforcement-learning",
+      "transformer",
+      "transformers"
+    ]
+  },
+  "created_at": "2026-05-01T03:56:04Z",
+  "updated_at": "2026-05-01T03:56:04Z",
+  "quality_score": 0.95
+}

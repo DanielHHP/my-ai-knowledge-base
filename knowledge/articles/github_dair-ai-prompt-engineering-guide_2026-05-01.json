@@ -1,0 +1,38 @@
+{
+  "id": "github_dair-ai-prompt-engineering-guide_2026-05-01",
+  "title": "dair-ai/Prompt-Engineering-Guide",
+  "source": "github",
+  "source_url": "https://github.com/dair-ai/Prompt-Engineering-Guide",
+  "published_at": "2026-05-01T00:00:00Z",
+  "summary": "这是一个全面的提示工程指南，包含指南、论文、课程笔记、笔记本和资源，覆盖提示工程、上下文工程、RAG和AI智能体，适合初学者和进阶者学习。",
+  "content": "",
+  "tags": [
+    "prompt-engineering",
+    "llm",
+    "rag",
+    "ai-agents",
+    "educational"
+  ],
+  "category": "综合技术",
+  "status": "published",
+  "metadata": {
+    "stars": 74046,
+    "language": "MDX",
+    "topics": [
+      "agent",
+      "agents",
+      "ai-agents",
+      "chatgpt",
+      "deep-learning",
+      "generative-ai",
+      "language-model",
+      "llms",
+      "openai",
+      "prompt-engineering",
+      "rag"
+    ]
+  },
+  "created_at": "2026-05-01T03:55:46Z",
+  "updated_at": "2026-05-01T03:55:46Z",
+  "quality_score": 0.95
+}

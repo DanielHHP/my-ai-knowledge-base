@@ -1,0 +1,46 @@
+{
+  "id": "github_binhnguyennus-awesome-scalability_2026-05-01",
+  "title": "binhnguyennus/awesome-scalability",
+  "source": "github",
+  "source_url": "https://github.com/binhnguyennus/awesome-scalability",
+  "published_at": "2026-05-01T00:00:00Z",
+  "summary": "一个整理可扩展、高可靠、高性能大规模系统设计模式的精选资源列表，涵盖架构、分布式系统、性能优化等核心主题，适合系统设计学习和参考。",
+  "content": "",
+  "tags": [
+    "scalability",
+    "system-design",
+    "distributed-systems",
+    "architecture"
+  ],
+  "category": "综合技术",
+  "status": "published",
+  "metadata": {
+    "stars": 70738,
+    "language": "",
+    "topics": [
+      "architecture",
+      "awesome",
+      "awesome-list",
+      "backend",
+      "big-data",
+      "computer-science",
+      "design-patterns",
+      "devops",
+      "distributed-systems",
+      "interview",
+      "interview-practice",
+      "interview-questions",
+      "lists",
+      "machine-learning",
+      "programming",
+      "resources",
+      "scalability",
+      "system",
+      "system-design",
+      "web-development"
+    ]
+  },
+  "created_at": "2026-05-01T03:55:55Z",
+  "updated_at": "2026-05-01T03:55:55Z",
+  "quality_score": 0.95
+}

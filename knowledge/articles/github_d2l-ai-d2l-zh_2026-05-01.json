@@ -1,0 +1,35 @@
+{
+  "id": "github_d2l-ai-d2l-zh_2026-05-01",
+  "title": "d2l-ai/d2l-zh",
+  "source": "github",
+  "source_url": "https://github.com/d2l-ai/d2l-zh",
+  "published_at": "2026-05-01T00:00:00Z",
+  "summary": "《动手学深度学习》是面向中文读者的开源深度学习教材，提供可运行的代码和社区讨论，被全球多所大学用于教学。",
+  "content": "",
+  "tags": [
+    "deep-learning",
+    "textbook",
+    "open-source",
+    "education",
+    "chinese"
+  ],
+  "category": "综合技术",
+  "status": "published",
+  "metadata": {
+    "stars": 77538,
+    "language": "Python",
+    "topics": [
+      "book",
+      "chinese",
+      "computer-vision",
+      "deep-learning",
+      "machine-learning",
+      "natural-language-processing",
+      "notebook",
+      "python"
+    ]
+  },
+  "created_at": "2026-05-01T03:55:42Z",
+  "updated_at": "2026-05-01T03:55:42Z",
+  "quality_score": 0.95
+}

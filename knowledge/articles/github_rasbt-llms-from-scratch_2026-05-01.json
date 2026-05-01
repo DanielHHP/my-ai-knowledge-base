@@ -1,0 +1,43 @@
+{
+  "id": "github_rasbt-llms-from-scratch_2026-05-01",
+  "title": "rasbt/LLMs-from-scratch",
+  "source": "github",
+  "source_url": "https://github.com/rasbt/LLMs-from-scratch",
+  "published_at": "2026-05-01T00:00:00Z",
+  "summary": "这是一个从零开始实现类似ChatGPT的大语言模型的教程项目，使用PyTorch逐步构建，涵盖从数据预处理、模型架构到训练的全过程，适合初学者深入理解LLM原理。",
+  "content": "",
+  "tags": [
+    "llm",
+    "pytorch",
+    "tutorial",
+    "chatgpt",
+    "deep-learning"
+  ],
+  "category": "综合技术",
+  "status": "published",
+  "metadata": {
+    "stars": 91766,
+    "language": "Jupyter Notebook",
+    "topics": [
+      "ai",
+      "artificial-intelligence",
+      "chatbot",
+      "chatgpt",
+      "deep-learning",
+      "from-scratch",
+      "generative-ai",
+      "gpt",
+      "language-model",
+      "large-language-models",
+      "llm",
+      "machine-learning",
+      "neural-networks",
+      "python",
+      "pytorch",
+      "transformers"
+    ]
+  },
+  "created_at": "2026-05-01T03:55:26Z",
+  "updated_at": "2026-05-01T03:55:26Z",
+  "quality_score": 0.85
+}

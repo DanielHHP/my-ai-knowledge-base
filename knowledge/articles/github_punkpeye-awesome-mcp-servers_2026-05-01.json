@@ -1,0 +1,28 @@
+{
+  "id": "github_punkpeye-awesome-mcp-servers_2026-05-01",
+  "title": "punkpeye/awesome-mcp-servers",
+  "source": "github",
+  "source_url": "https://github.com/punkpeye/awesome-mcp-servers",
+  "published_at": "2026-05-01T00:00:00Z",
+  "summary": "awesome-mcp-servers是一个收录了多种模型上下文协议(MCP)服务器的精选列表项目，整合了众多AI工具和服务接口，便于开发者快速集成和调用。",
+  "content": "",
+  "tags": [
+    "mcp",
+    "awesome-list",
+    "ai-tools",
+    "server-collection"
+  ],
+  "category": "工具库",
+  "status": "published",
+  "metadata": {
+    "stars": 86036,
+    "language": "",
+    "topics": [
+      "ai",
+      "mcp"
+    ]
+  },
+  "created_at": "2026-05-01T03:55:30Z",
+  "updated_at": "2026-05-01T03:55:30Z",
+  "quality_score": 0.75
+}

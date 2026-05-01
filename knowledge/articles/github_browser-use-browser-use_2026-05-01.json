@@ -1,0 +1,33 @@
+{
+  "id": "github_browser-use-browser-use_2026-05-01",
+  "title": "browser-use/browser-use",
+  "source": "github",
+  "source_url": "https://github.com/browser-use/browser-use",
+  "published_at": "2026-05-01T00:00:00Z",
+  "summary": "browser-use/browser-use 是一个让AI代理能够轻松访问和操作网站的工具库，旨在自动化在线任务。它通过为AI代理提供接口，使其能模拟人类浏览行为，适用于网页自动化、数据抓取等场景。该开源项目简化了AI与网页交互的复杂性，提升了在线任务的效率。",
+  "content": "",
+  "tags": [
+    "automation",
+    "web-scraping",
+    "open-source",
+    "agent"
+  ],
+  "category": "工具库",
+  "status": "published",
+  "metadata": {
+    "stars": 91444,
+    "language": "Python",
+    "topics": [
+      "ai-agents",
+      "ai-tools",
+      "browser-automation",
+      "browser-use",
+      "llm",
+      "playwright",
+      "python"
+    ]
+  },
+  "created_at": "2026-05-01T03:55:28Z",
+  "updated_at": "2026-05-01T03:55:28Z",
+  "quality_score": 0.85
+}

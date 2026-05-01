@@ -1,0 +1,39 @@
+{
+  "id": "github_lobehub-lobehub_2026-05-01",
+  "title": "lobehub/lobehub",
+  "source": "github",
+  "source_url": "https://github.com/lobehub/lobehub",
+  "published_at": "2026-05-01T00:00:00Z",
+  "summary": "LobeHub是一个面向工作和生活的智能体空间，支持多智能体协作、团队设计，并以智能体为工作交互单元，推动智能体工具的发展。",
+  "content": "",
+  "tags": [
+    "agent",
+    "multi-agent",
+    "collaboration",
+    "open-source",
+    "platform"
+  ],
+  "category": "综合技术",
+  "status": "published",
+  "metadata": {
+    "stars": 75899,
+    "language": "TypeScript",
+    "topics": [
+      "agent",
+      "agent-collaboration",
+      "agent-harness",
+      "ai",
+      "chatgpt",
+      "claude",
+      "deepseek",
+      "gemini",
+      "gpt",
+      "knowledge-base",
+      "mcp",
+      "openai"
+    ]
+  },
+  "created_at": "2026-05-01T03:55:44Z",
+  "updated_at": "2026-05-01T03:55:44Z",
+  "quality_score": 0.85
+}

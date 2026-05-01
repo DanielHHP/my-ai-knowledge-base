@@ -4,25 +4,18 @@
   "source": "github",
   "source_url": "https://github.com/f/prompts.chat",
   "published_at": "2026-05-01T00:00:00Z",
-  "summary": "这是一个社区驱动的提示词（prompt）分享与发现平台，原名Awesome ChatGPT Prompts。它提供免费开源的提示词集合，支持用户分享、发现和收藏提示词，并且可以自托管部署以保障组织的完全隐私。",
-  "highlights": [
-    "社区驱动：用户可以分享、发现和收藏ChatGPT提示词",
-    "免费开源：代码完全开放，支持自托管以保障隐私",
-    "原名强大ChatGPT提示词：汇集了高质量的提示词资源"
-  ],
+  "summary": "f/prompts.chat 是一个专注于 ChatGPT 提示词（prompts）的社区驱动型仓库，原名'Awesome ChatGPT Prompts'，旨在让用户分享、发现和收集提示词。该项目免费开源，支持自托管以保障隐私，适合组织内部使用，属于实用工具资源。",
+  "content": "",
   "tags": [
+    "prompt-engineering",
     "chatgpt",
-    "community",
     "open-source",
-    "privacy",
-    "prompts"
+    "community"
   ],
   "category": "工具库",
-  "score": 8,
-  "score_reason": "该平台为Prompt工程提供了宝贵的社区资源，支持自托管和隐私保护，实用性高，但功能相对单一，评分8分。",
   "status": "published",
   "metadata": {
-    "stars": 161263,
+    "stars": 161267,
     "language": "HTML",
     "topics": [
       "ai",
@@ -45,6 +38,7 @@
       "typescript"
     ]
   },
-  "created_at": "2026-05-01T01:57:18Z",
-  "updated_at": "2026-05-01T01:57:18Z"
+  "created_at": "2026-05-01T04:07:16Z",
+  "updated_at": "2026-05-01T04:07:16Z",
+  "quality_score": 0.7
 }

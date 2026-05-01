@@ -1,0 +1,47 @@
+{
+  "id": "github_netdata-netdata_2026-05-01",
+  "title": "netdata/netdata",
+  "source": "github",
+  "source_url": "https://github.com/netdata/netdata",
+  "published_at": "2026-05-01T00:00:00Z",
+  "summary": "Netdata是一个开源的全栈可观测性平台,专注于AI驱动的性能监控和故障排查,支持实时数据收集、可视化分析和智能告警,特别适合资源有限的团队快速搭建监控系统。",
+  "content": "",
+  "tags": [
+    "monitoring",
+    "observability",
+    "open-source",
+    "aiops",
+    "devops"
+  ],
+  "category": "工具库",
+  "status": "published",
+  "metadata": {
+    "stars": 78658,
+    "language": "C",
+    "topics": [
+      "ai",
+      "alerting",
+      "cncf",
+      "data-visualization",
+      "database",
+      "devops",
+      "docker",
+      "grafana",
+      "influxdb",
+      "kubernetes",
+      "linux",
+      "machine-learning",
+      "mcp",
+      "mongodb",
+      "monitoring",
+      "mysql",
+      "netdata",
+      "observability",
+      "postgresql",
+      "prometheus"
+    ]
+  },
+  "created_at": "2026-05-01T03:55:40Z",
+  "updated_at": "2026-05-01T03:55:40Z",
+  "quality_score": 0.85
+}

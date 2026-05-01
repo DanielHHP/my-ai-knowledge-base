@@ -4,24 +4,18 @@
   "source": "github",
   "source_url": "https://github.com/firecrawl/firecrawl",
   "published_at": "2026-05-01T00:00:00Z",
-  "summary": "firecrawl/firecrawl 是一个为AI设计的API，用于搜索、抓取和与网络交互。它简化了从网页提取数据的过程，使AI应用能更高效地获取网络信息。",
-  "highlights": [
-    "专为AI应用设计的网络数据获取API",
-    "支持搜索、抓取和交互多种网络操作",
-    "高效提取网页数据以支持AI模型训练和推理"
-  ],
+  "summary": "Firecrawl 提供 API 接口，支持 AI 应用进行网页搜索、抓取和交互，简化网络数据获取流程。",
+  "content": "",
   "tags": [
-    "ai",
     "api",
-    "data-extraction",
-    "web-scraping"
+    "web-scraping",
+    "ai-search",
+    "open-source"
   ],
   "category": "工具库",
-  "score": 8,
-  "score_reason": "该工具为AI应用提供高效网络数据获取能力，实用性强，但功能相对单一，创新性一般。",
   "status": "published",
   "metadata": {
-    "stars": 113470,
+    "stars": 113503,
     "language": "TypeScript",
     "topics": [
       "ai",
@@ -45,6 +39,7 @@
       "webscraping"
     ]
   },
-  "created_at": "2026-05-01T01:57:18Z",
-  "updated_at": "2026-05-01T01:57:18Z"
+  "created_at": "2026-05-01T03:55:09Z",
+  "updated_at": "2026-05-01T03:55:09Z",
+  "quality_score": 0.85
 }

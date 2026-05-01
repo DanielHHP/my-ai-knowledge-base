@@ -1,0 +1,31 @@
+{
+  "id": "github_foundationagents-metagpt_2026-05-01",
+  "title": "FoundationAgents/MetaGPT",
+  "source": "github",
+  "source_url": "https://github.com/FoundationAgents/MetaGPT",
+  "published_at": "2026-05-01T00:00:00Z",
+  "summary": "MetaGPT是一个多智能体框架，旨在通过自然语言编程实现软件公司的自动化，支持多个AI智能体协作完成复杂任务，如需求分析、代码生成和项目管理。",
+  "content": "",
+  "tags": [
+    "multi-agent",
+    "framework",
+    "nlp",
+    "ai"
+  ],
+  "category": "工具库",
+  "status": "published",
+  "metadata": {
+    "stars": 67583,
+    "language": "Python",
+    "topics": [
+      "agent",
+      "gpt",
+      "llm",
+      "metagpt",
+      "multi-agent"
+    ]
+  },
+  "created_at": "2026-05-01T03:56:00Z",
+  "updated_at": "2026-05-01T03:56:00Z",
+  "quality_score": 0.85
+}

@@ -1,0 +1,737 @@
+{
+  "articles": [
+    {
+      "id": "github_openclaw-openclaw_2026-05-01",
+      "title": "openclaw/openclaw",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "ai-assistant",
+        "cross-platform",
+        "open-source",
+        "personal-ai"
+      ],
+      "quality_score": 0.65,
+      "created_at": "2026-05-01T03:48:32Z"
+    },
+    {
+      "id": "github_tensorflow-tensorflow_2026-05-01",
+      "title": "tensorflow/tensorflow",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "machine-learning",
+        "deep-learning",
+        "tensorflow",
+        "open-source",
+        "framework"
+      ],
+      "quality_score": 0.95,
+      "created_at": "2026-05-01T03:48:34Z"
+    },
+    {
+      "id": "github_n8n-io-n8n_2026-05-01",
+      "title": "n8n-io/n8n",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "workflow-automation",
+        "open-source",
+        "no-code",
+        "ai-integrations"
+      ],
+      "quality_score": 0.85,
+      "created_at": "2026-05-01T03:48:36Z"
+    },
+    {
+      "id": "github_significant-gravitas-autogpt_2026-05-01",
+      "title": "Significant-Gravitas/AutoGPT",
+      "source": "github",
+      "category": "综合技术",
+      "tags": [
+        "ai-agent",
+        "open-source",
+        "gpt",
+        "automation",
+        "experimental"
+      ],
+      "quality_score": 0.85,
+      "created_at": "2026-05-01T03:48:38Z"
+    },
+    {
+      "id": "github_affaan-m-everything-claude-code_2026-05-01",
+      "title": "affaan-m/everything-claude-code",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "ai-agent",
+        "performance-optimization",
+        "claude-code",
+        "developer-tools",
+        "research-first"
+      ],
+      "quality_score": 0.78,
+      "created_at": "2026-05-01T03:48:40Z"
+    },
+    {
+      "id": "github_ollama-ollama_2026-05-01",
+      "title": "ollama/ollama",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "llm",
+        "open-source",
+        "tool",
+        "local-deployment"
+      ],
+      "quality_score": 0.92,
+      "created_at": "2026-05-01T03:48:42Z"
+    },
+    {
+      "id": "github_automatic1111-stable-diffusion-webui_2026-05-01",
+      "title": "AUTOMATIC1111/stable-diffusion-webui",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "stable-diffusion",
+        "image-generation",
+        "web-ui",
+        "open-source",
+        "ai-art"
+      ],
+      "quality_score": 0.95,
+      "created_at": "2026-05-01T03:48:44Z"
+    },
+    {
+      "id": "github_f-prompts-chat_2026-05-01",
+      "title": "f/prompts.chat",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "chatgpt",
+        "prompts",
+        "open-source",
+        "community"
+      ],
+      "quality_score": 0.7,
+      "created_at": "2026-05-01T03:48:46Z"
+    },
+    {
+      "id": "github_huggingface-transformers_2026-05-01",
+      "title": "huggingface/transformers",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "nlp",
+        "deep-learning",
+        "transformers",
+        "open-source",
+        "pre-trained-models"
+      ],
+      "quality_score": 0.95,
+      "created_at": "2026-05-01T03:48:48Z"
+    },
+    {
+      "id": "github_snailclimb-javaguide_2026-05-01",
+      "title": "Snailclimb/JavaGuide",
+      "source": "github",
+      "category": "综合技术",
+      "tags": [
+        "java",
+        "interview",
+        "backend",
+        "distributed-systems",
+        "ai-application"
+      ],
+      "quality_score": 0.85,
+      "created_at": "2026-05-01T03:48:50Z"
+    },
+    {
+      "id": "github_langgenius-dify_2026-05-01",
+      "title": "langgenius/dify",
+      "source": "github",
+      "category": "综合技术",
+      "tags": [
+        "agentic-workflow",
+        "platform",
+        "open-source",
+        "llm",
+        "production"
+      ],
+      "quality_score": 0.85,
+      "created_at": "2026-05-01T03:48:53Z"
+    },
+    {
+      "id": "github_x1xhlol-system-prompts-and-models-of-ai-tools_2026-05-01",
+      "title": "x1xhlol/system-prompts-and-models-of-ai-tools",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "system-prompts",
+        "ai-tools",
+        "open-source",
+        "code-generation",
+        "ide-plugin"
+      ],
+      "quality_score": 0.75,
+      "created_at": "2026-05-01T03:48:55Z"
+    },
+    {
+      "id": "github_langchain-ai-langchain_2026-05-01",
+      "title": "langchain-ai/langchain",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "llm",
+        "open-source",
+        "framework",
+        "agent",
+        "development-tools"
+      ],
+      "quality_score": 0.95,
+      "created_at": "2026-05-01T03:48:58Z"
+    },
+    {
+      "id": "github_open-webui-open-webui_2026-05-01",
+      "title": "open-webui/open-webui",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "webui",
+        "ai-interface",
+        "ollama",
+        "open-source"
+      ],
+      "quality_score": 0.85,
+      "created_at": "2026-05-01T03:49:00Z"
+    },
+    {
+      "id": "github_firecrawl-firecrawl_2026-05-01",
+      "title": "firecrawl/firecrawl",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "web-scraping",
+        "api",
+        "open-source",
+        "data-extraction"
+      ],
+      "quality_score": 0.85,
+      "created_at": "2026-05-01T03:49:05Z"
+    },
+    {
+      "id": "github_comfy-org-comfyui_2026-05-01",
+      "title": "Comfy-Org/ComfyUI",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "diffusion-model",
+        "gui",
+        "workflow",
+        "open-source",
+        "image-generation"
+      ],
+      "quality_score": 0.92,
+      "created_at": "2026-05-01T03:49:07Z"
+    },
+    {
+      "id": "github_microsoft-generative-ai-for-beginners_2026-05-01",
+      "title": "microsoft/generative-ai-for-beginners",
+      "source": "github",
+      "category": "综合技术",
+      "tags": [
+        "generative-ai",
+        "education",
+        "microsoft",
+        "llm"
+      ],
+      "quality_score": 0.95,
+      "created_at": "2026-05-01T03:49:09Z"
+    },
+    {
+      "id": "github_google-gemini-gemini-cli_2026-05-01",
+      "title": "google-gemini/gemini-cli",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "gemini",
+        "cli",
+        "ai-agent",
+        "open-source",
+        "command-line"
+      ],
+      "quality_score": 0.85,
+      "created_at": "2026-05-01T03:49:11Z"
+    },
+    {
+      "id": "github_supabase-supabase_2026-05-01",
+      "title": "supabase/supabase",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "open-source",
+        "database",
+        "backend",
+        "postgres",
+        "ai"
+      ],
+      "quality_score": 0.92,
+      "created_at": "2026-05-01T03:49:13Z"
+    },
+    {
+      "id": "github_pytorch-pytorch_2026-05-01",
+      "title": "pytorch/pytorch",
+      "source": "github",
+      "category": "综合技术",
+      "tags": [
+        "deep-learning",
+        "framework",
+        "open-source",
+        "gpu-acceleration"
+      ],
+      "quality_score": 0.95,
+      "created_at": "2026-05-01T03:49:15Z"
+    },
+    {
+      "id": "github_hacksider-deep-live-cam_2026-05-01",
+      "title": "hacksider/Deep-Live-Cam",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "deepfake",
+        "face-swap",
+        "real-time",
+        "open-source",
+        "computer-vision"
+      ],
+      "quality_score": 0.65,
+      "created_at": "2026-05-01T03:49:17Z"
+    },
+    {
+      "id": "github_github-spec-kit_2026-05-01",
+      "title": "github/spec-kit",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "spec-driven-development",
+        "toolkit",
+        "developer-tools"
+      ],
+      "quality_score": 0.65,
+      "created_at": "2026-05-01T03:49:19Z"
+    },
+    {
+      "id": "github_rasbt-llms-from-scratch_2026-05-01",
+      "title": "rasbt/LLMs-from-scratch",
+      "source": "github",
+      "category": "综合技术",
+      "tags": [
+        "llm",
+        "pytorch",
+        "tutorial",
+        "chatgpt",
+        "from-scratch"
+      ],
+      "quality_score": 0.85,
+      "created_at": "2026-05-01T03:49:21Z"
+    },
+    {
+      "id": "github_browser-use-browser-use_2026-05-01",
+      "title": "browser-use/browser-use",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "ai-agents",
+        "browser-automation",
+        "web-scraping",
+        "open-source"
+      ],
+      "quality_score": 0.85,
+      "created_at": "2026-05-01T03:49:24Z"
+    },
+    {
+      "id": "github_punkpeye-awesome-mcp-servers_2026-05-01",
+      "title": "punkpeye/awesome-mcp-servers",
+      "source": "github",
+      "category": "综合技术",
+      "tags": [
+        "mcp",
+        "server",
+        "collection",
+        "reference",
+        "tool-ecosystem"
+      ],
+      "quality_score": 0.75,
+      "created_at": "2026-05-01T03:49:26Z"
+    },
+    {
+      "id": "github_microsoft-ml-for-beginners_2026-05-01",
+      "title": "microsoft/ML-For-Beginners",
+      "source": "github",
+      "category": "综合技术",
+      "tags": [
+        "machine-learning",
+        "education",
+        "curriculum",
+        "microsoft"
+      ],
+      "quality_score": 0.95,
+      "created_at": "2026-05-01T03:49:28Z"
+    },
+    {
+      "id": "github_developer-y-cs-video-courses_2026-05-01",
+      "title": "Developer-Y/cs-video-courses",
+      "source": "github",
+      "category": "综合技术",
+      "tags": [
+        "computer-science",
+        "education",
+        "videos",
+        "courses",
+        "curated-list"
+      ],
+      "quality_score": 0.75,
+      "created_at": "2026-05-01T03:49:30Z"
+    },
+    {
+      "id": "github_mlabonne-llm-course_2026-05-01",
+      "title": "mlabonne/llm-course",
+      "source": "github",
+      "category": "综合技术",
+      "tags": [
+        "llm",
+        "course",
+        "colab",
+        "learning-path",
+        "natural-language-processing"
+      ],
+      "quality_score": 0.95,
+      "created_at": "2026-05-01T03:49:32Z"
+    },
+    {
+      "id": "github_vllm-project-vllm_2026-05-01",
+      "title": "vllm-project/vllm",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "llm",
+        "inference",
+        "open-source",
+        "gpu-optimization",
+        "serving-engine"
+      ],
+      "quality_score": 0.95,
+      "created_at": "2026-05-01T03:49:34Z"
+    },
+    {
+      "id": "github_netdata-netdata_2026-05-01",
+      "title": "netdata/netdata",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "observability",
+        "monitoring",
+        "ai",
+        "open-source",
+        "infrastructure"
+      ],
+      "quality_score": 0.85,
+      "created_at": "2026-05-01T03:49:36Z"
+    },
+    {
+      "id": "github_d2l-ai-d2l-zh_2026-05-01",
+      "title": "d2l-ai/d2l-zh",
+      "source": "github",
+      "category": "综合技术",
+      "tags": [
+        "deep-learning",
+        "education",
+        "open-source",
+        "tutorial",
+        "textbook"
+      ],
+      "quality_score": 0.95,
+      "created_at": "2026-05-01T03:49:38Z"
+    },
+    {
+      "id": "github_lobehub-lobehub_2026-05-01",
+      "title": "lobehub/lobehub",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "ai-agents",
+        "multi-agent",
+        "open-source",
+        "collaboration"
+      ],
+      "quality_score": 0.82,
+      "created_at": "2026-05-01T03:49:41Z"
+    },
+    {
+      "id": "github_dair-ai-prompt-engineering-guide_2026-05-01",
+      "title": "dair-ai/Prompt-Engineering-Guide",
+      "source": "github",
+      "category": "综合技术",
+      "tags": [
+        "prompt-engineering",
+        "rag",
+        "ai-agents",
+        "open-source",
+        "education"
+      ],
+      "quality_score": 0.95,
+      "created_at": "2026-05-01T03:49:43Z"
+    },
+    {
+      "id": "github_tesseract-ocr-tesseract_2026-05-01",
+      "title": "tesseract-ocr/tesseract",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "ocr",
+        "open-source",
+        "image-processing",
+        "text-recognition",
+        "c++"
+      ],
+      "quality_score": 0.95,
+      "created_at": "2026-05-01T03:49:45Z"
+    },
+    {
+      "id": "github_openhands-openhands_2026-05-01",
+      "title": "OpenHands/OpenHands",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "ai-driven-development",
+        "open-source",
+        "automation",
+        "developer-tools",
+        "code-generation"
+      ],
+      "quality_score": 0.85,
+      "created_at": "2026-05-01T03:49:47Z"
+    },
+    {
+      "id": "github_daytonaio-daytona_2026-05-01",
+      "title": "daytonaio/daytona",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "ai-infrastructure",
+        "code-execution",
+        "security",
+        "elastic",
+        "open-source"
+      ],
+      "quality_score": 0.78,
+      "created_at": "2026-05-01T03:49:49Z"
+    },
+    {
+      "id": "github_hiyouga-llamafactory_2026-05-01",
+      "title": "hiyouga/LlamaFactory",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "llm",
+        "fine-tuning",
+        "deep-learning",
+        "open-source"
+      ],
+      "quality_score": 0.95,
+      "created_at": "2026-05-01T03:49:51Z"
+    },
+    {
+      "id": "github_binhnguyennus-awesome-scalability_2026-05-01",
+      "title": "binhnguyennus/awesome-scalability",
+      "source": "github",
+      "category": "综合技术",
+      "tags": [
+        "scalability",
+        "distributed-systems",
+        "architecture",
+        "best-practices"
+      ],
+      "quality_score": 0.95,
+      "created_at": "2026-05-01T03:49:53Z"
+    },
+    {
+      "id": "github_thedotmack-claude-mem_2026-05-01",
+      "title": "thedotmack/claude-mem",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "claude",
+        "plugin",
+        "memory",
+        "code-sessions"
+      ],
+      "quality_score": 0.85,
+      "created_at": "2026-05-01T03:49:55Z"
+    },
+    {
+      "id": "github_foundationagents-metagpt_2026-05-01",
+      "title": "FoundationAgents/MetaGPT",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "multi-agent",
+        "framework",
+        "nlp",
+        "llm",
+        "open-source"
+      ],
+      "quality_score": 0.85,
+      "created_at": "2026-05-01T03:49:57Z"
+    },
+    {
+      "id": "github_openbb-finance-openbb_2026-05-01",
+      "title": "OpenBB-finance/OpenBB",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "fintech",
+        "open-source",
+        "ai-agents",
+        "data-platform",
+        "financial-analysis"
+      ],
+      "quality_score": 0.85,
+      "created_at": "2026-05-01T03:50:00Z"
+    },
+    {
+      "id": "github_labmlai-annotated-deep-learning-paper-implementations_2026-05-01",
+      "title": "labmlai/annotated_deep_learning_paper_implementations",
+      "source": "github",
+      "category": "综合技术",
+      "tags": [
+        "deep-learning",
+        "tutorials",
+        "transformers",
+        "reinforcement-learning",
+        "open-source"
+      ],
+      "quality_score": 0.95,
+      "created_at": "2026-05-01T03:50:02Z"
+    },
+    {
+      "id": "github_scikit-learn-scikit-learn_2026-05-01",
+      "title": "scikit-learn/scikit-learn",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "machine-learning",
+        "python",
+        "open-source",
+        "data-science"
+      ],
+      "quality_score": 0.98,
+      "created_at": "2026-05-01T03:50:04Z"
+    },
+    {
+      "id": "github_bytedance-deer-flow_2026-05-01",
+      "title": "bytedance/deer-flow",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "open-source",
+        "agent",
+        "task-automation",
+        "sandbox",
+        "tool-framework"
+      ],
+      "quality_score": 0.88,
+      "created_at": "2026-05-01T03:50:06Z"
+    },
+    {
+      "id": "github_keras-team-keras_2026-05-01",
+      "title": "keras-team/keras",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "deep-learning",
+        "neural-networks",
+        "api",
+        "tensorflow",
+        "keras"
+      ],
+      "quality_score": 0.95,
+      "created_at": "2026-05-01T03:50:08Z"
+    },
+    {
+      "id": "github_unslothai-unsloth_2026-05-01",
+      "title": "unslothai/unsloth",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "llm",
+        "open-source",
+        "fine-tuning",
+        "web-ui"
+      ],
+      "quality_score": 0.85,
+      "created_at": "2026-05-01T03:50:10Z"
+    },
+    {
+      "id": "github_pathwaycom-llm-app_2026-05-01",
+      "title": "pathwaycom/llm-app",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "rag",
+        "ai-pipelines",
+        "cloud-templates",
+        "real-time-data",
+        "docker"
+      ],
+      "quality_score": 0.85,
+      "created_at": "2026-05-01T03:50:13Z"
+    },
+    {
+      "id": "github_mintplex-labs-anything-llm_2026-05-01",
+      "title": "Mintplex-Labs/anything-llm",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "llm",
+        "productivity",
+        "privacy",
+        "local-ai",
+        "all-in-one"
+      ],
+      "quality_score": 0.9,
+      "created_at": "2026-05-01T03:50:15Z"
+    },
+    {
+      "id": "github_docling-project-docling_2026-05-01",
+      "title": "docling-project/docling",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "document-parsing",
+        "open-source",
+        "tool",
+        "data-processing",
+        "ai-ready"
+      ],
+      "quality_score": 0.82,
+      "created_at": "2026-05-01T03:50:18Z"
+    },
+    {
+      "id": "github_nousresearch-hermes-agent_2026-05-01",
+      "title": "NousResearch/hermes-agent",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "ai-agent",
+        "llm",
+        "open-source",
+        "autonomous",
+        "adaptive"
+      ],
+      "quality_score": 0.65,
+      "created_at": "2026-05-01T03:55:08Z"
+    }
+  ],
+  "updated_at": "2026-05-01T04:07:33Z"
+}

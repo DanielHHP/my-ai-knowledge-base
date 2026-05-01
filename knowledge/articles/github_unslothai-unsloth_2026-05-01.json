@@ -1,0 +1,46 @@
+{
+  "id": "github_unslothai-unsloth_2026-05-01",
+  "title": "unslothai/unsloth",
+  "source": "github",
+  "source_url": "https://github.com/unslothai/unsloth",
+  "published_at": "2026-05-01T00:00:00Z",
+  "summary": "unsloth是一个开源的Web界面工具，用于在本地训练和运行Gemma 4、Qwen3.6、DeepSeek等开放大模型，简化了本地AI模型的部署与微调流程。",
+  "content": "",
+  "tags": [
+    "llm",
+    "open-source",
+    "training",
+    "fine-tuning",
+    "web-ui"
+  ],
+  "category": "工具库",
+  "status": "published",
+  "metadata": {
+    "stars": 63368,
+    "language": "Python",
+    "topics": [
+      "agent",
+      "deepseek",
+      "fine-tuning",
+      "gemma",
+      "gemma3",
+      "gpt-oss",
+      "llama",
+      "llama3",
+      "llm",
+      "llms",
+      "mistral",
+      "openai",
+      "qwen",
+      "reinforcement-learning",
+      "self-hosted",
+      "text-to-speech",
+      "tts",
+      "ui",
+      "unsloth"
+    ]
+  },
+  "created_at": "2026-05-01T03:56:13Z",
+  "updated_at": "2026-05-01T03:56:13Z",
+  "quality_score": 0.85
+}

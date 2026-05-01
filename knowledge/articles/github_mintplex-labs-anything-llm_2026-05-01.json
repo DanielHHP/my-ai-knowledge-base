@@ -1,0 +1,45 @@
+{
+  "id": "github_mintplex-labs-anything-llm_2026-05-01",
+  "title": "Mintplex-Labs/anything-llm",
+  "source": "github",
+  "source_url": "https://github.com/Mintplex-Labs/anything-llm",
+  "published_at": "2026-05-01T00:00:00Z",
+  "summary": "Mintplex-Labs/anything-llm 是一个全能的AI生产力加速工具，支持本地部署和隐私优先，无需繁琐设置。它集成了多种AI功能，可作为个人或团队的智能助手。",
+  "content": "",
+  "tags": [
+    "llm",
+    "ai-assistant",
+    "privacy",
+    "productivity"
+  ],
+  "category": "工具库",
+  "status": "published",
+  "metadata": {
+    "stars": 59325,
+    "language": "JavaScript",
+    "topics": [
+      "ai-agents",
+      "custom-ai-agents",
+      "deepseek",
+      "kimi",
+      "llama3",
+      "llm",
+      "lmstudio",
+      "local-llm",
+      "localai",
+      "mcp",
+      "mcp-servers",
+      "moonshot",
+      "multimodal",
+      "no-code",
+      "ollama",
+      "qwen3",
+      "rag",
+      "vector-database",
+      "web-scraping"
+    ]
+  },
+  "created_at": "2026-05-01T03:56:17Z",
+  "updated_at": "2026-05-01T03:56:17Z",
+  "quality_score": 0.85
+}

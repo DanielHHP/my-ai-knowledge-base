@@ -1,0 +1,35 @@
+{
+  "id": "github_pytorch-pytorch_2026-05-01",
+  "title": "pytorch/pytorch",
+  "source": "github",
+  "source_url": "https://github.com/pytorch/pytorch",
+  "published_at": "2026-05-01T00:00:00Z",
+  "summary": "PyTorch是一个开源的深度学习框架，提供张量计算和动态神经网络，支持强大的GPU加速。它由Facebook AI研究院开发，广泛应用于研究和生产环境，拥有庞大的社区和丰富的生态系统。",
+  "content": "",
+  "tags": [
+    "deep-learning",
+    "framework",
+    "gpu-acceleration",
+    "open-source",
+    "python"
+  ],
+  "category": "工具库",
+  "status": "published",
+  "metadata": {
+    "stars": 99563,
+    "language": "Python",
+    "topics": [
+      "autograd",
+      "deep-learning",
+      "gpu",
+      "machine-learning",
+      "neural-network",
+      "numpy",
+      "python",
+      "tensor"
+    ]
+  },
+  "created_at": "2026-05-01T03:55:19Z",
+  "updated_at": "2026-05-01T03:55:19Z",
+  "quality_score": 0.95
+}

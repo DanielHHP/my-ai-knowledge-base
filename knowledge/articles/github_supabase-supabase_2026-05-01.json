@@ -4,25 +4,19 @@
   "source": "github",
   "source_url": "https://github.com/supabase/supabase",
   "published_at": "2026-05-01T00:00:00Z",
-  "summary": "Supabase 是一个开源的 Postgres 开发平台，旨在为开发者提供专用的 Postgres 数据库，用于构建 Web、移动和 AI 应用程序。它简化了数据库管理并集成了实时功能。",
-  "highlights": [
-    "提供专用的 Postgres 数据库，支持 Web、移动和 AI 应用开发。",
-    "开源平台，具有实时功能和简化数据库管理的能力。",
-    "集成 AI 应用支持，适合现代开发需求。"
-  ],
+  "summary": "Supabase 是一个开源的 Postgres 开发平台，提供托管数据库、实时订阅、认证、存储和边缘函数。它支持 AI 应用，集成向量存储和嵌入，简化后端开发。",
+  "content": "",
   "tags": [
-    "ai",
     "database",
     "open-source",
-    "postgres",
-    "real-time"
+    "postgresql",
+    "backend-as-a-service",
+    "ai"
   ],
   "category": "工具库",
-  "score": 9,
-  "score_reason": "Supabase 作为开源 Postgres 平台，提供了强大的数据库功能和实时支持，特别适合 AI 应用开发，综合评分高。",
   "status": "published",
   "metadata": {
-    "stars": 101669,
+    "stars": 101675,
     "language": "TypeScript",
     "topics": [
       "ai",
@@ -46,6 +40,7 @@
       "websockets"
     ]
   },
-  "created_at": "2026-05-01T01:57:18Z",
-  "updated_at": "2026-05-01T01:57:18Z"
+  "created_at": "2026-05-01T03:55:17Z",
+  "updated_at": "2026-05-01T03:55:17Z",
+  "quality_score": 0.95
 }

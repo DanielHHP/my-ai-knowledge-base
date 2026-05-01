@@ -1,0 +1,47 @@
+{
+  "id": "github_thedotmack-claude-mem_2026-05-01",
+  "title": "thedotmack/claude-mem",
+  "source": "github",
+  "source_url": "https://github.com/thedotmack/claude-mem",
+  "published_at": "2026-05-01T00:00:00Z",
+  "summary": "这个开源插件为Claude Code增加了自动记忆功能，能在编码会话中捕捉所有操作，用Claude的agent-sdk进行AI压缩，并在未来会话中注入相关上下文，提高开发连续性。",
+  "content": "",
+  "tags": [
+    "claude",
+    "code-assistant",
+    "memory",
+    "plugin",
+    "productivity"
+  ],
+  "category": "工具库",
+  "status": "published",
+  "metadata": {
+    "stars": 70410,
+    "language": "TypeScript",
+    "topics": [
+      "ai",
+      "ai-agents",
+      "ai-memory",
+      "anthropic",
+      "artificial-intelligence",
+      "chromadb",
+      "claude",
+      "claude-agent-sdk",
+      "claude-agents",
+      "claude-code",
+      "claude-code-plugin",
+      "claude-skills",
+      "embeddings",
+      "long-term-memory",
+      "mem0",
+      "memory-engine",
+      "openmemory",
+      "rag",
+      "sqlite",
+      "supermemory"
+    ]
+  },
+  "created_at": "2026-05-01T03:55:58Z",
+  "updated_at": "2026-05-01T03:55:58Z",
+  "quality_score": 0.85
+}

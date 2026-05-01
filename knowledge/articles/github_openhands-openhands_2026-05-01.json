@@ -1,0 +1,35 @@
+{
+  "id": "github_openhands-openhands_2026-05-01",
+  "title": "OpenHands/OpenHands",
+  "source": "github",
+  "source_url": "https://github.com/OpenHands/OpenHands",
+  "published_at": "2026-05-01T00:00:00Z",
+  "summary": "OpenHands是一个AI驱动的开发平台，旨在通过智能助手提升软件开发效率。它集成多种AI能力，支持自动化编码、调试和项目管理，帮助开发者更快地构建应用。",
+  "content": "",
+  "tags": [
+    "ai-development",
+    "coding-assistant",
+    "open-source",
+    "developer-tools"
+  ],
+  "category": "工具库",
+  "status": "published",
+  "metadata": {
+    "stars": 72437,
+    "language": "Python",
+    "topics": [
+      "agent",
+      "artificial-intelligence",
+      "chatgpt",
+      "claude-ai",
+      "cli",
+      "developer-tools",
+      "gpt",
+      "llm",
+      "openai"
+    ]
+  },
+  "created_at": "2026-05-01T03:55:50Z",
+  "updated_at": "2026-05-01T03:55:50Z",
+  "quality_score": 0.85
+}
