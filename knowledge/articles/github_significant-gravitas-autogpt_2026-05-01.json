@@ -1,0 +1,42 @@
+{
+  "id": "github_significant-gravitas-autogpt_2026-05-01",
+  "title": "Significant-Gravitas/AutoGPT",
+  "source": "github",
+  "source_url": "https://github.com/Significant-Gravitas/AutoGPT",
+  "published_at": "2026-05-01T00:00:00Z",
+  "summary": "AutoGPT是一个开源项目，旨在让AI技术更加 accessible，提供工具让开发者能够专注于更重要的事情。通过自主 GPT 模型实现任务自动化，降低 AI 使用门槛。",
+  "highlights": [
+    "提供自主 GPT 模型实现任务自动化",
+    "降低 AI 使用门槛，让更多人能够使用和构建 AI"
+  ],
+  "tags": [
+    "ai-tools",
+    "autogpt",
+    "automation",
+    "gpt",
+    "open-source"
+  ],
+  "category": "工具库",
+  "score": 9,
+  "score_reason": "AutoGPT 作为开源项目，推动了 AI 工具 democratization，概念新颖且具有广泛实用性，但仍在发展中",
+  "status": "published",
+  "metadata": {
+    "stars": 183911,
+    "language": "Python",
+    "topics": [
+      "agentic-ai",
+      "agents",
+      "ai",
+      "artificial-intelligence",
+      "autonomous-agents",
+      "claude",
+      "gpt",
+      "llama-api",
+      "llm",
+      "openai",
+      "python"
+    ]
+  },
+  "created_at": "2026-05-01T01:57:18Z",
+  "updated_at": "2026-05-01T01:57:18Z"
+}

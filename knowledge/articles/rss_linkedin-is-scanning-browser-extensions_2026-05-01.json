@@ -1,0 +1,29 @@
+{
+  "id": "rss_linkedin-is-scanning-browser-extensions_2026-05-01",
+  "title": "LinkedIn is scanning browser extensions",
+  "source": "rss",
+  "source_url": "https://404privacy.com/blog/linkedin-is-scanning-your-browser-extensions-this-is-how-they-use-the-data/",
+  "published_at": "2026-04-30T19:40:20Z",
+  "summary": "LinkedIn被曝扫描用户浏览器扩展以收集数据，包括安装的扩展名称、版本及权限，用于用户画像、广告定位和招聘分析，引发隐私争议。",
+  "highlights": [
+    "LinkedIn通过页面脚本检测用户安装的浏览器扩展，获取扩展列表及版本信息",
+    "收集数据用于构建用户兴趣画像、精准广告投放和招聘决策分析",
+    "该行为存在隐私侵犯风险，可能违反欧盟GDPR等数据保护法规"
+  ],
+  "tags": [
+    "browser-extension",
+    "data-collection",
+    "linkedin",
+    "privacy"
+  ],
+  "category": "行业动态",
+  "score": 8,
+  "score_reason": "涉及大型科技公司隐私侵犯，社区讨论热度高（409点/184评论），揭示行业普遍问题；但内容为报道而非原创技术，扣2分",
+  "status": "published",
+  "metadata": {
+    "source_name": "Hacker News Best",
+    "category": "综合技术"
+  },
+  "created_at": "2026-05-01T01:57:18Z",
+  "updated_at": "2026-05-01T01:57:18Z"
+}

@@ -278,6 +278,45 @@ class OpenAICompatibleProvider(LLMProvider):
 
 
 # ---------------------------------------------------------------------------
+# Factory function
+# ---------------------------------------------------------------------------
+
+
+def create_provider(
+    provider_name: str | None = None,
+    api_key: str | None = None,
+    base_url: str | None = None,
+    timeout: float = DEFAULT_TIMEOUT,
+) -> OpenAICompatibleProvider:
+    """Create and return an LLM provider instance.
+
+    Args:
+        provider_name: Provider name ``"deepseek"``, ``"qwen"``, or
+            ``"openai"``. Falls back to ``LLM_PROVIDER`` env var, then
+            ``"deepseek"``.
+        api_key: API key. Falls back to the corresponding environment variable.
+        base_url: Custom base URL. Falls back to the provider default.
+        timeout: Request timeout in seconds.
+
+    Returns:
+        An initialized :class:`OpenAICompatibleProvider` instance.
+
+    Example::
+
+        provider = create_provider()
+        resp = chat_with_retry(provider, messages=[...])
+        provider.close()
+    """
+    resolved = provider_name or os.environ.get("LLM_PROVIDER", "deepseek")
+    return OpenAICompatibleProvider(
+        provider_name=resolved,
+        api_key=api_key,
+        base_url=base_url,
+        timeout=timeout,
+    )
+
+
+# ---------------------------------------------------------------------------
 # Retry wrapper
 # ---------------------------------------------------------------------------
 
@@ -374,8 +413,7 @@ def quick_chat(
         resp = quick_chat("What is LangGraph?")
         print(resp.content)
     """
-    provider_name = provider_name or os.environ.get("LLM_PROVIDER", "deepseek")
-    provider = OpenAICompatibleProvider(provider_name=provider_name)
+    provider = create_provider(provider_name=provider_name)
 
     messages: list[dict[str, str]] = []
     if system_prompt:
@@ -430,7 +468,7 @@ def _run_smoke_test() -> None:
             continue
 
         logger.info("--- Testing provider: %s (model: %s) ---", name, cfg["default_model"])
-        provider = OpenAICompatibleProvider(provider_name=name)
+        provider = create_provider(provider_name=name)
         try:
             resp = chat_with_retry(provider, messages=test_messages)
             cost = provider.calculate_cost(resp.usage)

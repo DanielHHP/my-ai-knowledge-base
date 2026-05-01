@@ -1,0 +1,40 @@
+{
+  "id": "github_affaan-m-everything-claude-code_2026-05-01",
+  "title": "affaan-m/everything-claude-code",
+  "source": "github",
+  "source_url": "https://github.com/affaan-m/everything-claude-code",
+  "published_at": "2026-05-01T00:00:00Z",
+  "summary": "这是一个名为'affaan-m/everything-claude-code'的项目，专注于为Claude Code、Codex、Opencode、Cursor等AI编码代理提供性能优化系统，涵盖了技能、本能、记忆、安全以及研究优先的开发方法。",
+  "highlights": [
+    "提供代理调优系统，提升Claude Code等工具的性能和效率",
+    "集成技能、本能、记忆和安全功能，增强代理能力",
+    "支持研究优先的开发模式，适用于多种AI编码平台"
+  ],
+  "tags": [
+    "ai-agent",
+    "claude-code",
+    "developer-tools",
+    "open-source",
+    "performance-optimization"
+  ],
+  "category": "工具库",
+  "score": 8,
+  "score_reason": "项目聚焦于AI代理性能优化，技术方向独特且实用，但缺乏具体实现细节和广泛验证，评分8分。",
+  "status": "published",
+  "metadata": {
+    "stars": 170997,
+    "language": "JavaScript",
+    "topics": [
+      "ai-agents",
+      "anthropic",
+      "claude",
+      "claude-code",
+      "developer-tools",
+      "llm",
+      "mcp",
+      "productivity"
+    ]
+  },
+  "created_at": "2026-05-01T01:57:18Z",
+  "updated_at": "2026-05-01T01:57:18Z"
+}

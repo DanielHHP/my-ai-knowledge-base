@@ -1,0 +1,29 @@
+{
+  "id": "rss_porting-microgpt-to-futhark-part-i_2026-05-01",
+  "title": "Porting microgpt to Futhark, Part I",
+  "source": "rss",
+  "source_url": "https://www.kmjn.org/notes/microgpt_futhark.html",
+  "published_at": "2026-04-30T19:34:31Z",
+  "summary": "本文探讨了将微型GPT模型移植到Futhark语言的过程，第一部分介绍基础工作。作者通过实际案例展示了函数式编程语言在AI计算中的潜力，并分享了移植过程中的技术挑战与解决方案。",
+  "highlights": [
+    "微型GPT到Futhark的移植实践",
+    "函数式编程在AI计算中的应用探索",
+    "技术挑战与实现方案的详细分析"
+  ],
+  "tags": [
+    "functional-programming",
+    "futhark",
+    "microgpt",
+    "porting"
+  ],
+  "category": "综合技术",
+  "score": 7,
+  "score_reason": "内容具有技术深度和实践价值，但仅覆盖移植第一部分，完整度有限；适合对特定语言和模型移植感兴趣的读者。",
+  "status": "published",
+  "metadata": {
+    "source_name": "Lobsters AI/ML",
+    "category": "综合技术"
+  },
+  "created_at": "2026-05-01T01:57:18Z",
+  "updated_at": "2026-05-01T01:57:18Z"
+}

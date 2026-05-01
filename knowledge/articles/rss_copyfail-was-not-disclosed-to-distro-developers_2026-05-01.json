@@ -1,0 +1,29 @@
+{
+  "id": "rss_copyfail-was-not-disclosed-to-distro-developers_2026-05-01",
+  "title": "CopyFail was not disclosed to distro developers?",
+  "source": "rss",
+  "source_url": "https://www.openwall.com/lists/oss-security/2026/04/30/10",
+  "published_at": "2026-04-30T16:43:47Z",
+  "summary": "Hacker News上关于CopyFail漏洞（2026年4月）的讨论，指出该漏洞未向发行版开发者披露，引发社区对安全披露政策的广泛争议，共466条评论。",
+  "highlights": [
+    "CopyFail漏洞未被及时告知发行版维护者，可能影响软件包安全性",
+    "社区对披露流程的质疑，讨论开发者与安全研究者之间的沟通责任",
+    "事件引发关于开源生态中漏洞披露最佳实践的深入反思"
+  ],
+  "tags": [
+    "linux-distribution",
+    "open-source",
+    "security",
+    "vulnerability-disclosure"
+  ],
+  "category": "行业动态",
+  "score": 8,
+  "score_reason": "话题涉及开源安全核心问题，讨论热度高，但信息量不足以完全评估影响范围",
+  "status": "published",
+  "metadata": {
+    "source_name": "Hacker News Best",
+    "category": "综合技术"
+  },
+  "created_at": "2026-05-01T01:57:18Z",
+  "updated_at": "2026-05-01T01:57:18Z"
+}

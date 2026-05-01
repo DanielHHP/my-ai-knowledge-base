@@ -1,0 +1,30 @@
+{
+  "id": "rss_scaling-pain-of-coding-agent-serving-lessons-from-debugging-glm-5-at-scale_2026-05-01",
+  "title": "Scaling Pain of Coding Agent Serving: Lessons from Debugging GLM-5 at Scale",
+  "source": "rss",
+  "source_url": "https://z.ai/blog/scaling-pain",
+  "published_at": "2026-04-29T20:54:01Z",
+  "summary": "本文分享了在规模化部署GLM-5编码代理时遇到的实际挑战与调试经验，包括性能瓶颈、资源管理及系统稳定性等问题，并提出了相应的优化策略。",
+  "highlights": [
+    "大规模编码代理服务面临的扩展性问题",
+    "调试过程中发现的性能瓶颈与资源管理挑战",
+    "优化系统稳定性的实用经验与策略"
+  ],
+  "tags": [
+    "coding-agent",
+    "glm-5",
+    "llm",
+    "scaling",
+    "system-optimization"
+  ],
+  "category": "行业动态",
+  "score": 8,
+  "score_reason": "内容聚焦实际工程问题，提供了有价值的规模化部署经验，针对性强且实用，但缺乏具体技术细节和创新性突破。",
+  "status": "published",
+  "metadata": {
+    "source_name": "Lobsters AI/ML",
+    "category": "综合技术"
+  },
+  "created_at": "2026-05-01T01:57:18Z",
+  "updated_at": "2026-05-01T01:57:18Z"
+}

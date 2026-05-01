@@ -1,0 +1,38 @@
+{
+  "id": "github_tensorflow-tensorflow_2026-05-01",
+  "title": "tensorflow/tensorflow",
+  "source": "github",
+  "source_url": "https://github.com/tensorflow/tensorflow",
+  "published_at": "2026-05-01T00:00:00Z",
+  "summary": "TensorFlow是一个开源的机器学习框架，旨在为所有开发者提供构建和部署机器学习模型的能力。它支持各种平台，包括移动设备、边缘设备和云端，并拥有强大的社区支持和丰富的工具生态系统。",
+  "highlights": [
+    "开源且面向所有人，降低了机器学习开发的门槛",
+    "支持多平台部署，包括移动设备、边缘计算和云端"
+  ],
+  "tags": [
+    "framework",
+    "machine-learning",
+    "open-source",
+    "tensorflow"
+  ],
+  "category": "工具库",
+  "score": 9,
+  "score_reason": "TensorFlow作为业界主流的机器学习框架之一，功能强大且生态成熟，但仍有更多发展空间，因此评分接近满分。",
+  "status": "published",
+  "metadata": {
+    "stars": 194944,
+    "language": "C++",
+    "topics": [
+      "deep-learning",
+      "deep-neural-networks",
+      "distributed",
+      "machine-learning",
+      "ml",
+      "neural-network",
+      "python",
+      "tensorflow"
+    ]
+  },
+  "created_at": "2026-05-01T01:57:18Z",
+  "updated_at": "2026-05-01T01:57:18Z"
+}

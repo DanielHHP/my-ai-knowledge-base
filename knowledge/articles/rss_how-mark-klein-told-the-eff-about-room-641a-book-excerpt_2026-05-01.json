@@ -1,0 +1,30 @@
+{
+  "id": "rss_how-mark-klein-told-the-eff-about-room-641a-book-excerpt_2026-05-01",
+  "title": "How Mark Klein told the EFF about Room 641A [book excerpt]",
+  "source": "rss",
+  "source_url": "https://thereader.mitpress.mit.edu/the-whistleblower-who-uncovered-the-nsas-big-brother-machine/",
+  "published_at": "2026-04-30T16:41:00Z",
+  "summary": "这篇文章是《The Whistleblower Who Uncovered the NSA's Big Brother Machine》的节选，讲述了前AT&T技术人员Mark Klein如何向电子前沿基金会（EFF）揭露国家安全局（NSA）在旧金山索玛街611号（Room 641A）建立秘密监控设施，大规模监听美国公民通信的故事。",
+  "highlights": [
+    "Mark Klein在AT&T内部发现NSA在Room 641A安装监控设备，能够复制所有经过的互联网通信。",
+    "他冒着风险将证据提交给EFF，导致公开揭露和后来的诉讼。",
+    "该事件成为美国大规模监控争议的标志性案例，推动了对NSA改革的讨论。"
+  ],
+  "tags": [
+    "eff",
+    "nsa",
+    "privacy",
+    "surveillance",
+    "whistleblower"
+  ],
+  "category": "行业动态",
+  "score": 9,
+  "score_reason": "内容历史意义重大，技术细节丰富，对社会监控与隐私议题有深远影响，但在AI技术直接相关性上稍弱，因此得分为9。",
+  "status": "published",
+  "metadata": {
+    "source_name": "Hacker News Best",
+    "category": "综合技术"
+  },
+  "created_at": "2026-05-01T01:57:18Z",
+  "updated_at": "2026-05-01T01:57:18Z"
+}

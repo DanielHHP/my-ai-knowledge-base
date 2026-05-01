@@ -1,0 +1,29 @@
+{
+  "id": "rss_ai-terminology-is-poorly-defined-and-oft-misused_2026-05-01",
+  "title": "AI Terminology is Poorly Defined and Oft Misused",
+  "source": "rss",
+  "source_url": "https://vale.rocks/posts/ai-terminology",
+  "published_at": "2026-04-29T20:38:58Z",
+  "summary": "文章指出人工智能术语定义模糊且常被误用，强调这种现象造成沟通障碍与概念混淆，呼吁行业重视术语规范化工作。",
+  "highlights": [
+    "AI领域术语边界不清晰，导致跨学科交流效率低下",
+    "常见术语如“智能”、“学习”等被滥用，偏离原学术定义",
+    "需要建立统一术语体系以推动AI健康发展"
+  ],
+  "tags": [
+    "ai-definition",
+    "communication",
+    "misuse",
+    "terminology"
+  ],
+  "category": "行业动态",
+  "score": 7,
+  "score_reason": "主题切中行业痛点，具有反思价值，但缺乏具体解决方案，深度略逊",
+  "status": "published",
+  "metadata": {
+    "source_name": "Lobsters AI/ML",
+    "category": "综合技术"
+  },
+  "created_at": "2026-05-01T01:57:18Z",
+  "updated_at": "2026-05-01T01:57:18Z"
+}

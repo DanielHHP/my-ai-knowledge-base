@@ -1,0 +1,46 @@
+{
+  "id": "github_microsoft-generative-ai-for-beginners_2026-05-01",
+  "title": "microsoft/generative-ai-for-beginners",
+  "source": "github",
+  "source_url": "https://github.com/microsoft/generative-ai-for-beginners",
+  "published_at": "2026-05-01T00:00:00Z",
+  "summary": "微软推出的生成式AI入门课程，包含21个课时，从零开始教授构建生成式AI应用的基础知识，适合初学者系统学习。",
+  "highlights": [
+    "21个结构化课程，覆盖生成式AI核心概念与技术",
+    "由微软官方提供，学习资源权威可靠",
+    "注重实践，帮助学习者快速上手构建AI应用"
+  ],
+  "tags": [
+    "beginner",
+    "education",
+    "generative-ai",
+    "llm",
+    "microsoft"
+  ],
+  "category": "综合技术",
+  "score": 8,
+  "score_reason": "内容系统全面，适合初学者，但属于教程类资源，创新性和深度有限",
+  "status": "published",
+  "metadata": {
+    "stars": 110056,
+    "language": "Jupyter Notebook",
+    "topics": [
+      "ai",
+      "azure",
+      "chatgpt",
+      "dall-e",
+      "generative-ai",
+      "generativeai",
+      "gpt",
+      "language-model",
+      "llms",
+      "microsoft-for-beginners",
+      "openai",
+      "prompt-engineering",
+      "semantic-search",
+      "transformers"
+    ]
+  },
+  "created_at": "2026-05-01T01:57:18Z",
+  "updated_at": "2026-05-01T01:57:18Z"
+}

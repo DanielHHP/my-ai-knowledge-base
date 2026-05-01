@@ -1,0 +1,70 @@
+{
+  "source": "rss",
+  "collected_at": "2026-05-01T01:58:43Z",
+  "items": [
+    {
+      "title": "Rivian allows you to disable all internet connectivity",
+      "url": "https://rivian.com/support/article/can-i-disable-all-data-collection-from-my-vehicle",
+      "summary": "Article URL: https://rivian.com/support/article/can-i-disable-all-data-collection-from-my-vehicle\nComments URL: https://news.ycombinator.com/item?id=47967786\nPoints: 479\n# Comments: 178\n]]>",
+      "published_at": "2026-04-30T20:27:22Z",
+      "source_name": "Hacker News Best",
+      "category": "综合技术"
+    },
+    {
+      "title": "LinkedIn is scanning browser extensions",
+      "url": "https://404privacy.com/blog/linkedin-is-scanning-your-browser-extensions-this-is-how-they-use-the-data/",
+      "summary": "Article URL: https://404privacy.com/blog/linkedin-is-scanning-your-browser-extensions-this-is-how-they-use-the-data/\nComments URL: https://news.ycombinator.com/item?id=47967262\nPoints: 409\n# Comments: 184\n]]>",
+      "published_at": "2026-04-30T19:40:20Z",
+      "source_name": "Hacker News Best",
+      "category": "综合技术"
+    },
+    {
+      "title": "CopyFail was not disclosed to distro developers?",
+      "url": "https://www.openwall.com/lists/oss-security/2026/04/30/10",
+      "summary": "Recent: Copy Fail - https://news.ycombinator.com/item?id=47952181 - April 2026 (466 comments)\n\nComments URL: https://news.ycombinator.com/item?id=47965108\nPoints: 366\n# Comments: 290\n]]>",
+      "published_at": "2026-04-30T16:43:47Z",
+      "source_name": "Hacker News Best",
+      "category": "综合技术"
+    },
+    {
+      "title": "How Mark Klein told the EFF about Room 641A [book excerpt]",
+      "url": "https://thereader.mitpress.mit.edu/the-whistleblower-who-uncovered-the-nsas-big-brother-machine/",
+      "summary": "Article URL: https://thereader.mitpress.mit.edu/the-whistleblower-who-uncovered-the-nsas-big-brother-machine/\nComments URL: https://news.ycombinator.com/item?id=47965060\nPoints: 424\n# Comments: 127\n]]>",
+      "published_at": "2026-04-30T16:41:00Z",
+      "source_name": "Hacker News Best",
+      "category": "综合技术"
+    },
+    {
+      "title": "Porting microgpt to Futhark, Part I",
+      "url": "https://www.kmjn.org/notes/microgpt_futhark.html",
+      "summary": "&lt;p&gt;&lt;a href=\"https://lobste.rs/s/uch4e0/porting_microgpt_futhark_part_i\"&gt;Comments&lt;/a&gt;&lt;/p&gt;",
+      "published_at": "2026-04-30T19:34:31Z",
+      "source_name": "Lobsters AI/ML",
+      "category": "综合技术"
+    },
+    {
+      "title": "Where the goblins came from",
+      "url": "https://openai.com/index/where-the-goblins-came-from/",
+      "summary": "&lt;p&gt;&lt;a href=\"https://lobste.rs/s/hbmd5q/where_goblins_came_from\"&gt;Comments&lt;/a&gt;&lt;/p&gt;",
+      "published_at": "2026-04-30T01:38:54Z",
+      "source_name": "Lobsters AI/ML",
+      "category": "综合技术"
+    },
+    {
+      "title": "Scaling Pain of Coding Agent Serving: Lessons from Debugging GLM-5 at Scale",
+      "url": "https://z.ai/blog/scaling-pain",
+      "summary": "&lt;p&gt;&lt;a href=\"https://lobste.rs/s/2v2q1x/scaling_pain_coding_agent_serving\"&gt;Comments&lt;/a&gt;&lt;/p&gt;",
+      "published_at": "2026-04-29T20:54:01Z",
+      "source_name": "Lobsters AI/ML",
+      "category": "综合技术"
+    },
+    {
+      "title": "AI Terminology is Poorly Defined and Oft Misused",
+      "url": "https://vale.rocks/posts/ai-terminology",
+      "summary": "&lt;p&gt;&lt;a href=\"https://lobste.rs/s/zleph2/ai_terminology_is_poorly_defined_oft\"&gt;Comments&lt;/a&gt;&lt;/p&gt;",
+      "published_at": "2026-04-29T20:38:58Z",
+      "source_name": "Lobsters AI/ML",
+      "category": "综合技术"
+    }
+  ]
+}

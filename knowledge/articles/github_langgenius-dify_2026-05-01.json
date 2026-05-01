@@ -1,0 +1,51 @@
+{
+  "id": "github_langgenius-dify_2026-05-01",
+  "title": "langgenius/dify",
+  "source": "github",
+  "source_url": "https://github.com/langgenius/dify",
+  "published_at": "2026-05-01T00:00:00Z",
+  "summary": "langgenius/dify 是一个用于开发代理工作流的、生产就绪的平台。它支持快速构建和部署复杂的AI驱动工作流，强调实用性和稳定性。",
+  "highlights": [
+    "生产就绪，稳定可靠",
+    "专注于代理工作流开发",
+    "支持快速构建部署"
+  ],
+  "tags": [
+    "agent",
+    "open-source",
+    "platform",
+    "workflow"
+  ],
+  "category": "工具库",
+  "score": 8,
+  "score_reason": "平台实用性强，生产就绪，聚焦代理工作流，但需更多生态和社区信息。",
+  "status": "published",
+  "metadata": {
+    "stars": 139768,
+    "language": "TypeScript",
+    "topics": [
+      "agent",
+      "agentic-ai",
+      "agentic-framework",
+      "agentic-workflow",
+      "ai",
+      "automation",
+      "gemini",
+      "genai",
+      "gpt",
+      "gpt-4",
+      "llm",
+      "low-code",
+      "mcp",
+      "nextjs",
+      "no-code",
+      "openai",
+      "orchestration",
+      "python",
+      "rag",
+      "workflow"
+    ]
+  },
+  "created_at": "2026-05-01T01:57:18Z",
+  "updated_at": "2026-05-01T01:57:18Z"
+}

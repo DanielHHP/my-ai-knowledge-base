@@ -1,0 +1,52 @@
+{
+  "id": "github_x1xhlol-system-prompts-and-models-of-ai-tools_2026-05-01",
+  "title": "x1xhlol/system-prompts-and-models-of-ai-tools",
+  "source": "github",
+  "source_url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+  "published_at": "2026-05-01T00:00:00Z",
+  "summary": "这是一个收录多款AI工具（如Claude Code、Cursor、Devin AI等）的系统提示、内部工具及AI模型的资源库，覆盖代码助手、自动化代理和开源模型，提供全面的系统提示和模型信息。",
+  "highlights": [
+    "汇集20+主流AI工具的系统提示和内部机制，涵盖代码生成、代理和模型领域",
+    "包含开源模型信息，便于研究AI工具背后的工作流程和设计理念",
+    "为开发者提供深度参考，支持对比不同AI工具的内部结构和系统提示"
+  ],
+  "tags": [
+    "ai-tools",
+    "code-assistant",
+    "models",
+    "open-source",
+    "system-prompts"
+  ],
+  "category": "工具库",
+  "score": 8,
+  "score_reason": "内容覆盖面广、实用性强，但缺乏深度分析和原创性，侧重资源整合",
+  "status": "published",
+  "metadata": {
+    "stars": 136466,
+    "language": "",
+    "topics": [
+      "ai",
+      "bolt",
+      "cluely",
+      "copilot",
+      "cursor",
+      "cursorai",
+      "devin",
+      "github-copilot",
+      "lovable",
+      "open-source",
+      "perplexity",
+      "replit",
+      "system-prompts",
+      "trae",
+      "trae-ai",
+      "trae-ide",
+      "v0",
+      "vscode",
+      "windsurf",
+      "windsurf-ai"
+    ]
+  },
+  "created_at": "2026-05-01T01:57:18Z",
+  "updated_at": "2026-05-01T01:57:18Z"
+}
