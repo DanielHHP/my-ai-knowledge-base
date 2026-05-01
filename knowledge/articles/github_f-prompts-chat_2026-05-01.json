@@ -4,13 +4,16 @@
   "source": "github",
   "source_url": "https://github.com/f/prompts.chat",
   "published_at": "2026-05-01T00:00:00Z",
-  "summary": "f/prompts.chat 是一个专注于 ChatGPT 提示词（prompts）的社区驱动型仓库，原名'Awesome ChatGPT Prompts'，旨在让用户分享、发现和收集提示词。该项目免费开源，支持自托管以保障隐私，适合组织内部使用，属于实用工具资源。",
+  "summary": "这是一个收集、分享和发现社区ChatGPT提示词的平台，前身是Awesome ChatGPT Prompts。支持私有化部署，确保数据隐私。旨在通过众包方式提供高质量提示词资源，帮助用户更有效地使用AI聊天模型。",
   "content": "",
   "tags": [
-    "prompt-engineering",
+    "prompts",
     "chatgpt",
     "open-source",
-    "community"
+    "community",
+    "self-hosted",
+    "agent",
+    "workflow"
   ],
   "category": "工具库",
   "status": "published",
@@ -38,7 +41,7 @@
       "typescript"
     ]
   },
-  "created_at": "2026-05-01T04:07:16Z",
-  "updated_at": "2026-05-01T04:07:16Z",
-  "quality_score": 0.7
+  "created_at": "2026-05-01T04:15:45Z",
+  "updated_at": "2026-05-01T04:17:01Z",
+  "quality_score": 0.65
 }

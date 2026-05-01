@@ -350,6 +350,32 @@ def review_node(state: KBState) -> dict:
     }
 
 
+def review_node_test(state: KBState) -> dict:
+    """[ReviewNode-Test] 前 2 次审核不通过，第 3 次通过。"""
+    articles = state.get("articles", [])
+    iteration = state.get("iteration", 0)
+
+    feedbacks = [
+        "摘要缺少对技术实现细节的分析，建议补充核心架构说明",
+        "标签分类不够精准，建议增加 'agent'、'workflow' 等关键标签",
+    ]
+
+    if iteration >= 2 or not articles:
+        review_passed = True
+        feedback = ""
+    else:
+        review_passed = False
+        feedback = feedbacks[iteration]
+
+    print(f"[ReviewNode] iteration={iteration}, review_passed={review_passed}")
+
+    return {
+        "review_passed": review_passed,
+        "review_feedback": feedback,
+        "iteration": iteration + 1,
+    }
+
+
 # ---------------------------------------------------------------------------
 # Node 5: Save
 # ---------------------------------------------------------------------------

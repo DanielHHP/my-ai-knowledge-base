@@ -4,18 +4,21 @@
   "source": "github",
   "source_url": "https://github.com/Significant-Gravitas/AutoGPT",
   "published_at": "2026-05-01T00:00:00Z",
-  "summary": "AutoGPT是一个基于GPT-4的开源项目，旨在让每个人都能轻松使用和构建AI代理，实现自主任务执行。",
+  "summary": "AutoGPT是一个致力于让AI人人可用的开源项目，提供工具和平台，使用户能够构建和部署自主AI代理，专注于自动化任务和决策，降低AI使用门槛。",
   "content": "",
   "tags": [
     "autonomous-agents",
-    "llm",
     "open-source",
-    "ai-tools"
+    "llm",
+    "tool",
+    "automation",
+    "agent",
+    "workflow"
   ],
   "category": "工具库",
   "status": "published",
   "metadata": {
-    "stars": 183914,
+    "stars": 183916,
     "language": "Python",
     "topics": [
       "agentic-ai",
@@ -31,7 +34,7 @@
       "python"
     ]
   },
-  "created_at": "2026-05-01T04:07:07Z",
-  "updated_at": "2026-05-01T04:07:07Z",
+  "created_at": "2026-05-01T04:15:36Z",
+  "updated_at": "2026-05-01T04:16:42Z",
   "quality_score": 0.85
 }

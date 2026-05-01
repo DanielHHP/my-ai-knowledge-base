@@ -4,14 +4,16 @@
   "source": "github",
   "source_url": "https://github.com/tensorflow/tensorflow",
   "published_at": "2026-05-01T00:00:00Z",
-  "summary": "TensorFlow 是一个广泛使用的开源机器学习框架，支持深度学习、神经网络、自然语言处理等多种 AI 任务，提供强大灵活的计算图和分布式训练能力，适合研究者和开发者使用。",
+  "summary": "TensorFlow 是一个广泛使用的开源机器学习框架，支持深度学习、神经网络等多种模型构建与训练，适用于从研究到生产的全流程，拥有庞大的社区和丰富的生态系统。",
   "content": "",
   "tags": [
     "machine-learning",
     "deep-learning",
     "open-source",
     "framework",
-    "tensorflow"
+    "tensorflow",
+    "agent",
+    "workflow"
   ],
   "category": "工具库",
   "status": "published",
@@ -29,7 +31,7 @@
       "tensorflow"
     ]
   },
-  "created_at": "2026-05-01T04:07:03Z",
-  "updated_at": "2026-05-01T04:07:03Z",
+  "created_at": "2026-05-01T04:15:31Z",
+  "updated_at": "2026-05-01T04:16:38Z",
   "quality_score": 0.95
 }
