@@ -89,15 +89,6 @@ def review_node(state: KBState) -> dict:
         iteration,
     )
 
-    if iteration >= 2:
-        logger.info("[ReviewNode] Max iteration reached, force passing")
-        return {
-            "review_passed": True,
-            "review_feedback": "",
-            "iteration": iteration + 1,
-            "cost_tracker": state.get("cost_tracker"),
-        }
-
     if not analyses:
         return {
             "review_passed": True,

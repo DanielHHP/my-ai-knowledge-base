@@ -1,0 +1,401 @@
+{
+  "timestamp": "2026-05-06T153331",
+  "iterations_used": 3,
+  "last_feedback": "- openclaw/openclaw (score=5.7): 摘要清晰准确，但技术深度不足，缺乏对架构、模型或交互方式的具体分析；相关性中等，因项目尚处早期，AI功能未明确；原创性一般，差异化特点不突出。建议补充技术细节或明确AI能力。",
+  "analyses": [
+    {
+      "id": "github_openclaw-openclaw_2026-05-06",
+      "title": "openclaw/openclaw",
+      "source": "github",
+      "source_url": "https://github.com/openclaw/openclaw",
+      "published_at": "2026-05-06T00:00:00Z",
+      "summary": "OpenClaw是一个跨平台、跨操作系统的个人AI助手项目，以龙虾为吉祥物，强调自主性和便捷性。项目旨在为用户提供一个高度定制化的AI工具，可在任何系统上运行。目前代码库主要为文档和基础框架，尚未公开具体支持的AI模型或交互方式（如语音、文本等），技术实现细节和架构分析尚缺。与同类AI助手（如Mycroft、OpenAssistant）相比，其差异化特点尚不明确，AI功能有待进一步明确和实现。",
+      "tags": [
+        "ai-assistant",
+        "cross-platform",
+        "personal-assistant",
+        "open-source",
+        "early-stage"
+      ],
+      "category": "工具库",
+      "quality_score": 0.25,
+      "score_reason": "项目描述有趣，但代码库内容较少，缺乏核心实现和完整功能，活跃度和成熟度均低。",
+      "metadata": {
+        "stars": 368964,
+        "language": "TypeScript",
+        "topics": [
+          "ai",
+          "assistant",
+          "crustacean",
+          "molty",
+          "openclaw",
+          "own-your-data",
+          "personal"
+        ]
+      },
+      "created_at": "2026-05-06T15:30:42Z",
+      "updated_at": "2026-05-06T15:33:19Z"
+    },
+    {
+      "id": "github_tensorflow-tensorflow_2026-05-06",
+      "title": "tensorflow/tensorflow",
+      "source": "github",
+      "source_url": "https://github.com/tensorflow/tensorflow",
+      "published_at": "2026-05-06T00:00:00Z",
+      "summary": "TensorFlow是全球最广泛使用的开源机器学习框架之一，提供全面的工具、库和社区资源，支持从研究到生产的全流程AI开发，涵盖深度学习、神经网络、模型部署等核心功能。",
+      "tags": [
+        "machine-learning",
+        "deep-learning",
+        "open-source",
+        "framework",
+        "tensorflow"
+      ],
+      "category": "综合技术",
+      "quality_score": 0.95,
+      "score_reason": "作为业界标杆框架，TensorFlow拥有极其成熟的技术栈、庞大的用户社区和持续的官方维护，文档完善且应用广泛，几乎涵盖AI开发所有环节。",
+      "metadata": {
+        "stars": 195022,
+        "language": "C++",
+        "topics": [
+          "deep-learning",
+          "deep-neural-networks",
+          "distributed",
+          "machine-learning",
+          "ml",
+          "neural-network",
+          "python",
+          "tensorflow"
+        ]
+      },
+      "created_at": "2026-05-06T15:30:45Z",
+      "updated_at": "2026-05-06T15:33:19Z"
+    },
+    {
+      "id": "github_n8n-io-n8n_2026-05-06",
+      "title": "n8n-io/n8n",
+      "source": "github",
+      "source_url": "https://github.com/n8n-io/n8n",
+      "published_at": "2026-05-06T00:00:00Z",
+      "summary": "n8n是一个公平代码的工作流自动化平台，具备原生AI能力。它支持可视构建与自定义代码结合，可自托管或云部署，拥有400多个集成，显著提升AI应用开发效率。",
+      "tags": [
+        "workflow-automation",
+        "open-source",
+        "ai-integration",
+        "low-code",
+        "fair-code"
+      ],
+      "category": "综合技术",
+      "quality_score": 0.95,
+      "score_reason": "该平台功能强大，集成丰富，社区活跃，代码质量高，且具备原生AI能力，能有效促进AI工作流构建。",
+      "metadata": {
+        "stars": 186872,
+        "language": "TypeScript",
+        "topics": [
+          "ai",
+          "apis",
+          "automation",
+          "cli",
+          "data-flow",
+          "development",
+          "integration-framework",
+          "integrations",
+          "ipaas",
+          "low-code",
+          "low-code-platform",
+          "mcp",
+          "mcp-client",
+          "mcp-server",
+          "n8n",
+          "no-code",
+          "self-hosted",
+          "typescript",
+          "workflow",
+          "workflow-automation"
+        ]
+      },
+      "created_at": "2026-05-06T15:30:48Z",
+      "updated_at": "2026-05-06T15:33:19Z"
+    },
+    {
+      "id": "github_significant-gravitas-autogpt_2026-05-06",
+      "title": "Significant-Gravitas/AutoGPT",
+      "source": "github",
+      "source_url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "published_at": "2026-05-06T00:00:00Z",
+      "summary": "AutoGPT 是一个开源自主AI代理框架，基于LLM（如GPT-4）实现任务分解、工具调用和长期记忆管理。其核心机制包括自动目标分解、上下文窗口管理、插件系统（支持搜索、文件操作、代码执行等），以及可扩展的代理循环架构。应用场景涵盖自动化研究、内容生成、软件开发辅助等。技术亮点在于将大模型与外部工具链深度集成，实现半自主任务执行。",
+      "tags": [
+        "autonomous-agents",
+        "open-source",
+        "llm",
+        "tool-framework",
+        "ai-accessibility",
+        "task-decomposition"
+      ],
+      "category": "综合技术",
+      "quality_score": 0.85,
+      "score_reason": "该项目在 GitHub 上拥有极高星标和活跃社区，代表了自主 AI 代理领域的重要实践，且持续更新维护，但技术仍在演进中，存在一定局限。",
+      "metadata": {
+        "stars": 184031,
+        "language": "Python",
+        "topics": [
+          "agentic-ai",
+          "agents",
+          "ai",
+          "artificial-intelligence",
+          "autonomous-agents",
+          "claude",
+          "gpt",
+          "llama-api",
+          "llm",
+          "openai",
+          "python"
+        ]
+      },
+      "created_at": "2026-05-06T15:30:51Z",
+      "updated_at": "2026-05-06T15:33:19Z"
+    },
+    {
+      "id": "github_affaan-m-everything-claude-code_2026-05-06",
+      "title": "affaan-m/everything-claude-code",
+      "source": "github",
+      "source_url": "https://github.com/affaan-m/everything-claude-code",
+      "published_at": "2026-05-06T00:00:00Z",
+      "summary": "这是一个专注于Claude Code等AI代理性能优化的开源项目，提供技能、本能、记忆、安全性和研究优先的开发工具集合。旨在增强多种编程助手（如Claude Code、Codex、OpenCode、Cursor等）的实用性和效率，推动代理系统的发展。",
+      "tags": [
+        "ai-agents",
+        "optimization",
+        "claude-code",
+        "developer-tools",
+        "open-source"
+      ],
+      "category": "工具库",
+      "quality_score": 0.65,
+      "score_reason": "项目概念清晰，针对AI代理性能优化有实际应用价值，但文档和代码完整性尚需完善，影响力有限。",
+      "metadata": {
+        "stars": 174483,
+        "language": "JavaScript",
+        "topics": [
+          "ai-agents",
+          "anthropic",
+          "claude",
+          "claude-code",
+          "developer-tools",
+          "llm",
+          "mcp",
+          "productivity"
+        ]
+      },
+      "created_at": "2026-05-06T15:30:54Z",
+      "updated_at": "2026-05-06T15:33:19Z"
+    },
+    {
+      "id": "github_ollama-ollama_2026-05-06",
+      "title": "ollama/ollama",
+      "source": "github",
+      "source_url": "https://github.com/ollama/ollama",
+      "published_at": "2026-05-06T00:00:00Z",
+      "summary": "ollama/ollama 是一个方便用户快速运行多种大型语言模型的工具，支持 Kimi-K2.5、GLM-5、MiniMax、DeepSeek、gpt-oss、Qwen、Gemma 等模型。它简化了模型部署和推理流程，适合研究和开发人员。",
+      "tags": [
+        "llm",
+        "open-source",
+        "tool",
+        "model-serving"
+      ],
+      "category": "工具库",
+      "quality_score": 0.85,
+      "score_reason": "该仓库集成了多种最新模型，作为工具库实用性高，但描述中未提及创新性，略有扣分。",
+      "metadata": {
+        "stars": 170841,
+        "language": "Go",
+        "topics": [
+          "deepseek",
+          "gemma",
+          "gemma3",
+          "glm",
+          "go",
+          "golang",
+          "gpt-oss",
+          "llama",
+          "llama3",
+          "llm",
+          "llms",
+          "minimax",
+          "mistral",
+          "ollama",
+          "qwen"
+        ]
+      },
+      "created_at": "2026-05-06T15:30:57Z",
+      "updated_at": "2026-05-06T15:33:19Z"
+    },
+    {
+      "id": "github_automatic1111-stable-diffusion-webui_2026-05-06",
+      "title": "AUTOMATIC1111/stable-diffusion-webui",
+      "source": "github",
+      "source_url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+      "published_at": "2026-05-06T00:00:00Z",
+      "summary": "AUTOMATIC1111/stable-diffusion-webui 是一个基于 Gradio 的 Stable Diffusion 图形界面，支持文生图、图生图、图像修复、超分辨率等功能，拥有丰富的扩展和模型管理能力。",
+      "tags": [
+        "stable-diffusion",
+        "image-generation",
+        "web-ui",
+        "open-source",
+        "deep-learning"
+      ],
+      "category": "工具库",
+      "quality_score": 0.95,
+      "score_reason": "项目极为流行，社区活跃度高，文档完善，功能强大且持续更新，是 Stable Diffusion 生态中最重要的前端工具。",
+      "metadata": {
+        "stars": 162738,
+        "language": "Python",
+        "topics": [
+          "ai",
+          "ai-art",
+          "deep-learning",
+          "diffusion",
+          "gradio",
+          "image-generation",
+          "image2image",
+          "img2img",
+          "pytorch",
+          "stable-diffusion",
+          "text2image",
+          "torch",
+          "txt2img",
+          "unstable",
+          "upscaling",
+          "web"
+        ]
+      },
+      "created_at": "2026-05-06T15:30:59Z",
+      "updated_at": "2026-05-06T15:33:19Z"
+    },
+    {
+      "id": "github_f-prompts-chat_2026-05-06",
+      "title": "f/prompts.chat",
+      "source": "github",
+      "source_url": "https://github.com/f/prompts.chat",
+      "published_at": "2026-05-06T00:00:00Z",
+      "summary": "该项目是一个社区驱动的ChatGPT提示词集合平台，原名Awesome ChatGPT Prompts，支持用户分享、发现和收集提示词。开源且可自托管，确保组织使用的隐私性。",
+      "tags": [
+        "prompt-engineering",
+        "chatgpt",
+        "open-source",
+        "community"
+      ],
+      "category": "工具库",
+      "quality_score": 0.85,
+      "score_reason": "项目实用性强，社区活跃，提供高质量提示词集合，开源且注重隐私，但本身不涉及模型或核心技术创新。",
+      "metadata": {
+        "stars": 161695,
+        "language": "HTML",
+        "topics": [
+          "ai",
+          "artificial-intelligence",
+          "awesome-list",
+          "chatgpt",
+          "chatgpt-prompts",
+          "claude",
+          "gemini",
+          "gpt",
+          "gpt-4",
+          "llm",
+          "machine-learning",
+          "nextjs",
+          "open-source",
+          "openai",
+          "prompt-engineering",
+          "prompts",
+          "prompts-chat",
+          "typescript"
+        ]
+      },
+      "created_at": "2026-05-06T15:31:02Z",
+      "updated_at": "2026-05-06T15:33:19Z"
+    },
+    {
+      "id": "github_huggingface-transformers_2026-05-06",
+      "title": "huggingface/transformers",
+      "source": "github",
+      "source_url": "https://github.com/huggingface/transformers",
+      "published_at": "2026-05-06T00:00:00Z",
+      "summary": "Hugging Face Transformers 是一个广泛使用的开源框架，提供丰富的预训练模型库，支持文本、视觉、音频和多模态任务，兼具推理与训练功能，是机器学习和人工智能领域的核心工具。",
+      "tags": [
+        "transformers",
+        "open-source",
+        "nlp",
+        "pretrained-models",
+        "multimodal"
+      ],
+      "category": "工具库",
+      "quality_score": 0.95,
+      "score_reason": "该仓库在AI社区中具有极高的知名度和影响力，代码质量高、文档完善、社区活跃，是主流模型的标准实现，因此评分很高。",
+      "metadata": {
+        "stars": 160307,
+        "language": "Python",
+        "topics": [
+          "audio",
+          "deep-learning",
+          "deepseek",
+          "gemma",
+          "glm",
+          "hacktoberfest",
+          "llm",
+          "machine-learning",
+          "model-hub",
+          "natural-language-processing",
+          "nlp",
+          "pretrained-models",
+          "python",
+          "pytorch",
+          "pytorch-transformers",
+          "qwen",
+          "speech-recognition",
+          "transformer",
+          "vlm"
+        ]
+      },
+      "created_at": "2026-05-06T15:31:05Z",
+      "updated_at": "2026-05-06T15:33:19Z"
+    },
+    {
+      "id": "github_snailclimb-javaguide_2026-05-06",
+      "title": "Snailclimb/JavaGuide",
+      "source": "github",
+      "source_url": "https://github.com/Snailclimb/JavaGuide",
+      "published_at": "2026-05-06T00:00:00Z",
+      "summary": "JavaGuide是一个涵盖计算机基础、数据库、分布式、高并发、系统设计与AI应用开发的Java面试与后端通用面试指南，内容全面，适合开发者系统学习。",
+      "tags": [
+        "java",
+        "interview",
+        "backend",
+        "system-design",
+        "ai-application"
+      ],
+      "category": "综合技术",
+      "quality_score": 0.85,
+      "score_reason": "内容丰富全面，覆盖多个核心领域，社区活跃度高，但AI应用开发部分相对较少，整体质量优秀。",
+      "metadata": {
+        "stars": 155441,
+        "language": "Java",
+        "topics": [
+          "agent",
+          "context-engineering",
+          "interview",
+          "java",
+          "jvm",
+          "mcp",
+          "mysql",
+          "redis",
+          "redisson",
+          "skills",
+          "spring",
+          "system",
+          "system-design"
+        ]
+      },
+      "created_at": "2026-05-06T15:31:07Z",
+      "updated_at": "2026-05-06T15:33:19Z"
+    }
+  ]
+}

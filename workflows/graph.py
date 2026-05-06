@@ -1,9 +1,10 @@
-"""LangGraph workflow assembly — linear pipeline with review feedback loop.
+"""LangGraph workflow assembly — linear pipeline with 3-way review routing.
 
 Graph structure::
 
-    collect → analyze → organize → review ──passed──→ save → END
-                                        └──failed──→ organize
+    collect → analyze → review ──passed──────────→ organize → END
+                               ├──failed + iter<3──→ revise ──→ review (loop)
+                               └──failed + iter≥3──→ human_flag → END
 """
 
 import logging
@@ -11,13 +12,14 @@ from typing import Any
 
 from langgraph.graph import END, StateGraph
 
+from workflows.human_flag import human_flag_node
 from workflows.nodes import (
     analyze_node,
     collect_node,
-    organize_node,
-    save_node,
 )
+from workflows.organizer import organize_node
 from workflows.reviewer import review_node
+from workflows.reviser import revise_node
 from workflows.state import KBState
 
 logger = logging.getLogger(__name__)
@@ -28,11 +30,18 @@ logger = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 
 
-def review_router(state: KBState) -> str:
-    """Route from review: passed → save, failed → organize (revision loop)."""
+def route_after_review(state: KBState) -> str:
+    """3-way route from review node.
+
+    - passed → "organize"
+    - not passed + iteration < 3 → "revise" (trigger LLM revision)
+    - not passed + iteration >= 3 → "human_flag" (escalation)
+    """
     if state.get("review_passed", False):
-        return "save"
-    return "organize"
+        return "organize"
+    if state.get("iteration", 0) < 3:
+        return "revise"
+    return "human_flag"
 
 
 # ---------------------------------------------------------------------------
@@ -52,25 +61,31 @@ def build_graph() -> Any:
     # Register nodes
     graph.add_node("collect", collect_node)
     graph.add_node("analyze", analyze_node)
-    graph.add_node("organize", organize_node)
     graph.add_node("review", review_node)
-    graph.add_node("save", save_node)
+    graph.add_node("organize", organize_node)
+    graph.add_node("revise", revise_node)
+    graph.add_node("human_flag", human_flag_node)
 
-    # Linear pipeline: collect → analyze → organize → review
+    # Linear pipeline: collect → analyze → review
     graph.set_entry_point("collect")
     graph.add_edge("collect", "analyze")
-    graph.add_edge("analyze", "organize")
-    graph.add_edge("organize", "review")
+    graph.add_edge("analyze", "review")
 
-    # Conditional branch: review → save (passed) / organize (not passed)
+    # 3-way conditional branch after review
     graph.add_conditional_edges(
         "review",
-        review_router,
-        {"save": "save", "organize": "organize"},
+        route_after_review,
+        {"organize": "organize", "revise": "revise", "human_flag": "human_flag"},
     )
 
-    # Terminal edge
-    graph.add_edge("save", END)
+    # Revise → review loop (feedback-driven iteration)
+    graph.add_edge("revise", "review")
+
+    # Organize → terminal (articles saved to disk)
+    graph.add_edge("organize", END)
+
+    # Human flag → terminal (escalation when max iterations exceeded)
+    graph.add_edge("human_flag", END)
 
     return graph.compile()
 
@@ -140,10 +155,6 @@ if __name__ == "__main__":
             _print_header(f"Node: {node_name}")
             if output:
                 final_state.update(output)
-            if node_name == "save":
-                articles_count = len(output.get("articles", [])) if output else 0
-                print(f"  articles in state: {articles_count}")
-            elif output:
                 _print_dict(node_name, output)
 
     _print_header("Workflow Complete")

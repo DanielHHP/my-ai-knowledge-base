@@ -27,4 +27,7 @@ class KBState(TypedDict):
 
     cost_tracker: dict
     """Token 及费用追踪摘要。
-       含 {total_tokens, prompt_tokens, completion_tokens, estimated_cost} 等字段。"""
+        含 {total_tokens, prompt_tokens, completion_tokens, estimated_cost} 等字段。"""
+
+    needs_human_review: bool
+    """是否需要人工审核。审核循环超过上限时由 HumanFlag 节点置为 True。"""
