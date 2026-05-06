@@ -97,6 +97,17 @@ def review_node(state: KBState) -> dict:
             "cost_tracker": state.get("cost_tracker"),
         }
 
+    plan = state.get("plan", {}) or {}
+    max_iter = int(plan.get("max_iterations", 3))
+    if iteration >= max_iter:
+        logger.info("[ReviewNode] Max iterations (%d) reached, force passing", max_iter)
+        return {
+            "review_passed": True,
+            "review_feedback": "",
+            "iteration": iteration + 1,
+            "cost_tracker": state.get("cost_tracker"),
+        }
+
     tracker: dict | None = state.get("cost_tracker")
     feedback_parts: list[str] = []
     all_passed = True

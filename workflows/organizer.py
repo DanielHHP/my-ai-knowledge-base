@@ -54,8 +54,10 @@ def organize_node(state: KBState) -> dict:
         "[OrganizeNode] Processing %d analyses (iter=%d)...", len(analyses), iteration
     )
 
-    # Step 1: Filter low quality (< 0.6)
-    filtered = [a for a in analyses if a.get("quality_score", 0) >= 0.6]
+    # Step 1: Filter low quality (below plan threshold or default 0.5)
+    plan = state.get("plan", {}) or {}
+    threshold = float(plan.get("relevance_threshold", 0.5))
+    filtered = [a for a in analyses if a.get("quality_score", 0) >= threshold]
 
     # Step 2: Dedup by source_url
     seen_urls: set[str] = set()

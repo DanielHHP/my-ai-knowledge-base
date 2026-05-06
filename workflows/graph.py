@@ -2,9 +2,9 @@
 
 Graph structure::
 
-    collect → analyze → review ──passed──────────→ organize → END
-                               ├──failed + iter<3──→ revise ──→ review (loop)
-                               └──failed + iter≥3──→ human_flag → END
+    plan → collect → analyze → review ──passed──────────→ organize → END
+                                      ├──failed + iter<3──→ revise ──→ review (loop)
+                                      └──failed + iter≥3──→ human_flag → END
 """
 
 import logging
@@ -12,12 +12,11 @@ from typing import Any
 
 from langgraph.graph import END, StateGraph
 
+from workflows.collector import collect_node
 from workflows.human_flag import human_flag_node
-from workflows.nodes import (
-    analyze_node,
-    collect_node,
-)
+from workflows.nodes import analyze_node
 from workflows.organizer import organize_node
+from workflows.planner import planner_node
 from workflows.reviewer import review_node
 from workflows.reviser import revise_node
 from workflows.state import KBState
@@ -34,12 +33,13 @@ def route_after_review(state: KBState) -> str:
     """3-way route from review node.
 
     - passed → "organize"
-    - not passed + iteration < 3 → "revise" (trigger LLM revision)
-    - not passed + iteration >= 3 → "human_flag" (escalation)
+    - not passed + iteration < max_iterations → "revise" (trigger LLM revision)
+    - not passed + iteration >= max_iterations → "human_flag" (escalation)
     """
     if state.get("review_passed", False):
         return "organize"
-    if state.get("iteration", 0) < 3:
+    max_iter = (state.get("plan") or {}).get("max_iterations", 3)
+    if state.get("iteration", 0) < max_iter:
         return "revise"
     return "human_flag"
 
@@ -59,6 +59,7 @@ def build_graph() -> Any:
     graph = StateGraph(KBState)
 
     # Register nodes
+    graph.add_node("plan", planner_node)
     graph.add_node("collect", collect_node)
     graph.add_node("analyze", analyze_node)
     graph.add_node("review", review_node)
@@ -66,8 +67,9 @@ def build_graph() -> Any:
     graph.add_node("revise", revise_node)
     graph.add_node("human_flag", human_flag_node)
 
-    # Linear pipeline: collect → analyze → review
-    graph.set_entry_point("collect")
+    # Linear pipeline: plan → collect → analyze → review
+    graph.set_entry_point("plan")
+    graph.add_edge("plan", "collect")
     graph.add_edge("collect", "analyze")
     graph.add_edge("analyze", "review")
 

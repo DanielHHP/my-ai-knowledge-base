@@ -4,20 +4,19 @@
   "source": "github",
   "source_url": "https://github.com/f/prompts.chat",
   "published_at": "2026-05-06T00:00:00Z",
-  "summary": "f/prompts.chat（原名 Awesome ChatGPT Prompts）是一个社区驱动的 ChatGPT 提示词集合及托管平台，基于 Next.js 和 TypeScript 构建。它提供分类浏览、搜索、分享和收藏提示词的功能，并通过允许自托管来保障隐私。项目面向个人和组织免费开源，可作为内部提示词库，提升大语言模型使用效率。技术上实现了提示词社区协作与元数据管理，适合企业内部知识沉淀与 LLM 应用集成。",
+  "summary": "这是一个收集、分享和发现ChatGPT提示词（prompts）的开源仓库，前身为Awesome ChatGPT Prompts。它允许社区贡献各种提示词，并支持自部署以保护隐私。旨在帮助用户更好利用ChatGPT等大型语言模型。",
   "content": "",
   "tags": [
-    "prompt-engineering",
     "chatgpt",
+    "prompts",
     "open-source",
     "community",
-    "nextjs",
-    "typescript"
+    "llm"
   ],
   "category": "工具库",
   "status": "published",
   "metadata": {
-    "stars": 161692,
+    "stars": 161696,
     "language": "HTML",
     "topics": [
       "ai",
@@ -40,7 +39,7 @@
       "typescript"
     ]
   },
-  "created_at": "2026-05-06T13:47:49Z",
-  "updated_at": "2026-05-06T13:50:20Z",
-  "quality_score": 0.78
+  "created_at": "2026-05-06T16:11:06Z",
+  "updated_at": "2026-05-06T16:12:13Z",
+  "quality_score": 0.82
 }

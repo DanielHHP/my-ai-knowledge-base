@@ -4,20 +4,18 @@
   "source": "github",
   "source_url": "https://github.com/affaan-m/everything-claude-code",
   "published_at": "2026-05-06T00:00:00Z",
-  "summary": "一个针对Claude Code等AI代理的通用性能优化系统，通过模块化技能体系、可扩展记忆架构和分层安全策略，提升代理在复杂任务中的自主决策效率。系统实现了基于本能的上下文感知优化（将响应延迟降低约30%），并集成了研究优先级引擎以加速多步骤推理。兼容Claude Code、AutoGPT及类似LLM代理，为核心AI编码工作流提供可插拔优化。",
+  "summary": "这是一个针对Claude Code、Codex等多种AI代码代理的性能优化系统，集成了技能、直觉、记忆、安全与优先研发功能，旨在提升代理的效率和可靠性。",
   "content": "",
   "tags": [
+    "llm",
     "agent",
-    "performance",
-    "claude",
-    "optimization",
-    "mcp",
-    "developer-tools"
+    "performance-optimization",
+    "security"
   ],
   "category": "工具库",
   "status": "published",
   "metadata": {
-    "stars": 174420,
+    "stars": 174499,
     "language": "JavaScript",
     "topics": [
       "ai-agents",
@@ -30,7 +28,7 @@
       "productivity"
     ]
   },
-  "created_at": "2026-05-06T13:47:42Z",
-  "updated_at": "2026-05-06T13:49:57Z",
+  "created_at": "2026-05-06T16:10:58Z",
+  "updated_at": "2026-05-06T16:12:13Z",
   "quality_score": 0.72
 }

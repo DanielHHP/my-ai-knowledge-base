@@ -1,15 +1,11 @@
-"""LangGraph workflow node functions (5 nodes).
+"""LangGraph workflow node functions (4 nodes).
 
 Each node is a pure function: receives KBState, returns dict (partial state update).
 """
 
 import json
 import logging
-import os
 import re
-import urllib.error
-import urllib.parse
-import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -21,9 +17,6 @@ logger = logging.getLogger(__name__)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 ARTICLES_DIR = BASE_DIR / "knowledge" / "articles"
-
-GITHUB_SEARCH_URL = "https://api.github.com/search/repositories"
-GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 
 # ---------------------------------------------------------------------------
 # Prompt templates
@@ -107,55 +100,7 @@ def _make_slug(text: str) -> str:
 
 
 # ---------------------------------------------------------------------------
-# Node 1: Collect
-# ---------------------------------------------------------------------------
-
-
-def collect_node(state: KBState) -> dict:
-    """[CollectNode] Fetch top AI/LLM repos from GitHub Search API via urllib."""
-    logger.info("[CollectNode] Fetching GitHub trending repos...")
-
-    query = "ai OR llm OR agent OR machine-learning in:topics"
-    encoded_query = urllib.parse.quote(query)
-    url = f"{GITHUB_SEARCH_URL}?q={encoded_query}&sort=stars&order=desc&per_page=10"
-
-    headers = {"Accept": "application/vnd.github.v3+json"}
-    if GITHUB_TOKEN:
-        headers["Authorization"] = f"Bearer {GITHUB_TOKEN}"
-
-    req = urllib.request.Request(url, headers=headers)
-    sources: list[dict] = []
-
-    try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-            for repo in data.get("items", []):
-                sources.append({
-                    "platform": "github",
-                    "title": repo.get("full_name", ""),
-                    "url": repo.get("html_url", ""),
-                    "description": repo.get("description") or "",
-                    "metadata": {
-                        "stars": repo.get("stargazers_count", 0),
-                        "language": repo.get("language") or "",
-                        "topics": repo.get("topics", []),
-                    },
-                })
-    except urllib.error.HTTPError as e:
-        logger.error("[CollectNode] HTTP error %s: %s", e.code, e.reason)
-    except urllib.error.URLError as e:
-        logger.error("[CollectNode] URL error: %s", e.reason)
-    except json.JSONDecodeError as e:
-        logger.error("[CollectNode] JSON decode error: %s", e)
-    except OSError as e:
-        logger.error("[CollectNode] Network error: %s", e)
-
-    logger.info("[CollectNode] Collected %d repos", len(sources))
-    return {"sources": sources}
-
-
-# ---------------------------------------------------------------------------
-# Node 2: Analyze
+# Node 1: Analyze
 # ---------------------------------------------------------------------------
 
 
@@ -204,7 +149,7 @@ def analyze_node(state: KBState) -> dict:
 
 
 # ---------------------------------------------------------------------------
-# Node 3: Organize
+# Node 2: Organize
 # ---------------------------------------------------------------------------
 
 
@@ -281,7 +226,7 @@ def organize_node(state: KBState) -> dict:
 
 
 # ---------------------------------------------------------------------------
-# Node 4: Review
+# Node 3: Review
 # ---------------------------------------------------------------------------
 
 
@@ -377,7 +322,7 @@ def review_node_test(state: KBState) -> dict:
 
 
 # ---------------------------------------------------------------------------
-# Node 5: Save
+# Node 4: Save
 # ---------------------------------------------------------------------------
 
 

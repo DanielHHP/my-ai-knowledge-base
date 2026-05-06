@@ -29,5 +29,9 @@ class KBState(TypedDict):
     """Token 及费用追踪摘要。
         含 {total_tokens, prompt_tokens, completion_tokens, estimated_cost} 等字段。"""
 
+    plan: dict
+    """规划节点输出的策略计划。
+        含 {steps, strategy, targets} 等执行策略相关字段。"""
+
     needs_human_review: bool
     """是否需要人工审核。审核循环超过上限时由 HumanFlag 节点置为 True。"""
