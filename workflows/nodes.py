@@ -285,7 +285,7 @@ def organize_node(state: KBState) -> dict:
 # ---------------------------------------------------------------------------
 
 
-def review_node(state: KBState) -> dict:
+def review_node_old(state: KBState) -> dict:
     """[ReviewNode] LLM 4-dimension quality review. Forced pass after iteration >= 2."""
     articles = state.get("articles", [])
     iteration = state.get("iteration", 0)

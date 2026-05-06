@@ -1,0 +1,45 @@
+{
+  "id": "github_automatic1111-stable-diffusion-webui_2026-05-06",
+  "title": "AUTOMATIC1111/stable-diffusion-webui",
+  "source": "github",
+  "source_url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+  "published_at": "2026-05-06T00:00:00Z",
+  "summary": "AUTOMATIC1111/stable-diffusion-webui 是基于Gradio构建的Stable Diffusion Web界面，采用PyTorch框架，提供文本到图像、图像到图像、图像修复、超分辨率等生成功能。项目支持多种Stable Diffusion模型（如SD1.5、SDXL等），并集成ControlNet、LoRA、Textual Inversion等扩展，通过优化的采样算法和批处理机制提升生成效率。该工具在AI图像生成领域广泛应用，为研究人员和开发者提供灵活的实验平台，支持自定义脚本和插件开发，显著降低了Stable Diffusion的使用门槛。",
+  "content": "",
+  "tags": [
+    "stable-diffusion",
+    "open-source",
+    "image-generation",
+    "web-ui",
+    "pytorch",
+    "gradio",
+    "controlnet"
+  ],
+  "category": "工具库",
+  "status": "published",
+  "metadata": {
+    "stars": 162737,
+    "language": "Python",
+    "topics": [
+      "ai",
+      "ai-art",
+      "deep-learning",
+      "diffusion",
+      "gradio",
+      "image-generation",
+      "image2image",
+      "img2img",
+      "pytorch",
+      "stable-diffusion",
+      "text2image",
+      "torch",
+      "txt2img",
+      "unstable",
+      "upscaling",
+      "web"
+    ]
+  },
+  "created_at": "2026-05-06T13:47:47Z",
+  "updated_at": "2026-05-06T13:50:13Z",
+  "quality_score": 0.95
+}

@@ -1,0 +1,42 @@
+{
+  "id": "github_ollama-ollama_2026-05-06",
+  "title": "ollama/ollama",
+  "source": "github",
+  "source_url": "https://github.com/ollama/ollama",
+  "published_at": "2026-05-06T00:00:00Z",
+  "summary": "Ollama 是一个基于 Go 语言开发的开源工具，提供本地化部署和运行大型语言模型（LLM）的能力。其技术架构采用轻量级 REST API 接口，支持模型的快速下载、高效管理与推理，底层通过优化模型加载机制和内存管理策略降低资源消耗。关键功能包括模型量化（如 4-bit、8-bit）以适配不同硬件环境，自动模型版本管理与热切换，以及多模型并行推理。Ollama 完全离线运行，确保数据隐私，适用于开发者的本地实验、原型验证和生产级微服务部署，尤其在 Agent 系统中可作为低延迟推理引擎。开源社区活跃，模型库丰富（如 DeepSeek、Qwen、Gemma 等），并提供与 LangChain、AutoGPT 等框架的集成接口。",
+  "content": "",
+  "tags": [
+    "llm",
+    "local-inference",
+    "open-source",
+    "go",
+    "ollama"
+  ],
+  "category": "工具库",
+  "status": "published",
+  "metadata": {
+    "stars": 170837,
+    "language": "Go",
+    "topics": [
+      "deepseek",
+      "gemma",
+      "gemma3",
+      "glm",
+      "go",
+      "golang",
+      "gpt-oss",
+      "llama",
+      "llama3",
+      "llm",
+      "llms",
+      "minimax",
+      "mistral",
+      "ollama",
+      "qwen"
+    ]
+  },
+  "created_at": "2026-05-06T13:47:44Z",
+  "updated_at": "2026-05-06T13:50:05Z",
+  "quality_score": 0.95
+}

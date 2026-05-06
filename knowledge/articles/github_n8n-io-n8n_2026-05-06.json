@@ -1,0 +1,47 @@
+{
+  "id": "github_n8n-io-n8n_2026-05-06",
+  "title": "n8n-io/n8n",
+  "source": "github",
+  "source_url": "https://github.com/n8n-io/n8n",
+  "published_at": "2026-05-06T00:00:00Z",
+  "summary": "n8n 是一个公平代码工作流自动化平台，采用 TypeScript 开发，基于节点式数据流引擎，支持可视化编排与自定义代码（含 JavaScript/Python 节点）。后端使用 Express 和 Knex，前端基于 Vue 3，支持自托管（Docker 部署）及 n8n Cloud。平台内置 LLM 节点（如 OpenAI、Anthropic）、MCP 客户端与服务端，可实现 AI Agent 工作流、动态工具调用与知识库集成。拥有 400+ 原生集成，支持 Webhook、REST API 及 OAuth2 认证。适用于构建复杂 AI 自动化、数据处理管道及企业级 iPaaS 场景，兼顾低代码易用性与开发者灵活性。",
+  "content": "",
+  "tags": [
+    "workflow-automation",
+    "fair-code",
+    "low-code-platform",
+    "ai-agent",
+    "iPaaS"
+  ],
+  "category": "工具库",
+  "status": "published",
+  "metadata": {
+    "stars": 186863,
+    "language": "TypeScript",
+    "topics": [
+      "ai",
+      "apis",
+      "automation",
+      "cli",
+      "data-flow",
+      "development",
+      "integration-framework",
+      "integrations",
+      "ipaas",
+      "low-code",
+      "low-code-platform",
+      "mcp",
+      "mcp-client",
+      "mcp-server",
+      "n8n",
+      "no-code",
+      "self-hosted",
+      "typescript",
+      "workflow",
+      "workflow-automation"
+    ]
+  },
+  "created_at": "2026-05-06T13:47:38Z",
+  "updated_at": "2026-05-06T13:49:44Z",
+  "quality_score": 0.92
+}
