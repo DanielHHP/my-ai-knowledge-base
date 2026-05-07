@@ -11,7 +11,7 @@ import logging
 import re
 from typing import Any
 
-from pipeline.model_client import create_provider, chat_with_retry
+from pipeline.model_client import CNY_PRICES, create_provider, chat_with_retry
 
 logger = logging.getLogger(__name__)
 
@@ -108,7 +108,17 @@ def accumulate_usage(tracker: dict | None, usage: dict) -> dict:
             "estimated_cost": 0.0,
         }
 
-    tracker["prompt_tokens"] += usage.get("prompt_tokens", 0)
-    tracker["completion_tokens"] += usage.get("completion_tokens", 0)
+    prompt = usage.get("prompt_tokens", 0)
+    completion = usage.get("completion_tokens", 0)
+    tracker["prompt_tokens"] += prompt
+    tracker["completion_tokens"] += completion
     tracker["total_tokens"] += usage.get("total_tokens", 0)
+
+    # CNYA cost: ¥/million tokens (matches CostGuard default pricing)
+    provider_name = _get_provider().provider_name
+    pricing = CNY_PRICES.get(provider_name, CNY_PRICES["deepseek"])
+    tracker["estimated_cost"] += (
+        prompt / 1_000_000 * pricing["input"]
+        + completion / 1_000_000 * pricing["output"]
+    )
     return tracker

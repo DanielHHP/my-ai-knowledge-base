@@ -165,7 +165,7 @@ if __name__ == "__main__":
         print(f"  Total tokens:     {tracker.get('total_tokens', 0)}")
         print(f"  Prompt tokens:    {tracker.get('prompt_tokens', 0)}")
         print(f"  Completion tokens: {tracker.get('completion_tokens', 0)}")
-        print(f"  Estimated cost:   ${tracker.get('estimated_cost', 0):.6f}")
+        print(f"  Estimated cost:   ¥{tracker.get('estimated_cost', 0):.6f}")
 
     articles = (final_state or {}).get("articles", [])
     passed = (final_state or {}).get("review_passed", True)
