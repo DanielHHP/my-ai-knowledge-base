@@ -118,7 +118,7 @@ def analyze_node(state: KBState) -> dict:
         prompt = ANALYSIS_PROMPT.format(title=title, description=description)
 
         try:
-            result, usage = chat_json(prompt, system=ANALYSIS_SYSTEM, max_tokens=1000)
+            result, usage = chat_json(prompt, system=ANALYSIS_SYSTEM, max_tokens=1000, node_name="analyze")
             tracker = accumulate_usage(tracker, usage)
         except (json.JSONDecodeError, RuntimeError) as e:
             logger.warning("[AnalyzeNode] LLM failed for '%s': %s", title, e)
@@ -186,7 +186,7 @@ def organize_node(state: KBState) -> dict:
             )
             try:
                 result, usage = chat_json(
-                    prompt, system=ORGANIZE_FIX_SYSTEM, max_tokens=1500
+                    prompt, system=ORGANIZE_FIX_SYSTEM, max_tokens=1500, node_name="organize"
                 )
                 tracker = accumulate_usage(tracker, usage)
                 result["updated_at"] = _now_iso()
@@ -269,7 +269,7 @@ def review_node_old(state: KBState) -> dict:
         )
 
         try:
-            result, usage = chat_json(prompt, system=REVIEW_SYSTEM, max_tokens=800)
+            result, usage = chat_json(prompt, system=REVIEW_SYSTEM, max_tokens=800, node_name="review")
             tracker = accumulate_usage(tracker, usage)
         except (json.JSONDecodeError, RuntimeError) as e:
             logger.warning(

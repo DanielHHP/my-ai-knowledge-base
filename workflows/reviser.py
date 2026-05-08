@@ -62,7 +62,7 @@ def revise_node(state: KBState) -> dict:
 
     try:
         result, usage = chat_json(
-            prompt, system=REVISE_SYSTEM, temperature=0.4
+            prompt, system=REVISE_SYSTEM, temperature=0.4, node_name="reviser"
         )
         tracker = accumulate_usage(tracker, usage)
     except (json.JSONDecodeError, RuntimeError) as e:

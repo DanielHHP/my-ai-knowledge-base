@@ -8,14 +8,30 @@ Exposes a simplified API on top of pipeline/model_client:
 
 import json
 import logging
+import os
 import re
 from typing import Any
 
 from pipeline.model_client import CNY_PRICES, create_provider, chat_with_retry
+from tests.cost_guard import BudgetExceededError, CostGuard
 
 logger = logging.getLogger(__name__)
 
 _provider = None
+_cost_guard: CostGuard | None = None
+
+
+def get_cost_guard() -> CostGuard:
+    """Lazy-load singleton CostGuard for budget enforcement.
+
+    Reads budget_yuan from BUDGET_YUAN env var on first call.
+    Subsequent calls return the same instance.
+    """
+    global _cost_guard
+    if _cost_guard is None:
+        budget_yuan = float(os.environ.get("BUDGET_YUAN", "1.0"))
+        _cost_guard = CostGuard(budget_yuan=budget_yuan)
+    return _cost_guard
 
 
 def _get_provider():
@@ -28,6 +44,7 @@ def _get_provider():
 def chat(
     prompt: str,
     system: str | None = None,
+    node_name: str = "unknown",
     **kwargs: Any,
 ) -> tuple[str, dict]:
     """Send a text prompt to LLM and return (response_text, usage_dict).
@@ -35,6 +52,7 @@ def chat(
     Args:
         prompt: User message content.
         system: Optional system prompt.
+        node_name: Calling workflow node for cost tracking (default "unknown").
         **kwargs: Forwarded to chat_with_retry (model, temperature, max_tokens, ...).
 
     Returns:
@@ -53,12 +71,18 @@ def chat(
         "completion_tokens": resp.usage.completion_tokens,
         "total_tokens": resp.usage.total_tokens,
     }
+
+    cost_guard = get_cost_guard()
+    cost_guard.record(node_name, usage, model=resp.model)
+    cost_guard.check()
+
     return resp.content, usage
 
 
 def chat_json(
     prompt: str,
     system: str | None = None,
+    node_name: str = "unknown",
     **kwargs: Any,
 ) -> tuple[Any, dict]:
     """Send a prompt expecting JSON response. Returns (parsed_data, usage_dict).
@@ -68,6 +92,7 @@ def chat_json(
     Args:
         prompt: User message content.
         system: Optional system prompt.
+        node_name: Calling workflow node for cost tracking (default "unknown").
         **kwargs: Forwarded to chat_with_retry.
 
     Returns:
@@ -76,7 +101,7 @@ def chat_json(
     Raises:
         json.JSONDecodeError: If response is not valid JSON.
     """
-    text, usage = chat(prompt, system=system, **kwargs)
+    text, usage = chat(prompt, system=system, node_name=node_name, **kwargs)
 
     text = text.strip()
     text = re.sub(r"^```(?:json)?\s*", "", text)

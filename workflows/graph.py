@@ -14,6 +14,7 @@ from langgraph.graph import END, StateGraph
 
 from workflows.collector import collect_node
 from workflows.human_flag import human_flag_node
+from workflows.model_client import get_cost_guard
 from workflows.nodes import analyze_node
 from workflows.organizer import organize_node
 from workflows.planner import planner_node
@@ -173,4 +174,7 @@ if __name__ == "__main__":
     print(f"  Articles produced: {len(articles)}")
     print(f"  Review passed:     {passed}")
     print(f"  Iterations:        {iterations}")
+
+    cost_report_path = get_cost_guard().save_report("knowledge/cost-report.json")
+    print(f"  Cost report saved: {cost_report_path}")
     print()

@@ -123,7 +123,7 @@ def review_node(state: KBState) -> dict:
 
         try:
             result, usage = chat_json(
-                prompt, system=REVIEW_SYSTEM, temperature=0.1
+                prompt, system=REVIEW_SYSTEM, temperature=0.1, node_name="reviewer"
             )
             tracker = accumulate_usage(tracker, usage)
         except (json.JSONDecodeError, RuntimeError) as e:

@@ -82,7 +82,7 @@ def organize_node(state: KBState) -> dict:
             )
             try:
                 result, usage = chat_json(
-                    prompt, system=ORGANIZE_FIX_SYSTEM, max_tokens=1500
+                    prompt, system=ORGANIZE_FIX_SYSTEM, max_tokens=1500, node_name="organizer"
                 )
                 tracker = accumulate_usage(tracker, usage)
                 result["updated_at"] = _now_iso()
