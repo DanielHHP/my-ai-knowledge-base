@@ -10,6 +10,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from tests.security import filter_output
 from workflows.model_client import accumulate_usage, chat_json
 from workflows.state import KBState
 
@@ -96,7 +97,24 @@ def organize_node(state: KBState) -> dict:
                 fixed.append(article)
         deduped = fixed
 
-    # Step 4: Build final articles list
+    # Step 4: Desensitize PII in title, summary, content
+    desensitize_count = 0
+    for a in deduped:
+        for field in ("title", "summary", "content"):
+            text = a.get(field, "")
+            if text:
+                filtered_text, detections = filter_output(text, mask=True)
+                if detections:
+                    desensitize_count += len(detections)
+                    logger.info(
+                        "[OrganizeNode] Desensitized %d PII in '%s' field of '%s'",
+                        len(detections),
+                        field,
+                        a.get("title", ""),
+                    )
+                    a[field] = filtered_text
+
+    # Step 5: Build final articles list
     now = _now_iso()
     articles: list[dict] = []
     for a in deduped:
@@ -118,8 +136,9 @@ def organize_node(state: KBState) -> dict:
         })
 
     logger.info("[OrganizeNode] %d articles after organizing", len(articles))
+    logger.info("[OrganizeNode] Total desensitization operations: %d", desensitize_count)
 
-    # Step 5: Persist articles to disk
+    # Step 6: Persist articles to disk
     _save_articles(articles)
 
     return {"articles": articles, "cost_tracker": tracker}

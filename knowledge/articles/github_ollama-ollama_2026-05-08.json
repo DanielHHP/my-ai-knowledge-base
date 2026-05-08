@@ -1,0 +1,42 @@
+{
+  "id": "github_ollama-ollama_2026-05-08",
+  "title": "ollama/ollama",
+  "source": "github",
+  "source_url": "https://github.com/ollama/ollama",
+  "published_at": "2026-05-08T00:00:00Z",
+  "summary": "Ollama项目旨在让用户轻松上手使用Kimi-K2.5、GLM-5、MiniMax、DeepSeek、gpt-oss、Qwen、Gemma等多种AI模型。它提供了一种简便的方式在本地运行和管理大型语言模型（LLMs），支持多种流行模型，并简化了部署和调用过程。",
+  "content": "",
+  "tags": [
+    "llm",
+    "open-source",
+    "tool",
+    "inference",
+    "local-deployment"
+  ],
+  "category": "工具库",
+  "status": "published",
+  "metadata": {
+    "stars": 170996,
+    "language": "Go",
+    "topics": [
+      "deepseek",
+      "gemma",
+      "gemma3",
+      "glm",
+      "go",
+      "golang",
+      "gpt-oss",
+      "llama",
+      "llama3",
+      "llm",
+      "llms",
+      "minimax",
+      "mistral",
+      "ollama",
+      "qwen"
+    ]
+  },
+  "created_at": "2026-05-08T15:24:23Z",
+  "updated_at": "2026-05-08T15:25:46Z",
+  "quality_score": 0.92
+}

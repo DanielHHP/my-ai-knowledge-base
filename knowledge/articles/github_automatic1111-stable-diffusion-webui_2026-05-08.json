@@ -1,0 +1,42 @@
+{
+  "id": "github_automatic1111-stable-diffusion-webui_2026-05-08",
+  "title": "AUTOMATIC1111/stable-diffusion-webui",
+  "source": "github",
+  "source_url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+  "published_at": "2026-05-08T00:00:00Z",
+  "summary": "AUTOMATIC1111/stable-diffusion-webui 是一个开源的Stable Diffusion模型Web界面，提供图像生成、编辑、优化等功能，支持扩展和自定义，广受AI绘画爱好者欢迎。",
+  "content": "",
+  "tags": [
+    "stable-diffusion",
+    "image-generation",
+    "web-ui",
+    "open-source"
+  ],
+  "category": "工具库",
+  "status": "published",
+  "metadata": {
+    "stars": 162779,
+    "language": "Python",
+    "topics": [
+      "ai",
+      "ai-art",
+      "deep-learning",
+      "diffusion",
+      "gradio",
+      "image-generation",
+      "image2image",
+      "img2img",
+      "pytorch",
+      "stable-diffusion",
+      "text2image",
+      "torch",
+      "txt2img",
+      "unstable",
+      "upscaling",
+      "web"
+    ]
+  },
+  "created_at": "2026-05-08T15:24:26Z",
+  "updated_at": "2026-05-08T15:25:46Z",
+  "quality_score": 0.95
+}

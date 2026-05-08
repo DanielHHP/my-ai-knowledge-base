@@ -1,0 +1,34 @@
+{
+  "id": "github_openclaw-openclaw_2026-05-08",
+  "title": "openclaw/openclaw",
+  "source": "github",
+  "source_url": "https://github.com/openclaw/openclaw",
+  "published_at": "2026-05-08T00:00:00Z",
+  "summary": "OpenClaw是一个跨平台、跨操作系统的个人AI助手项目，以龙虾🦞为特征。它采用模块化架构，支持插件扩展和本地优先的数据存储，强调用户对数据的完全控制。项目基于TypeScript开发，提供可定制的AI交互界面和工具链，适合构建私有化、个性化的AI辅助系统。",
+  "content": "",
+  "tags": [
+    "ai-assistant",
+    "cross-platform",
+    "open-source",
+    "personal-ai",
+    "privacy-first"
+  ],
+  "category": "工具库",
+  "status": "published",
+  "metadata": {
+    "stars": 369775,
+    "language": "TypeScript",
+    "topics": [
+      "ai",
+      "assistant",
+      "crustacean",
+      "molty",
+      "openclaw",
+      "own-your-data",
+      "personal"
+    ]
+  },
+  "created_at": "2026-05-08T15:24:09Z",
+  "updated_at": "2026-05-08T15:25:46Z",
+  "quality_score": 0.7
+}

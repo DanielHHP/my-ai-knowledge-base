@@ -1,0 +1,35 @@
+{
+  "id": "github_tensorflow-tensorflow_2026-05-08",
+  "title": "tensorflow/tensorflow",
+  "source": "github",
+  "source_url": "https://github.com/tensorflow/tensorflow",
+  "published_at": "2026-05-08T00:00:00Z",
+  "summary": "TensorFlow 是一个由 Google 开发的开源机器学习框架，支持从研究到生产的全流程，提供灵活的数值计算和深度学习能力，广泛用于构建和部署 ML 模型。",
+  "content": "",
+  "tags": [
+    "machine-learning",
+    "deep-learning",
+    "open-source",
+    "framework",
+    "tensorflow"
+  ],
+  "category": "工具库",
+  "status": "published",
+  "metadata": {
+    "stars": 195034,
+    "language": "C++",
+    "topics": [
+      "deep-learning",
+      "deep-neural-networks",
+      "distributed",
+      "machine-learning",
+      "ml",
+      "neural-network",
+      "python",
+      "tensorflow"
+    ]
+  },
+  "created_at": "2026-05-08T15:24:12Z",
+  "updated_at": "2026-05-08T15:25:46Z",
+  "quality_score": 0.96
+}

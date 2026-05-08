@@ -888,7 +888,154 @@
       ],
       "quality_score": 0.92,
       "created_at": "2026-05-06T13:47:54Z"
+    },
+    {
+      "id": "github_openclaw-openclaw_2026-05-08",
+      "title": "openclaw/openclaw",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "ai-assistant",
+        "cross-platform",
+        "open-source",
+        "personal-ai",
+        "privacy-first"
+      ],
+      "quality_score": 0.7,
+      "created_at": "2026-05-08T15:24:09Z"
+    },
+    {
+      "id": "github_tensorflow-tensorflow_2026-05-08",
+      "title": "tensorflow/tensorflow",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "machine-learning",
+        "deep-learning",
+        "open-source",
+        "framework",
+        "tensorflow"
+      ],
+      "quality_score": 0.96,
+      "created_at": "2026-05-08T15:24:12Z"
+    },
+    {
+      "id": "github_n8n-io-n8n_2026-05-08",
+      "title": "n8n-io/n8n",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "automation",
+        "workflow",
+        "low-code",
+        "open-source",
+        "ai-integration"
+      ],
+      "quality_score": 0.95,
+      "created_at": "2026-05-08T15:24:14Z"
+    },
+    {
+      "id": "github_significant-gravitas-autogpt_2026-05-08",
+      "title": "Significant-Gravitas/AutoGPT",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "autonomous-agents",
+        "open-source",
+        "llm",
+        "ai-tools",
+        "task-decomposition"
+      ],
+      "quality_score": 0.85,
+      "created_at": "2026-05-08T15:24:17Z"
+    },
+    {
+      "id": "github_affaan-m-everything-claude-code_2026-05-08",
+      "title": "affaan-m/everything-claude-code",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "ai-agent",
+        "performance-optimization",
+        "claude-code",
+        "development-tools"
+      ],
+      "quality_score": 0.75,
+      "created_at": "2026-05-08T15:24:20Z"
+    },
+    {
+      "id": "github_ollama-ollama_2026-05-08",
+      "title": "ollama/ollama",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "llm",
+        "open-source",
+        "tool",
+        "inference",
+        "local-deployment"
+      ],
+      "quality_score": 0.92,
+      "created_at": "2026-05-08T15:24:23Z"
+    },
+    {
+      "id": "github_automatic1111-stable-diffusion-webui_2026-05-08",
+      "title": "AUTOMATIC1111/stable-diffusion-webui",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "stable-diffusion",
+        "image-generation",
+        "web-ui",
+        "open-source"
+      ],
+      "quality_score": 0.95,
+      "created_at": "2026-05-08T15:24:26Z"
+    },
+    {
+      "id": "github_f-prompts-chat_2026-05-08",
+      "title": "f/prompts.chat",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "chatgpt",
+        "prompts",
+        "open-source",
+        "community"
+      ],
+      "quality_score": 0.7,
+      "created_at": "2026-05-08T15:24:29Z"
+    },
+    {
+      "id": "github_huggingface-transformers_2026-05-08",
+      "title": "huggingface/transformers",
+      "source": "github",
+      "category": "工具库",
+      "tags": [
+        "transformers",
+        "open-source",
+        "machine-learning",
+        "deep-learning",
+        "nlp"
+      ],
+      "quality_score": 0.98,
+      "created_at": "2026-05-08T15:24:31Z"
+    },
+    {
+      "id": "github_snailclimb-javaguide_2026-05-08",
+      "title": "Snailclimb/JavaGuide",
+      "source": "github",
+      "category": "综合技术",
+      "tags": [
+        "java",
+        "interview",
+        "backend",
+        "distributed",
+        "ai"
+      ],
+      "quality_score": 0.9,
+      "created_at": "2026-05-08T15:24:34Z"
     }
   ],
-  "updated_at": "2026-05-06T16:12:23Z"
+  "updated_at": "2026-05-08T15:25:57Z"
 }

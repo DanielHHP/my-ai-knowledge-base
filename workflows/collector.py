@@ -7,6 +7,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
+from tests.security import sanitize_input
 from workflows.state import KBState
 
 logger = logging.getLogger(__name__)
@@ -39,16 +40,32 @@ def collect_node(state: KBState) -> dict:
 
     req = urllib.request.Request(url, headers=headers)
     sources: list[dict] = []
+    injection_hits = 0
 
     try:
         with urllib.request.urlopen(req, timeout=30) as resp:
             data = json.loads(resp.read().decode("utf-8"))
             for repo in data.get("items", []):
+                title = repo.get("full_name", "")
+                description = repo.get("description") or ""
+
+                cleaned_title, title_warnings = sanitize_input(title)
+                cleaned_desc, desc_warnings = sanitize_input(description)
+                all_warnings = title_warnings + desc_warnings
+
+                if all_warnings:
+                    injection_hits += 1
+                    logger.warning(
+                        "[CollectNode] 注入风险 - repo=%s, warnings=%s",
+                        title,
+                        all_warnings,
+                    )
+
                 sources.append({
                     "platform": "github",
-                    "title": repo.get("full_name", ""),
+                    "title": cleaned_title,
                     "url": repo.get("html_url", ""),
-                    "description": repo.get("description") or "",
+                    "description": cleaned_desc,
                     "metadata": {
                         "stars": repo.get("stargazers_count", 0),
                         "language": repo.get("language") or "",
@@ -64,5 +81,5 @@ def collect_node(state: KBState) -> dict:
     except OSError as e:
         logger.error("[CollectNode] Network error: %s", e)
 
-    logger.info("[CollectNode] Collected %d repos", len(sources))
+    logger.info("[CollectNode] Collected %d repos, injection_hits=%d", len(sources), injection_hits)
     return {"sources": sources}
