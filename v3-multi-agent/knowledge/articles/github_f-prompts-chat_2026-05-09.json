@@ -1,0 +1,44 @@
+{
+  "id": "github_f-prompts-chat_2026-05-09",
+  "title": "f/prompts.chat",
+  "source": "github",
+  "source_url": "https://github.com/f/prompts.chat",
+  "published_at": "2026-05-09T00:00:00Z",
+  "summary": "f/prompts.chat（原名Awesome ChatGPT Prompts）是一个开源的AI提示词收集和共享平台。它允许社区用户分享、发现和收集ChatGPT提示词，并支持自托管部署以确保隐私。项目旨在促进提示词工程的协作和创新。",
+  "content": "",
+  "tags": [
+    "prompts",
+    "chatgpt",
+    "open-source",
+    "community"
+  ],
+  "category": "行业动态",
+  "status": "published",
+  "metadata": {
+    "stars": 161847,
+    "language": "HTML",
+    "topics": [
+      "ai",
+      "artificial-intelligence",
+      "awesome-list",
+      "chatgpt",
+      "chatgpt-prompts",
+      "claude",
+      "gemini",
+      "gpt",
+      "gpt-4",
+      "llm",
+      "machine-learning",
+      "nextjs",
+      "open-source",
+      "openai",
+      "prompt-engineering",
+      "prompts",
+      "prompts-chat",
+      "typescript"
+    ]
+  },
+  "created_at": "2026-05-09T01:40:51Z",
+  "updated_at": "2026-05-09T01:41:53Z",
+  "quality_score": 0.65
+}

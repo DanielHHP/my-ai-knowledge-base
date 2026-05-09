@@ -1,0 +1,40 @@
+{
+  "id": "github_snailclimb-javaguide_2026-05-09",
+  "title": "Snailclimb/JavaGuide",
+  "source": "github",
+  "source_url": "https://github.com/Snailclimb/JavaGuide",
+  "published_at": "2026-05-09T00:00:00Z",
+  "summary": "JavaGuide 是一个全面的 Java 面试与后端开发指南，涵盖计算机基础、数据库、分布式系统、高并发、系统设计以及 AI 应用开发等内容，适合后端工程师和面试准备者。",
+  "content": "",
+  "tags": [
+    "java",
+    "interview",
+    "backend",
+    "system-design",
+    "ai-application"
+  ],
+  "category": "综合技术",
+  "status": "published",
+  "metadata": {
+    "stars": 155496,
+    "language": "Java",
+    "topics": [
+      "agent",
+      "context-engineering",
+      "interview",
+      "java",
+      "jvm",
+      "mcp",
+      "mysql",
+      "redis",
+      "redisson",
+      "skills",
+      "spring",
+      "system",
+      "system-design"
+    ]
+  },
+  "created_at": "2026-05-09T01:40:56Z",
+  "updated_at": "2026-05-09T01:41:53Z",
+  "quality_score": 0.92
+}
