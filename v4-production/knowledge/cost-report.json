@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "total_calls": 21,
+    "total_prompt_tokens": 8630,
+    "total_completion_tokens": 6050,
+    "total_cost_yuan": 0.02073,
+    "budget_yuan": 1.0,
+    "usage_ratio": 0.0207
+  },
+  "nodes": {
+    "analyze": {
+      "call_count": 10,
+      "prompt_tokens": 1696,
+      "completion_tokens": 1272,
+      "total_cost_yuan": 0.00424
+    },
+    "reviewer": {
+      "call_count": 10,
+      "prompt_tokens": 3042,
+      "completion_tokens": 1037,
+      "total_cost_yuan": 0.005116
+    },
+    "reviser": {
+      "call_count": 1,
+      "prompt_tokens": 3892,
+      "completion_tokens": 3741,
+      "total_cost_yuan": 0.011374
+    }
+  },
+  "generated_at": "2026-05-09T01:42:03.746239+00:00"
+}
