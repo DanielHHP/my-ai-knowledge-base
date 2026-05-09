@@ -4,19 +4,20 @@
   "source": "github",
   "source_url": "https://github.com/Snailclimb/JavaGuide",
   "published_at": "2026-05-09T00:00:00Z",
-  "summary": "JavaGuide 是一个全面的 Java 面试与后端开发指南，涵盖计算机基础、数据库、分布式系统、高并发、系统设计以及 AI 应用开发等内容，适合后端工程师和面试准备者。",
+  "key_insight": "AI应用开发是Java面试新方向",
+  "summary": "该仓库不仅覆盖传统Java面试与后端技术，还新增AI应用开发指南，帮助开发者系统掌握从基础到高并发的全栈知识与AI实践。",
   "content": "",
   "tags": [
     "java",
     "interview",
     "backend",
-    "system-design",
-    "ai-application"
+    "ai-application",
+    "guide"
   ],
   "category": "综合技术",
   "status": "published",
   "metadata": {
-    "stars": 155496,
+    "stars": 155521,
     "language": "Java",
     "topics": [
       "agent",
@@ -34,7 +35,7 @@
       "system-design"
     ]
   },
-  "created_at": "2026-05-09T01:40:56Z",
-  "updated_at": "2026-05-09T01:41:53Z",
-  "quality_score": 0.92
+  "created_at": "2026-05-09T17:17:47Z",
+  "updated_at": "2026-05-09T17:21:17Z",
+  "quality_score": 0.8
 }

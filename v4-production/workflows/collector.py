@@ -6,6 +6,7 @@ import os
 import urllib.error
 import urllib.parse
 import urllib.request
+from datetime import datetime, timedelta, timezone
 
 from tests.security import sanitize_input
 from workflows.state import KBState
@@ -30,7 +31,8 @@ def collect_node(state: KBState) -> dict:
     plan = state.get("plan", {}) or {}
     per_page = int(plan.get("per_source_limit", 10))
 
-    query = "ai OR llm OR agent OR machine-learning in:topics"
+    one_week_ago = (datetime.now(timezone.utc) - timedelta(days=7)).strftime("%Y-%m-%d")
+    query = f"ai OR llm OR agent OR machine-learning in:topics stars:>100 pushed:>={one_week_ago}"
     encoded_query = urllib.parse.quote(query)
     url = f"{GITHUB_SEARCH_URL}?q={encoded_query}&sort=stars&order=desc&per_page={per_page}"
 

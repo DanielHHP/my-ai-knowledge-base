@@ -124,6 +124,7 @@ def organize_node(state: KBState) -> dict:
             "source": a.get("source", "github"),
             "source_url": a.get("source_url", ""),
             "published_at": a.get("published_at", ""),
+            "key_insight": a.get("key_insight", ""),
             "summary": a.get("summary", ""),
             "content": a.get("content", ""),
             "tags": a.get("tags", []),

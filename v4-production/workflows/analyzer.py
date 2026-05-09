@@ -20,12 +20,16 @@ ANALYSIS_PROMPT = """Analyze this AI-related repository:
 Title: {title}
 Description: {description}
 
-Return a JSON object with these fields:
-- "summary": Chinese summary (100-200 characters)
-- "tags": array of 3-5 English lowercase tags (e.g. "llm", "open-source")
-- "category": one of ["模型发布", "工具库", "论文", "行业动态", "综合技术"]
-- "quality_score": float between 0 and 1
-- "score_reason": brief Chinese explanation for the score"""
+    Return a JSON object with these fields:
+    - "key_insight": one Chinese sentence capturing the core insight (15-30 characters)
+    - "summary": Chinese summary (100-200 characters)
+    - "tags": array of 3-5 English lowercase tags (e.g. "llm", "open-source")
+    - "category": one of ["模型发布", "工具库", "论文", "行业动态", "综合技术"]
+    - "quality_score": float between 0 and 1, calculated as weighted average:
+        * 技术价值 (40%): practical value, solving real problems
+        * 创新性 (30%): novelty of approach, unique contribution
+        * 实用性 (30%): ease of adoption, documentation, community activity
+    - "score_reason": brief Chinese explanation covering the three dimensions above"""
 
 
 def _now_iso() -> str:
@@ -78,6 +82,7 @@ def analyze_node(state: KBState) -> dict:
             "source": "github",
             "source_url": item.get("url", ""),
             "published_at": f"{today}T00:00:00Z",
+            "key_insight": result.get("key_insight", ""),
             "summary": result.get("summary", ""),
             "tags": result.get("tags", []),
             "category": result.get("category", "综合技术"),
