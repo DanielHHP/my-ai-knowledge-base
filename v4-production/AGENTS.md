@@ -66,6 +66,7 @@
   "source_url": "https://github.com/openai/gpt-3",
   "published_at": "2025-04-17T00:00:00Z",
   "summary": "OpenAI 发布的大规模预训练语言模型 GPT-3，具有 1750 亿参数...",
+  "key_insight": "OpenAI发布大规模预训练语言模型"
   "content": "详细分析内容，由 AI 生成...",
   "tags": ["llm", "language-model", "openai"],
   "category": "模型发布",  // 模型发布、工具库、论文、行业动态等
@@ -88,6 +89,7 @@
 - `source_url`: 原始链接
 - `published_at`: 源发布时间 (UTC)
 - `summary`: AI 生成的摘要 (100-200字)
+- `key_insight`: 一句话核心洞察
 - `content`: 详细分析内容 (可选)
 - `tags`: 标签列表，用于分类检索
 - `category`: 分类，便于聚合展示
