@@ -115,12 +115,26 @@ docker compose up -d
 
 > 若使用 Qwen 免费 API 搭配本地计算资源运行，成本可降至 ¥0。
 
-## 运行情况
-
-
 
 ## License
 
 MIT License
 
 Copyright (c) 2026
+
+
+## 运行情况
+
+### workflow执行
+
+![图片](screenshots/run_workflow.png)
+
+![图片](screenshots/cost_report.png)
+
+### 飞书消息推送
+
+
+![图片](screenshots/chat_1.jpeg)
+
+![图片](screenshots/chat_2.jpeg)
+
