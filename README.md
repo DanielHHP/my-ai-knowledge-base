@@ -122,6 +122,9 @@ MIT License
 
 Copyright (c) 2026
 
+## 参考文档
+
+- [飞书卡片开发文档](https://open.larkoffice.com/document/feishu-cards/quick-start/send-message-cards-with-custom-bot)
 
 ## 运行情况
 
