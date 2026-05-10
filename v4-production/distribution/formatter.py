@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import json
 import logging
-from datetime import date, datetime
+from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -61,12 +61,12 @@ def _score_emoji(score: float) -> str:
         score: Quality score (0.0–1.0).
 
     Returns:
-        ``🟢`` for ≥0.8, ``🟟`` for ≥0.6, ``🔴`` otherwise.
+        ``🟢`` for ≥0.8, ``🟡`` for ≥0.6, ``🔴`` otherwise.
     """
     if score >= 0.8:
         return "🟢"
     if score >= 0.6:
-        return "🟟"
+        return "🟡"
     return "🔴"
 
 
@@ -294,30 +294,15 @@ def json_to_feishu(article: dict[str, Any]) -> dict[str, Any]:
 
     body_elements.append({"tag": "div", "fields": fields})
 
-    body_elements.append(
-        {
-            "tag": "action",
-            "actions": [
-                {
-                    "tag": "button",
-                    "text": {"tag": "plain_text", "content": "查看原文"},
-                    "type": "primary",
-                    "url": source_url,
-                },
-            ],
-        }
-    )
+    if source_url:
+        body_elements.append(
+            {
+                "tag": "markdown",
+                "content": f"🔗 [查看原文]({source_url})",
+            }
+        )
 
     body_elements.append({"tag": "hr"})
-
-    body_elements.append(
-        {
-            "tag": "note",
-            "elements": [
-                {"tag": "plain_text", "content": "AI 知识库助手自动生成"},
-            ],
-        }
-    )
 
     return {
         "schema": "2.0",
@@ -344,6 +329,150 @@ def json_to_feishu(article: dict[str, Any]) -> dict[str, Any]:
 # ---------------------------------------------------------------------------
 
 
+def generate_feishu_digest_card(
+    date: str,
+    top_articles: list[dict[str, Any]],
+    total_count: int,
+) -> dict[str, Any]:
+    """Generate a Feishu aggregrate digest card summarising the day's articles.
+
+    Args:
+        date: Date string in ``YYYY-MM-DD`` format.
+        top_articles: List of knowledge article dicts, pre-sorted by quality
+            score descending.
+        total_count: Total number of articles collected for the date (may be
+            larger than ``len(top_articles)`` when truncation is applied).
+
+    Returns:
+        Feishu Card JSON v2.0 dict suitable for sending as an interactive
+        message.
+
+    Example::
+
+        >>> card = generate_feishu_digest_card("2026-05-10", [a1, a2], 12)
+        >>> card["schema"]
+        '2.0'
+    """
+    n = len(top_articles)
+
+    # -- Source & tag statistics --
+    sources: dict[str, int] = {}
+    all_tags: dict[str, int] = {}
+    scores: list[float] = []
+    for art in top_articles:
+        src = art.get("source", "unknown")
+        sources[src] = sources.get(src, 0) + 1
+        for t in art.get("tags", []):
+            all_tags[t] = all_tags.get(t, 0) + 1
+        sc = art.get("quality_score", 0.0)
+        if sc:
+            scores.append(sc)
+
+    avg_score = sum(scores) / len(scores) if scores else 0.0
+    tag_summary = ", ".join(f"#{t}" for t, _ in sorted(all_tags.items(), key=lambda x: -x[1])[:6])
+
+    # -- Body elements --
+    elements: list[dict[str, Any]] = []
+
+    # Summary text
+    elements.append(
+        {
+            "tag": "markdown",
+            "content": (
+                f"本日共采集 **{total_count}** 条 AI/LLM/Agent 相关动态，"
+                f"精选相关度最高的 **{n}** 条展示如下。"
+            ),
+        }
+    )
+
+    # Statistics field block
+    stat_fields: list[dict[str, Any]] = [
+        {
+            "is_short": True,
+            "text": {"tag": "lark_md", "content": f"**GitHub**\n{sources.get('github', 0)} 项"},
+        },
+        {
+            "is_short": True,
+            "text": {"tag": "lark_md", "content": f"**HackerNews**\n{sources.get('hackernews', 0)} 项"},
+        },
+        {
+            "is_short": True,
+            "text": {"tag": "lark_md", "content": f"**平均相关性**\n{avg_score:.2f}"},
+        },
+    ]
+    if tag_summary:
+        stat_fields.append(
+            {
+                "is_short": False,
+                "text": {"tag": "lark_md", "content": f"**热门标签**\n{tag_summary}"},
+            }
+        )
+    elements.append({"tag": "div", "fields": stat_fields})
+    elements.append({"tag": "hr"})
+
+    # Top article entries via column_set
+    for i, art in enumerate(top_articles, 1):
+        title = art.get("title", "Untitled")
+        source_url = art.get("source_url", "")
+        score = art.get("quality_score", 0.0)
+        key_insight = art.get("key_insight", "")
+        source = art.get("source", "unknown")
+
+        emoji = _score_emoji(score)
+
+        detail_lines: list[str] = []
+        if key_insight:
+            detail_lines.append(key_insight)
+        detail_lines.append(f"来源: {source}　{emoji} {score:.2f}")
+
+        detail_text = "\n".join(detail_lines)
+
+        left_content = f"**{i}. [{title}]({source_url})**\n{detail_text}"
+
+        elements.append(
+            {
+                "tag": "column_set",
+                "flex_mode": "none",
+                "background_style": "default",
+                "columns": [
+                    {
+                        "tag": "column",
+                        "width": "weighted",
+                        "weight": 1,
+                        "vertical_align": "top",
+                        "elements": [
+                            {"tag": "markdown", "content": left_content},
+                        ],
+                    },
+                ],
+            }
+        )
+
+    elements.append({"tag": "hr"})
+
+    return {
+        "schema": "2.0",
+        "config": {
+            "enable_forward": True,
+            "update_multi": True,
+            "width_mode": "fill",
+        },
+        "header": {
+            "title": {
+                "tag": "plain_text",
+                "content": f"📰 AI 技术动态日报 · {date}",
+            },
+            "template": "wathet",
+            "padding": "12px 12px 12px 12px",
+        },
+        "body": {
+            "direction": "vertical",
+            "padding": "12px 12px 12px 12px",
+            "elements": elements,
+        },
+    }
+
+
 def generate_daily_digest(
     knowledge_dir: str = "knowledge/articles",
     date: str | None = None,
@@ -366,7 +495,9 @@ def generate_daily_digest(
 
         - ``"markdown"`` — combined Markdown string.
         - ``"telegram"`` — combined Telegram MarkdownV2 string.
-        - ``"feishu"`` — list of Feishu card dicts.
+        - ``"feishu"`` — list of Feishu card dicts.  The first element is the
+          aggregate digest card (see :func:`generate_feishu_digest_card`),
+          followed by individual article cards.
 
         When no articles are found for the given date, all string values are
         set to ``"📭 {date} 暂无新增知识条目"`` and ``"feishu"`` is an empty
@@ -375,11 +506,11 @@ def generate_daily_digest(
     Example::
 
         >>> digest = generate_daily_digest(date="2026-05-09")
-        >>> len(digest["feishu"]) <= 5
+        >>> len(digest["feishu"]) == 6  # 1 digest card + 5 article cards
         True
     """
     if date is None:
-        date = datetime.now().strftime("%Y-%m-%d")
+        date = datetime.now(tz=timezone.utc).strftime("%Y-%m-%d")
 
     articles_dir = Path(knowledge_dir)
 
@@ -437,8 +568,11 @@ def generate_daily_digest(
         telegram_lines.append("")
     telegram = "\n".join(telegram_lines)
 
-    # -- Feishu digest (list of individual card dicts) --
-    feishu_cards: list[dict[str, Any]] = [json_to_feishu(a) for a in top_articles]
+    # -- Feishu digest (digest summary card + individual article cards) --
+    feishu_cards: list[dict[str, Any]] = [
+        generate_feishu_digest_card(date, top_articles, len(articles))
+    ]
+    feishu_cards.extend(json_to_feishu(a) for a in top_articles)
 
     return {
         "markdown": markdown,
