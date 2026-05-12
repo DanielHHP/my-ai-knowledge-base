@@ -78,7 +78,8 @@
     "hackernews_score": 256
   },
   "created_at": "2025-04-17T10:30:00Z",
-  "updated_at": "2025-04-17T10:30:00Z"
+  "updated_at": "2025-04-17T10:30:00Z",
+  "quality_score": 0.76
 }
 ```
 
@@ -96,6 +97,7 @@
 - `status`: 状态机，控制发布流程
 - `metadata`: 源平台特定元数据
 - `created_at`/`updated_at`: 系统内部时间戳
+- `quality_score`: 文章质量分
 
 ## Agent 角色概览
 

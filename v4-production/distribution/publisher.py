@@ -436,6 +436,7 @@ async def publish_daily_digest(
     date: str | None = None,
     top_n: int = 5,
     timeout: float = _REQUEST_TIMEOUT,
+    min_quality_score: float = 0.0,
 ) -> list[PublishResult]:
     """Generate and publish the daily knowledge digest to specified channels.
 
@@ -451,6 +452,9 @@ async def publish_daily_digest(
         date: Date in ``YYYY-MM-DD`` format.  Defaults to today.
         top_n: Maximum number of articles to include.
         timeout: Request timeout in seconds, passed to each publisher.
+        min_quality_score: Minimum quality score filter (0.0–1.0).  Articles
+            with ``quality_score < min_quality_score`` are excluded.  Defaults
+            to 0.0 (no filtering).
 
     Returns:
         Flat list of ``PublishResult`` objects for all messages sent across
@@ -469,7 +473,12 @@ async def publish_daily_digest(
     if date is None:
         date = datetime.now(tz=timezone.utc).strftime("%Y-%m-%d")
 
-    digest = generate_daily_digest(knowledge_dir=knowledge_dir, date=date, top_n=top_n)
+    digest = generate_daily_digest(
+        knowledge_dir=knowledge_dir,
+        date=date,
+        top_n=top_n,
+        min_quality_score=min_quality_score,
+    )
 
     # Resolve channels
     if channels is None:

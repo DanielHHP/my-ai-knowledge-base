@@ -1,31 +1,31 @@
 {
   "summary": {
     "total_calls": 21,
-    "total_prompt_tokens": 9861,
-    "total_completion_tokens": 6813,
-    "total_cost_yuan": 0.023487,
+    "total_prompt_tokens": 9606,
+    "total_completion_tokens": 6486,
+    "total_cost_yuan": 0.022578,
     "budget_yuan": 1.0,
-    "usage_ratio": 0.0235
+    "usage_ratio": 0.0226
   },
   "nodes": {
     "analyze": {
       "call_count": 10,
-      "prompt_tokens": 2523,
-      "completion_tokens": 1715,
-      "total_cost_yuan": 0.005953
+      "prompt_tokens": 2521,
+      "completion_tokens": 1596,
+      "total_cost_yuan": 0.005713
     },
     "reviewer": {
       "call_count": 10,
-      "prompt_tokens": 3094,
-      "completion_tokens": 1005,
-      "total_cost_yuan": 0.005104
+      "prompt_tokens": 2979,
+      "completion_tokens": 958,
+      "total_cost_yuan": 0.004895
     },
     "reviser": {
       "call_count": 1,
-      "prompt_tokens": 4244,
-      "completion_tokens": 4093,
-      "total_cost_yuan": 0.01243
+      "prompt_tokens": 4106,
+      "completion_tokens": 3932,
+      "total_cost_yuan": 0.01197
     }
   },
-  "generated_at": "2026-05-09T17:21:29.714469+00:00"
+  "generated_at": "2026-05-12T01:05:03.967511+00:00"
 }

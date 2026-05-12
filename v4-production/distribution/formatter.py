@@ -477,18 +477,23 @@ def generate_daily_digest(
     knowledge_dir: str = "knowledge/articles",
     date: str | None = None,
     top_n: int = 5,
+    min_quality_score: float = 0.0,
 ) -> dict[str, Any]:
     """Generate a daily digest from knowledge article JSON files.
 
-    Scans ``knowledge_dir`` for files matching ``*_{date}.json``, sorts them
-    by ``quality_score`` in descending order, and formats the top N articles
-    for all three output channels.
+    Scans ``knowledge_dir`` for files matching ``*_{date}.json``, optionally
+    filters by minimum quality score, sorts them by ``quality_score`` in
+    descending order, and formats the top N articles for all three output
+    channels.
 
     Args:
         knowledge_dir: Path to the directory containing knowledge article JSON
             files.
         date: Date string in ``YYYY-MM-DD`` format.  Defaults to today's date.
         top_n: Maximum number of articles to include in the digest.
+        min_quality_score: Minimum quality score filter (0.0–1.0).  Articles
+            with ``quality_score < min_quality_score`` are excluded.  Defaults
+            to 0.0 (no filtering).
 
     Returns:
         A dict with keys:
@@ -537,6 +542,20 @@ def generate_daily_digest(
     if not articles:
         empty_msg = f"📭 {date} 暂无新增知识条目"
         return {"markdown": empty_msg, "telegram": empty_msg, "feishu": []}
+
+    # -- Quality filter --
+    if min_quality_score > 0.0:
+        total_before = len(articles)
+        articles = [a for a in articles if a.get("quality_score", 0.0) >= min_quality_score]
+        logger.info(
+            "Quality filter (>=%.2f): kept %d/%d articles",
+            min_quality_score,
+            len(articles),
+            total_before,
+        )
+        if not articles:
+            empty_msg = f"📭 {date} 暂无高质量知识条目 (阈值≥{min_quality_score:.0%})"
+            return {"markdown": empty_msg, "telegram": empty_msg, "feishu": []}
 
     articles.sort(key=lambda a: a.get("quality_score", 0.0), reverse=True)
     top_articles = articles[:top_n]
